@@ -1,0 +1,3 @@
+C:\Users\Administrator\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\Definitions.UEStudyForMMO.h
+C:\Users\Administrator\UEStudyForMMO\Source\UEStudyForMMO\MyPlayerController.h
+C:\Users\Administrator\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Inc\UEStudyForMMO\MyPlayerController.generated.h

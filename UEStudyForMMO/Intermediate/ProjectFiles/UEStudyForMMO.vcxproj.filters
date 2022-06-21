@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\UEStudyForMMO.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{00F387BD-9A40-406D-B718-206F17B76888}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\UEStudyForMMO.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\UEStudyForMMOEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{5EA27B52-3C38-43A6-AF10-7032B75CEFC5}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\UEStudyForMMO">
+      <UniqueIdentifier>{01F7C1C4-D051-4BA9-BE58-5CCE721DFB96}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\UEStudyForMMO\MyActor.cpp">
+      <Filter>Source\UEStudyForMMO</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UEStudyForMMO\MyActor.h">
+      <Filter>Source\UEStudyForMMO</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\UEStudyForMMO\MyAnimInstance.cpp">
+      <Filter>Source\UEStudyForMMO</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UEStudyForMMO\MyAnimInstance.h">
+      <Filter>Source\UEStudyForMMO</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\UEStudyForMMO\MyCharacter.cpp">
+      <Filter>Source\UEStudyForMMO</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UEStudyForMMO\MyCharacter.h">
+      <Filter>Source\UEStudyForMMO</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\UEStudyForMMO\MyGameModeBase.cpp">
+      <Filter>Source\UEStudyForMMO</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UEStudyForMMO\MyGameModeBase.h">
+      <Filter>Source\UEStudyForMMO</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\UEStudyForMMO\MyPlayerController.cpp">
+      <Filter>Source\UEStudyForMMO</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UEStudyForMMO\MyPlayerController.h">
+      <Filter>Source\UEStudyForMMO</Filter>
+    </ClInclude>
+    <None Include="..\..\Source\UEStudyForMMO\UEStudyForMMO.Build.cs">
+      <Filter>Source\UEStudyForMMO</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\UEStudyForMMO\UEStudyForMMO.cpp">
+      <Filter>Source\UEStudyForMMO</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UEStudyForMMO\UEStudyForMMO.h">
+      <Filter>Source\UEStudyForMMO</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\UEStudyForMMO\Weapon.cpp">
+      <Filter>Source\UEStudyForMMO</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UEStudyForMMO\Weapon.h">
+      <Filter>Source\UEStudyForMMO</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
