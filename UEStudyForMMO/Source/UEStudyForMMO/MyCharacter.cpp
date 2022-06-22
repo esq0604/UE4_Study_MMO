@@ -8,7 +8,8 @@ AMyCharacter::AMyCharacter()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-	GetMeshFromDir();
+	GetWizardMesh();
+	GetWeaponMesh();
 	SetSpringArmComponent();
 	SetCameraComponent();
 	GetAnimInstance();
@@ -41,7 +42,7 @@ void AMyCharacter::GetAnimInstance()
 {
 	GetMesh()->SetAnimationMode(EAnimationMode::AnimationBlueprint);
 
-	static ConstructorHelpers::FClassFinder<UAnimInstance> Wizard_Anim(TEXT("/Game/BattleWizardPolyart/Animations/NewAnimBlueprint.NewAnimBlueprint_C"));
+	static ConstructorHelpers::FClassFinder<UAnimInstance> Wizard_Anim(TEXT("/Game/BattleWizardPolyart/Animations/WizardAnim.WizardAnim_C"));
 
 	if (Wizard_Anim.Succeeded())
 	{
@@ -59,13 +60,29 @@ void AMyCharacter::LeftRight(float NewAxisValue)
 	AddMovementInput(GetActorRightVector(), NewAxisValue);
 }
 
-void AMyCharacter::GetMeshFromDir()
+void AMyCharacter::GetWizardMesh()
 {
 	GetMesh()->SetRelativeLocationAndRotation(FVector(0.0f, 0.0f, -88.0f), FRotator(0.0f, -90.0f, 0.0f));
 	static ConstructorHelpers::FObjectFinder<USkeletalMesh> Wizrd(TEXT("/Game/BattleWizardPolyart/Meshes/WizardSM.WizardSM"));
 	if (Wizrd.Succeeded())
 	{
 		GetMesh()->SetSkeletalMesh(Wizrd.Object);
+	}
+}
+
+void AMyCharacter::GetWeaponMesh()
+{
+	FName WeaponSocket(TEXT("WeaponSocket"));
+	if (GetMesh()->DoesSocketExist(WeaponSocket))
+	{
+		UE_LOG(LogTemp,Warning,TEXT("WeaponSocket is exist"))
+		Weapon = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("WEAPON"));
+		static ConstructorHelpers::FObjectFinder<UStaticMesh> WZ_WEAPON(TEXT("/Game/BattleWizardPolyart/Meshes/MagicStaffs/Staff01SM.Staff01SM"));
+		if (WZ_WEAPON.Succeeded())
+		{
+			Weapon->SetStaticMesh(WZ_WEAPON.Object);
+		}
+		Weapon->SetupAttachment(GetMesh(), WeaponSocket);
 	}
 }
 

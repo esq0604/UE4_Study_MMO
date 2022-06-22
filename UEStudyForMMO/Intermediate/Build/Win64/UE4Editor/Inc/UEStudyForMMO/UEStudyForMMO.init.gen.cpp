@@ -21,7 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeUEStudyForMMO_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x5CFA0B35,
+				0x4A0E3CBF,
 				0x9AE964FF,
 				METADATA_PARAMS(nullptr, 0)
 			};
