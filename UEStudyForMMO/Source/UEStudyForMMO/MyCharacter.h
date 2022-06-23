@@ -39,6 +39,7 @@ private:
 	void GetFireBallBP();
 	void FireBallSpwan();
 	void PlayMontage();
+	void OpenInventory();
 public:
 	UPROPERTY(VisibleAnywhere, Category = Camera)
 		USpringArmComponent* SpringArm;
@@ -49,6 +50,8 @@ public:
 	UPROPERTY(VisibleAnywhere, Category = Weapon)
 		UStaticMeshComponent* Weapon;
 
+	UPROPERTY(VisibleAnywhere, Category = UI)
+		class UWidgetComponent* UI_Inventory;
 
 	UPROPERTY(Category = FireAttack, VisibleAnywhere, BlueprintReadOnly, Meta = (AllowPrivateAccess = "true"))
 		TSubclassOf<class AFireBall> FireBallClass;

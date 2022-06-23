@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\UEStudyForMMO.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{44D545AD-6360-4BF4-8B03-508928E3E4FB}</UniqueIdentifier>
+      <UniqueIdentifier>{E58B440D-0C77-473E-B6D7-BCAE69B9051D}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\UEStudyForMMO.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{72668918-8437-4922-99C7-9588DA3FA03F}</UniqueIdentifier>
+      <UniqueIdentifier>{5F8715D9-B524-42A9-B17C-BF5031D3F92D}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -30,7 +30,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\UEStudyForMMO">
-      <UniqueIdentifier>{198F2A5B-AB08-40AA-A8C8-D0CFF179748F}</UniqueIdentifier>
+      <UniqueIdentifier>{DA2DC7FB-50D6-4AEB-B833-E234254EDCCA}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\UEStudyForMMO\FireBall.cpp">
       <Filter>Source\UEStudyForMMO</Filter>
@@ -75,6 +75,12 @@
       <Filter>Source\UEStudyForMMO</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\UEStudyForMMO\UEStudyForMMO.h">
+      <Filter>Source\UEStudyForMMO</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\UEStudyForMMO\UISlot.cpp">
+      <Filter>Source\UEStudyForMMO</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UEStudyForMMO\UISlot.h">
       <Filter>Source\UEStudyForMMO</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\UEStudyForMMO\Weapon.cpp">
