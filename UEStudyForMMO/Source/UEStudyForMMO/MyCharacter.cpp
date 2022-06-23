@@ -2,7 +2,8 @@
 
 
 #include "MyCharacter.h"
-
+#include "MyAnimInstance.h"
+#include "FireBall.h"
 // Sets default values
 AMyCharacter::AMyCharacter()
 {
@@ -13,6 +14,7 @@ AMyCharacter::AMyCharacter()
 	SetSpringArmComponent();
 	SetCameraComponent();
 	GetAnimInstance();
+	GetFireBallBP();
 }
 
 // Called when the game starts or when spawned
@@ -33,9 +35,12 @@ void AMyCharacter::Tick(float DeltaTime)
 void AMyCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
+	//캐릭터 움직임 바인딩 
 	PlayerInputComponent->BindAxis(TEXT("UpDown"), this, &AMyCharacter::UpDown);
 	PlayerInputComponent->BindAxis(TEXT("LeftRight"), this, &AMyCharacter::LeftRight);
-
+	PlayerInputComponent->BindAction(TEXT("Attack"),EInputEvent::IE_Pressed, this, &AMyCharacter::Attack);
+	//카메라 움직임 바인딩 
+	PlayerInputComponent->BindAxis(TEXT("Turn"), this, &AMyCharacter::AddControllerYawInput);
 }
 
 void AMyCharacter::GetAnimInstance()
@@ -48,6 +53,14 @@ void AMyCharacter::GetAnimInstance()
 	{
 		GetMesh()->SetAnimInstanceClass(Wizard_Anim.Class);
 	}
+}
+
+void AMyCharacter::Attack()
+{
+	UE_LOG(LogTemp, Warning, TEXT("Attack"));
+
+	PlayMontage();
+	FireBallSpwan();
 }
 
 void AMyCharacter::UpDown(float NewAxisValue)
@@ -98,5 +111,33 @@ void AMyCharacter::SetCameraComponent()
 {
 	Camera=CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
 	Camera->SetupAttachment(SpringArm);
+}
+
+void AMyCharacter::GetFireBallBP()
+{
+	static ConstructorHelpers::FClassFinder<AFireBall> FireBallAsset(TEXT("/Game/Blueprint/MyFireBall.MyFireBall_C"));
+	if (FireBallAsset.Succeeded())
+		FireBallClass = FireBallAsset.Class;
+}
+
+void AMyCharacter::FireBallSpwan()
+{
+	FVector vPos = GetActorLocation() + GetActorForwardVector() * 100.0f;
+	FActorSpawnParameters params;
+	params.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn;
+
+	AFireBall* FireBall = GetWorld()->SpawnActor<AFireBall>(FireBallClass, vPos, GetActorRotation(), params);
+	UE_LOG(LogTemp, Warning, TEXT("Spawn Fire"));
+}
+
+void AMyCharacter::PlayMontage()
+{
+	auto AnimInstance = Cast<UMyAnimInstance>(GetMesh()->GetAnimInstance());
+	if (nullptr == AnimInstance)
+	{
+		return;
+	}
+	AnimInstance->PlayAttackMontage();
+
 }
 

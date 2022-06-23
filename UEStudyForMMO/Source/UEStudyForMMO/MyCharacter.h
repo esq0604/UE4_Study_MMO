@@ -26,7 +26,9 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 	void GetAnimInstance();
-
+	
+	UFUNCTION()
+	void Attack();
 private:
 	void UpDown(float NewAxisValue);
 	void LeftRight(float NewAxisValue);
@@ -34,12 +36,20 @@ private:
 	void GetWeaponMesh();
 	void SetSpringArmComponent();
 	void SetCameraComponent();
-	
+	void GetFireBallBP();
+	void FireBallSpwan();
+	void PlayMontage();
 public:
 	UPROPERTY(VisibleAnywhere, Category = Camera)
 		USpringArmComponent* SpringArm;
+	
 	UPROPERTY(VisibleAnywhere, Category = Camera)
 		UCameraComponent* Camera;
+	
 	UPROPERTY(VisibleAnywhere, Category = Weapon)
 		UStaticMeshComponent* Weapon;
+
+
+	UPROPERTY(Category = FireAttack, VisibleAnywhere, BlueprintReadOnly, Meta = (AllowPrivateAccess = "true"))
+		TSubclassOf<class AFireBall> FireBallClass;
 };

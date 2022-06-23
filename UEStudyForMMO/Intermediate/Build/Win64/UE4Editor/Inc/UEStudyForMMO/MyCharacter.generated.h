@@ -14,8 +14,16 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define UESTUDYFORMMO_MyCharacter_generated_h
 
 #define UEStudyForMMO_Source_UEStudyForMMO_MyCharacter_h_12_SPARSE_DATA
-#define UEStudyForMMO_Source_UEStudyForMMO_MyCharacter_h_12_RPC_WRAPPERS
-#define UEStudyForMMO_Source_UEStudyForMMO_MyCharacter_h_12_RPC_WRAPPERS_NO_PURE_DECLS
+#define UEStudyForMMO_Source_UEStudyForMMO_MyCharacter_h_12_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execAttack);
+
+
+#define UEStudyForMMO_Source_UEStudyForMMO_MyCharacter_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execAttack);
+
+
 #define UEStudyForMMO_Source_UEStudyForMMO_MyCharacter_h_12_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAMyCharacter(); \
