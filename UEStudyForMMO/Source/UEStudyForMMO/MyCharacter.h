@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "EngineMinimal.h"
+#include "Engine.h"
 #include "GameFramework/Character.h"
 #include "MyCharacter.generated.h"
 
@@ -54,5 +54,7 @@ public:
 		class UWidgetComponent* UI_Inventory;
 
 	UPROPERTY(Category = FireAttack, VisibleAnywhere, BlueprintReadOnly, Meta = (AllowPrivateAccess = "true"))
-		TSubclassOf<class AFireBall> FireBallClass;
+		TSubclassOf<class AFireBall> FireBallClass; 
+	UPROPERTY(VisibleAnywhere, Category = UI)
+		class UWidgetComponent* Inventory;
 };

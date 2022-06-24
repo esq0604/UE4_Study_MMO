@@ -4,6 +4,7 @@
 #include "MyCharacter.h"
 #include "MyAnimInstance.h"
 #include "FireBall.h"
+#include "Components/WidgetComponent.h"
 // Sets default values
 AMyCharacter::AMyCharacter()
 {
@@ -15,6 +16,17 @@ AMyCharacter::AMyCharacter()
 	SetCameraComponent();
 	GetAnimInstance();
 	GetFireBallBP();
+
+	Inventory = CreateDefaultSubobject<UWidgetComponent>(TEXT("Inventory"));
+	Inventory->SetupAttachment(GetMesh());
+	static ConstructorHelpers::FClassFinder<UUserWidget> UI_INVENTORY(TEXT("/Game/UI/Inventory.Inventory_C"));
+	if (UI_INVENTORY.Succeeded())
+	{
+		UE_LOG(LogTemp,Warning,TEXT("INVENTORY Succeed"))
+		Inventory->SetWidgetClass(UI_INVENTORY.Class);
+		Inventory->SetActive(true);
+		Inventory->SetDrawSize(FVector2D(300.0f,100.0f));
+	}
 }
 
 // Called when the game starts or when spawned
@@ -39,7 +51,6 @@ void AMyCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 	PlayerInputComponent->BindAxis(TEXT("UpDown"), this, &AMyCharacter::UpDown);
 	PlayerInputComponent->BindAxis(TEXT("LeftRight"), this, &AMyCharacter::LeftRight);
 	PlayerInputComponent->BindAction(TEXT("Attack"),EInputEvent::IE_Pressed, this, &AMyCharacter::Attack);
-	PlayerInputComponent->BindAction(TEXT("OpenInventory"), EInputEvent::IE_Pressed, this, &AMyCharacter::OpenInventory);
 	
 	//카메라 움직임 바인딩 
 	PlayerInputComponent->BindAxis(TEXT("Turn"), this, &AMyCharacter::AddControllerYawInput);
