@@ -5,6 +5,10 @@
 #include "MyAnimInstance.h"
 #include "FireBall.h"
 #include "Components/WidgetComponent.h"
+#include "Interactable.h"
+#include "AutoPickup.h"
+#include "MyPlayerController.h"
+
 // Sets default values
 AMyCharacter::AMyCharacter()
 {
@@ -17,16 +21,13 @@ AMyCharacter::AMyCharacter()
 	GetAnimInstance();
 	GetFireBallBP();
 
-	Inventory = CreateDefaultSubobject<UWidgetComponent>(TEXT("Inventory"));
-	Inventory->SetupAttachment(GetMesh());
-	static ConstructorHelpers::FClassFinder<UUserWidget> UI_INVENTORY(TEXT("/Game/UI/Inventory.Inventory_C"));
-	if (UI_INVENTORY.Succeeded())
-	{
-		UE_LOG(LogTemp,Warning,TEXT("INVENTORY Succeed"))
-		Inventory->SetWidgetClass(UI_INVENTORY.Class);
-		Inventory->SetActive(true);
-		Inventory->SetDrawSize(FVector2D(300.0f,100.0f));
-	}
+
+	/// Create the collection sphere
+
+	CollectionSphere = CreateDefaultSubobject<USphereComponent>(TEXT("CollectionSphere"));
+	CollectionSphere->SetupAttachment(RootComponent);
+	CollectionSphere->SetSphereRadius(200.f);
+
 }
 
 // Called when the game starts or when spawned
@@ -40,7 +41,8 @@ void AMyCharacter::BeginPlay()
 void AMyCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
+	CollectAutoPickups();
+	CheckForInteractables();
 }
 
 // Called to bind functionality to input
@@ -152,5 +154,56 @@ void AMyCharacter::PlayMontage()
 	}
 	AnimInstance->PlayAttackMontage();
 
+}
+
+void AMyCharacter::CollectAutoPickups()
+{
+	TArray<AActor*> CollectedActors;
+	CollectionSphere->GetOverlappingActors(CollectedActors);
+
+	AMyPlayerController* IController = Cast<AMyPlayerController>(GetController());
+
+	for (int32 iColleted = 0; iColleted < CollectedActors.Num(); ++iColleted)
+	{
+		AAutoPickup* const TestPickup = Cast<AAutoPickup>(CollectedActors[iColleted]);
+		
+		if (TestPickup && !TestPickup->IsPendingKill())
+		{
+			TestPickup->Collect(IController);
+		}
+	}
+
+}
+
+void AMyCharacter::CheckForInteractables()
+{
+	FHitResult HitResult;
+	int32 Range = 500;
+
+	FVector StartTrace = Camera->GetComponentLocation();
+	FVector EndTrace = (Camera->GetForwardVector() * Range) + StartTrace;
+
+	FCollisionQueryParams QueryParams;
+	QueryParams.AddIgnoredActor(this);
+
+	AMyPlayerController* IController = Cast<AMyPlayerController>(GetController());
+
+	if (IController)
+	{
+		//Check if something is hit
+		if (GetWorld()->LineTraceSingleByChannel(HitResult, StartTrace, EndTrace, ECC_Visibility, QueryParams))
+		{
+			//Cast ths actor to Ainteractable
+			AInteractable* Interactable = Cast<AInteractable>(HitResult.GetActor());
+			
+			if (Interactable)
+			{
+				IController->CurrentInteractable = Interactable;
+				return;
+			}
+		}
+
+		IController->CurrentInteractable = nullptr;
+	}
 }
 

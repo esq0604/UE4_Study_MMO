@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\UEStudyForMMO.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{1799624F-9C42-497D-827D-1FA082F480A8}</UniqueIdentifier>
+      <UniqueIdentifier>{A994659C-7E8F-44E4-8120-16C8C5435876}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\UEStudyForMMO.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{7CFF63B6-8E44-4746-8953-C333EAE0499B}</UniqueIdentifier>
+      <UniqueIdentifier>{96B98347-7B5F-4ADF-B9B9-FE4BDA2FE90F}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -30,7 +30,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\UEStudyForMMO">
-      <UniqueIdentifier>{75FDA203-BB29-4449-9420-B082E99464A6}</UniqueIdentifier>
+      <UniqueIdentifier>{C13529CB-3ED8-4E9B-82BE-E7A53A96F838}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\UEStudyForMMO\AutoPickup.cpp">
       <Filter>Source\UEStudyForMMO</Filter>
@@ -56,6 +56,12 @@
     <ClInclude Include="..\..\Source\UEStudyForMMO\Interactable.h">
       <Filter>Source\UEStudyForMMO</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\UEStudyForMMO\ManPickup.cpp">
+      <Filter>Source\UEStudyForMMO</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UEStudyForMMO\ManPickup.h">
+      <Filter>Source\UEStudyForMMO</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\UEStudyForMMO\MyAnimInstance.cpp">
       <Filter>Source\UEStudyForMMO</Filter>
     </ClCompile>
@@ -72,6 +78,12 @@
       <Filter>Source\UEStudyForMMO</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\UEStudyForMMO\MyGameModeBase.h">
+      <Filter>Source\UEStudyForMMO</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\UEStudyForMMO\MyGameStateBase.cpp">
+      <Filter>Source\UEStudyForMMO</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UEStudyForMMO\MyGameStateBase.h">
       <Filter>Source\UEStudyForMMO</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\UEStudyForMMO\MyPlayerController.cpp">

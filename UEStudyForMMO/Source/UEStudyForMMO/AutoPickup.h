@@ -26,10 +26,8 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	//collect every AutoPickup in range 
-	void CollectAutoPickups();
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowpriavteAccess = "ture"))
-		class USphereComponent* CollectionSphere;
+
+	void Collect(class AMyPlayerController* IController);
 
 };

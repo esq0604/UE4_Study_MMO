@@ -55,6 +55,16 @@ public:
 
 	UPROPERTY(Category = FireAttack, VisibleAnywhere, BlueprintReadOnly, Meta = (AllowPrivateAccess = "true"))
 		TSubclassOf<class AFireBall> FireBallClass; 
-	UPROPERTY(VisibleAnywhere, Category = UI)
-		class UWidgetComponent* Inventory;
+	
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowpriavteAccess = "ture"))
+		class USphereComponent* CollectionSphere;
+
+protected:
+	/** Function to collect every AutoPickup in range. */
+	void CollectAutoPickups();
+
+	/** Function to check for the closest Interactable in sight and in range. */
+	void CheckForInteractables();
+
 };
