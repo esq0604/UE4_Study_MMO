@@ -36,7 +36,7 @@ public: \
 
 #define UEStudyForMMO_Source_UEStudyForMMO_ManPickup_h_15_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API AManPickup(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	NO_API AManPickup(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AManPickup) \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, AManPickup); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AManPickup); \
@@ -48,8 +48,6 @@ public:
 
 
 #define UEStudyForMMO_Source_UEStudyForMMO_ManPickup_h_15_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API AManPickup() { }; \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AManPickup(AManPickup&&); \
@@ -60,7 +58,11 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AManPickup)
 
 
-#define UEStudyForMMO_Source_UEStudyForMMO_ManPickup_h_15_PRIVATE_PROPERTY_OFFSET
+#define UEStudyForMMO_Source_UEStudyForMMO_ManPickup_h_15_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__PickupMesh() { return STRUCT_OFFSET(AManPickup, PickupMesh); } \
+	FORCEINLINE static uint32 __PPO__ItemID() { return STRUCT_OFFSET(AManPickup, ItemID); }
+
+
 #define UEStudyForMMO_Source_UEStudyForMMO_ManPickup_h_12_PROLOG
 #define UEStudyForMMO_Source_UEStudyForMMO_ManPickup_h_15_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

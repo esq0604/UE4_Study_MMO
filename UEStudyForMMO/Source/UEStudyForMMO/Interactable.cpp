@@ -6,22 +6,18 @@
 // Sets default values
 AInteractable::AInteractable()
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
-
+	Name = "Interatalbe";
+	Action = "Interact";
 }
 
-// Called when the game starts or when spawned
-void AInteractable::BeginPlay()
+void AInteractable::Interact_Implementation(APlayerController* Controller)
 {
-	Super::BeginPlay();
-	
+	return;
 }
 
-// Called every frame
-void AInteractable::Tick(float DeltaTime)
+FString AInteractable::GetInteractText() const
 {
-	Super::Tick(DeltaTime);
-
+	return FString::Printf(TEXT("%s : Press F to %s"), *Name, *Action);
 }
+
 

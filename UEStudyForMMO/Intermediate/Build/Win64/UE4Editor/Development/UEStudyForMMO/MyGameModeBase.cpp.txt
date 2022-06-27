@@ -678,4 +678,6 @@ C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Slate\Public\Widgets/I
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Slate\Public\Framework/Docking/LayoutService.h
 C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Inc\UEStudyForMMO\MyCharacter.generated.h
 C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Source\UEStudyForMMO\MyPlayerController.h
+C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Source\UEStudyForMMO\FInvenItem.h
+C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Inc\UEStudyForMMO\FInvenItem.generated.h
 C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Inc\UEStudyForMMO\MyPlayerController.generated.h

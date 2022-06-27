@@ -2,6 +2,7 @@
 
 
 #include "AutoPickup.h"
+#include "MyPlayerController.h"
 
 // Sets default values
 AAutoPickup::AAutoPickup()
@@ -11,17 +12,14 @@ AAutoPickup::AAutoPickup()
 
 }
 
-// Called when the game starts or when spawned
-void AAutoPickup::BeginPlay()
+void AAutoPickup::Collect_Implementation(APlayerController* Controller)
 {
-	Super::BeginPlay();
-	
+	AMyPlayerController* IController = Cast<AMyPlayerController>(Controller);
+	if (IController->AddItemToInventoryByID(ItemID))
+		Destroy();
 }
 
-// Called every frame
-void AAutoPickup::Tick(float DeltaTime)
+FName AAutoPickup::GetItemID()
 {
-	Super::Tick(DeltaTime);
-
+	return ItemID;
 }
-

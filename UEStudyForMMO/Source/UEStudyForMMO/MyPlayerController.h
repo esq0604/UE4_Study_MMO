@@ -4,13 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerController.h"
+#include "FInvenItem.h"
 #include "MyPlayerController.generated.h"
 
-#include "Interactable.h"
-//#include "InventoryItem.h"
-/**
- * 
- */
 UCLASS()
 class UESTUDYFORMMO_API AMyPlayerController : public APlayerController
 {
@@ -32,7 +28,7 @@ public:
 		class AInteractable* CurrentInteractable;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
-		TArray<class FInventoryItem> Inventory;
+		TArray<FInvenItem> Inventory;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 		int32 Money;

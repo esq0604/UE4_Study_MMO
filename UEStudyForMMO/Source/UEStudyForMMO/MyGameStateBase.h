@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "CoreMinimal.h"
+#include "Engine.h"
 #include "GameFramework/GameStateBase.h"
 #include "MyGameStateBase.generated.h"
 
@@ -14,4 +14,14 @@ class UESTUDYFORMMO_API AMyGameStateBase : public AGameStateBase
 {
 	GENERATED_BODY()
 	
+public:
+	AMyGameStateBase();
+
+	UDataTable* GetItemDB() const;
+
+protected:
+	UPROPERTY(EditDefaultsOnly)
+		class UDataTable* ItemDB;
+
+
 };

@@ -8,14 +8,34 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class APlayerController;
 #ifdef UESTUDYFORMMO_Interactable_generated_h
 #error "Interactable.generated.h already included, missing '#pragma once' in Interactable.h"
 #endif
 #define UESTUDYFORMMO_Interactable_generated_h
 
 #define UEStudyForMMO_Source_UEStudyForMMO_Interactable_h_12_SPARSE_DATA
-#define UEStudyForMMO_Source_UEStudyForMMO_Interactable_h_12_RPC_WRAPPERS
-#define UEStudyForMMO_Source_UEStudyForMMO_Interactable_h_12_RPC_WRAPPERS_NO_PURE_DECLS
+#define UEStudyForMMO_Source_UEStudyForMMO_Interactable_h_12_RPC_WRAPPERS \
+	virtual void Interact_Implementation(APlayerController* Controller); \
+ \
+	DECLARE_FUNCTION(execGetInteractText); \
+	DECLARE_FUNCTION(execInteract);
+
+
+#define UEStudyForMMO_Source_UEStudyForMMO_Interactable_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execGetInteractText); \
+	DECLARE_FUNCTION(execInteract);
+
+
+#define UEStudyForMMO_Source_UEStudyForMMO_Interactable_h_12_EVENT_PARMS \
+	struct Interactable_eventInteract_Parms \
+	{ \
+		APlayerController* Controller; \
+	};
+
+
+#define UEStudyForMMO_Source_UEStudyForMMO_Interactable_h_12_CALLBACK_WRAPPERS
 #define UEStudyForMMO_Source_UEStudyForMMO_Interactable_h_12_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAInteractable(); \
@@ -59,13 +79,17 @@ public: \
 
 
 #define UEStudyForMMO_Source_UEStudyForMMO_Interactable_h_12_PRIVATE_PROPERTY_OFFSET
-#define UEStudyForMMO_Source_UEStudyForMMO_Interactable_h_9_PROLOG
+#define UEStudyForMMO_Source_UEStudyForMMO_Interactable_h_9_PROLOG \
+	UEStudyForMMO_Source_UEStudyForMMO_Interactable_h_12_EVENT_PARMS
+
+
 #define UEStudyForMMO_Source_UEStudyForMMO_Interactable_h_12_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	UEStudyForMMO_Source_UEStudyForMMO_Interactable_h_12_PRIVATE_PROPERTY_OFFSET \
 	UEStudyForMMO_Source_UEStudyForMMO_Interactable_h_12_SPARSE_DATA \
 	UEStudyForMMO_Source_UEStudyForMMO_Interactable_h_12_RPC_WRAPPERS \
+	UEStudyForMMO_Source_UEStudyForMMO_Interactable_h_12_CALLBACK_WRAPPERS \
 	UEStudyForMMO_Source_UEStudyForMMO_Interactable_h_12_INCLASS \
 	UEStudyForMMO_Source_UEStudyForMMO_Interactable_h_12_STANDARD_CONSTRUCTORS \
 public: \
@@ -78,6 +102,7 @@ public: \
 	UEStudyForMMO_Source_UEStudyForMMO_Interactable_h_12_PRIVATE_PROPERTY_OFFSET \
 	UEStudyForMMO_Source_UEStudyForMMO_Interactable_h_12_SPARSE_DATA \
 	UEStudyForMMO_Source_UEStudyForMMO_Interactable_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+	UEStudyForMMO_Source_UEStudyForMMO_Interactable_h_12_CALLBACK_WRAPPERS \
 	UEStudyForMMO_Source_UEStudyForMMO_Interactable_h_12_INCLASS_NO_PURE_DECLS \
 	UEStudyForMMO_Source_UEStudyForMMO_Interactable_h_12_ENHANCED_CONSTRUCTORS \
 private: \

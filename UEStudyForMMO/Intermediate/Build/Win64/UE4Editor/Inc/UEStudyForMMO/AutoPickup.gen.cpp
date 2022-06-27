@@ -17,10 +17,59 @@ void EmptyLinkFunctionForGeneratedCodeAutoPickup() {}
 	UESTUDYFORMMO_API UClass* Z_Construct_UClass_AAutoPickup();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	UPackage* Z_Construct_UPackage__Script_UEStudyForMMO();
-	ENGINE_API UClass* Z_Construct_UClass_USphereComponent_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_APlayerController_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 // End Cross Module References
+	DEFINE_FUNCTION(AAutoPickup::execCollect)
+	{
+		P_GET_OBJECT(APlayerController,Z_Param_IController);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->Collect_Implementation(Z_Param_IController);
+		P_NATIVE_END;
+	}
+	static FName NAME_AAutoPickup_Collect = FName(TEXT("Collect"));
+	void AAutoPickup::Collect(APlayerController* IController)
+	{
+		AutoPickup_eventCollect_Parms Parms;
+		Parms.IController=IController;
+		ProcessEvent(FindFunctionChecked(NAME_AAutoPickup_Collect),&Parms);
+	}
 	void AAutoPickup::StaticRegisterNativesAAutoPickup()
 	{
+		UClass* Class = AAutoPickup::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "Collect", &AAutoPickup::execCollect },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_AAutoPickup_Collect_Statics
+	{
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_IController;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AAutoPickup_Collect_Statics::NewProp_IController = { "IController", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AutoPickup_eventCollect_Parms, IController), Z_Construct_UClass_APlayerController_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AAutoPickup_Collect_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AAutoPickup_Collect_Statics::NewProp_IController,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AAutoPickup_Collect_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "AutoPickup.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AAutoPickup_Collect_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AAutoPickup, nullptr, "Collect", nullptr, nullptr, sizeof(AutoPickup_eventCollect_Parms), Z_Construct_UFunction_AAutoPickup_Collect_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AAutoPickup_Collect_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020C00, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AAutoPickup_Collect_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AAutoPickup_Collect_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AAutoPickup_Collect()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AAutoPickup_Collect_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	UClass* Z_Construct_UClass_AAutoPickup_NoRegister()
 	{
@@ -29,13 +78,18 @@ void EmptyLinkFunctionForGeneratedCodeAutoPickup() {}
 	struct Z_Construct_UClass_AAutoPickup_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CollectionSphere_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PickupMesh_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_CollectionSphere;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_PickupMesh;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ItemID_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FNamePropertyParams NewProp_ItemID;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -44,6 +98,9 @@ void EmptyLinkFunctionForGeneratedCodeAutoPickup() {}
 		(UObject* (*)())Z_Construct_UClass_AActor,
 		(UObject* (*)())Z_Construct_UPackage__Script_UEStudyForMMO,
 	};
+	const FClassFunctionLinkInfo Z_Construct_UClass_AAutoPickup_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_AAutoPickup_Collect, "Collect" }, // 4222939258
+	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAutoPickup_Statics::Class_MetaDataParams[] = {
 		{ "IncludePath", "AutoPickup.h" },
@@ -51,16 +108,23 @@ void EmptyLinkFunctionForGeneratedCodeAutoPickup() {}
 	};
 #endif
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAutoPickup_Statics::NewProp_CollectionSphere_MetaData[] = {
-		{ "AllowpriavteAccess", "ture" },
-		{ "Category", "Camera" },
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAutoPickup_Statics::NewProp_PickupMesh_MetaData[] = {
+		{ "Category", "AutoPickup" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "AutoPickup.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AAutoPickup_Statics::NewProp_CollectionSphere = { "CollectionSphere", nullptr, (EPropertyFlags)0x00100000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAutoPickup, CollectionSphere), Z_Construct_UClass_USphereComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AAutoPickup_Statics::NewProp_CollectionSphere_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAutoPickup_Statics::NewProp_CollectionSphere_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AAutoPickup_Statics::NewProp_PickupMesh = { "PickupMesh", nullptr, (EPropertyFlags)0x0020080000080009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAutoPickup, PickupMesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AAutoPickup_Statics::NewProp_PickupMesh_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAutoPickup_Statics::NewProp_PickupMesh_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAutoPickup_Statics::NewProp_ItemID_MetaData[] = {
+		{ "Category", "AutoPickup" },
+		{ "ModuleRelativePath", "AutoPickup.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UClass_AAutoPickup_Statics::NewProp_ItemID = { "ItemID", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAutoPickup, ItemID), METADATA_PARAMS(Z_Construct_UClass_AAutoPickup_Statics::NewProp_ItemID_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAutoPickup_Statics::NewProp_ItemID_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AAutoPickup_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAutoPickup_Statics::NewProp_CollectionSphere,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAutoPickup_Statics::NewProp_PickupMesh,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAutoPickup_Statics::NewProp_ItemID,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AAutoPickup_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AAutoPickup>::IsAbstract,
@@ -70,11 +134,11 @@ void EmptyLinkFunctionForGeneratedCodeAutoPickup() {}
 		"Engine",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		nullptr,
+		FuncInfo,
 		Z_Construct_UClass_AAutoPickup_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
-		0,
+		UE_ARRAY_COUNT(FuncInfo),
 		UE_ARRAY_COUNT(Z_Construct_UClass_AAutoPickup_Statics::PropPointers),
 		0,
 		0x009000A4u,
@@ -89,7 +153,7 @@ void EmptyLinkFunctionForGeneratedCodeAutoPickup() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAutoPickup, 1537771912);
+	IMPLEMENT_CLASS(AAutoPickup, 3112986192);
 	template<> UESTUDYFORMMO_API UClass* StaticClass<AAutoPickup>()
 	{
 		return AAutoPickup::StaticClass();

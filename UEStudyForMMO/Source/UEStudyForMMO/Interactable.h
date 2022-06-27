@@ -10,17 +10,23 @@ UCLASS()
 class UESTUDYFORMMO_API AInteractable : public AActor
 {
 	GENERATED_BODY()
-	
-public:	
+
+public:
 	// Sets default values for this actor's properties
 	AInteractable();
 
-protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
+	UFUNCTION(BlueprintNativeEvent)
+	void Interact(APlayerController* Controller);
+	virtual void Interact_Implementation(APlayerController* Controller);
 
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
+	UPROPERTY(EditDefaultsOnly)
+		FString Name;
 
+	UPROPERTY(EditDefaultsOnly)
+		FString Action;
+
+	UFUNCTION(BlueprintCallable, Category = "Pickup")
+		FString GetInteractText() const;
 };
+
+

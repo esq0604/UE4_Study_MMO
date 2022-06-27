@@ -4,6 +4,7 @@
 #include "MyPlayerController.h"
 #include "MyGameStateBase.h"
 #include "MyCharacter.h"
+#include "Interactable.h"
 
 AMyPlayerController::AMyPlayerController()
 {
@@ -20,14 +21,14 @@ int32 AMyPlayerController::GetInventoryWeight()
 	{
 		Weight += Item.Weight;
 	}
-	return Weight();
+	return Weight;
 }
 
 bool AMyPlayerController::AddItemToInventoryByID(FName ID)
 {
 	AMyGameStateBase* GameState = Cast<AMyGameStateBase>(GetWorld()->GetGameState());
 	UDataTable* ItemTable = GameState->GetItemDB();
-	FInventoryItem* ItemToAdd = ItemTable->FindRow<FInventoryItem>(ID, "");
+	FInvenItem* ItemToAdd = ItemTable->FindRow<FInvenItem>(ID, "");
 
 	if (ItemToAdd)
 	{

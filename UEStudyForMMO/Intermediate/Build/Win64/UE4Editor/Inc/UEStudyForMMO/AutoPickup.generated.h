@@ -8,14 +8,32 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class APlayerController;
 #ifdef UESTUDYFORMMO_AutoPickup_generated_h
 #error "AutoPickup.generated.h already included, missing '#pragma once' in AutoPickup.h"
 #endif
 #define UESTUDYFORMMO_AutoPickup_generated_h
 
 #define UEStudyForMMO_Source_UEStudyForMMO_AutoPickup_h_12_SPARSE_DATA
-#define UEStudyForMMO_Source_UEStudyForMMO_AutoPickup_h_12_RPC_WRAPPERS
-#define UEStudyForMMO_Source_UEStudyForMMO_AutoPickup_h_12_RPC_WRAPPERS_NO_PURE_DECLS
+#define UEStudyForMMO_Source_UEStudyForMMO_AutoPickup_h_12_RPC_WRAPPERS \
+	virtual void Collect_Implementation(APlayerController* IController); \
+ \
+	DECLARE_FUNCTION(execCollect);
+
+
+#define UEStudyForMMO_Source_UEStudyForMMO_AutoPickup_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execCollect);
+
+
+#define UEStudyForMMO_Source_UEStudyForMMO_AutoPickup_h_12_EVENT_PARMS \
+	struct AutoPickup_eventCollect_Parms \
+	{ \
+		APlayerController* IController; \
+	};
+
+
+#define UEStudyForMMO_Source_UEStudyForMMO_AutoPickup_h_12_CALLBACK_WRAPPERS
 #define UEStudyForMMO_Source_UEStudyForMMO_AutoPickup_h_12_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAAutoPickup(); \
@@ -58,14 +76,22 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AAutoPickup)
 
 
-#define UEStudyForMMO_Source_UEStudyForMMO_AutoPickup_h_12_PRIVATE_PROPERTY_OFFSET
-#define UEStudyForMMO_Source_UEStudyForMMO_AutoPickup_h_9_PROLOG
+#define UEStudyForMMO_Source_UEStudyForMMO_AutoPickup_h_12_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__PickupMesh() { return STRUCT_OFFSET(AAutoPickup, PickupMesh); } \
+	FORCEINLINE static uint32 __PPO__ItemID() { return STRUCT_OFFSET(AAutoPickup, ItemID); }
+
+
+#define UEStudyForMMO_Source_UEStudyForMMO_AutoPickup_h_9_PROLOG \
+	UEStudyForMMO_Source_UEStudyForMMO_AutoPickup_h_12_EVENT_PARMS
+
+
 #define UEStudyForMMO_Source_UEStudyForMMO_AutoPickup_h_12_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	UEStudyForMMO_Source_UEStudyForMMO_AutoPickup_h_12_PRIVATE_PROPERTY_OFFSET \
 	UEStudyForMMO_Source_UEStudyForMMO_AutoPickup_h_12_SPARSE_DATA \
 	UEStudyForMMO_Source_UEStudyForMMO_AutoPickup_h_12_RPC_WRAPPERS \
+	UEStudyForMMO_Source_UEStudyForMMO_AutoPickup_h_12_CALLBACK_WRAPPERS \
 	UEStudyForMMO_Source_UEStudyForMMO_AutoPickup_h_12_INCLASS \
 	UEStudyForMMO_Source_UEStudyForMMO_AutoPickup_h_12_STANDARD_CONSTRUCTORS \
 public: \
@@ -78,6 +104,7 @@ public: \
 	UEStudyForMMO_Source_UEStudyForMMO_AutoPickup_h_12_PRIVATE_PROPERTY_OFFSET \
 	UEStudyForMMO_Source_UEStudyForMMO_AutoPickup_h_12_SPARSE_DATA \
 	UEStudyForMMO_Source_UEStudyForMMO_AutoPickup_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+	UEStudyForMMO_Source_UEStudyForMMO_AutoPickup_h_12_CALLBACK_WRAPPERS \
 	UEStudyForMMO_Source_UEStudyForMMO_AutoPickup_h_12_INCLASS_NO_PURE_DECLS \
 	UEStudyForMMO_Source_UEStudyForMMO_AutoPickup_h_12_ENHANCED_CONSTRUCTORS \
 private: \

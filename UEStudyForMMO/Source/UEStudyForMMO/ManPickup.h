@@ -15,5 +15,15 @@ class UESTUDYFORMMO_API AManPickup : public AInteractable
 	GENERATED_BODY()
 	
 public:
-	CheckForInteractables();
+	AManPickup();
+
+	void Interact_Implementation(APlayerController* Controller) override;
+
+protected:
+	UPROPERTY(EditAnywhere)
+		UStaticMeshComponent* PickupMesh;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		FName ItemID;
+
 };

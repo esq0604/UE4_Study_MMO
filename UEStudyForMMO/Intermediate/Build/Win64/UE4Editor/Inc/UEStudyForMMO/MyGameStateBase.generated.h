@@ -36,7 +36,7 @@ public: \
 
 #define UEStudyForMMO_Source_UEStudyForMMO_MyGameStateBase_h_15_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API AMyGameStateBase(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	NO_API AMyGameStateBase(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AMyGameStateBase) \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, AMyGameStateBase); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AMyGameStateBase); \
@@ -48,8 +48,6 @@ public:
 
 
 #define UEStudyForMMO_Source_UEStudyForMMO_MyGameStateBase_h_15_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API AMyGameStateBase(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AMyGameStateBase(AMyGameStateBase&&); \
@@ -57,10 +55,13 @@ private: \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, AMyGameStateBase); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AMyGameStateBase); \
-	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AMyGameStateBase)
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AMyGameStateBase)
 
 
-#define UEStudyForMMO_Source_UEStudyForMMO_MyGameStateBase_h_15_PRIVATE_PROPERTY_OFFSET
+#define UEStudyForMMO_Source_UEStudyForMMO_MyGameStateBase_h_15_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__ItemDB() { return STRUCT_OFFSET(AMyGameStateBase, ItemDB); }
+
+
 #define UEStudyForMMO_Source_UEStudyForMMO_MyGameStateBase_h_12_PROLOG
 #define UEStudyForMMO_Source_UEStudyForMMO_MyGameStateBase_h_15_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
