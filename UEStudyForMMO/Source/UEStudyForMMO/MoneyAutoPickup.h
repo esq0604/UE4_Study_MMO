@@ -6,9 +6,7 @@
 #include "AutoPickup.h"
 #include "MoneyAutoPickup.generated.h"
 
-/**
- * 
- */
+
 UCLASS()
 class UESTUDYFORMMO_API AMoneyAutoPickup : public AAutoPickup
 {

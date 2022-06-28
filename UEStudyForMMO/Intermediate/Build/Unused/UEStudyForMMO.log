@@ -1,47 +1,12 @@
-﻿  Using 'git status' to determine working set for adaptive non-unity build (C:\Users\user1\UE4_Study_MMO).
-  Creating makefile for UEStudyForMMOEditor (no existing makefile)
-  Parsing headers for UEStudyForMMOEditor
-    Running UnrealHeaderTool "C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\UEStudyForMMO.uproject" "C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UEStudyForMMOEditor\Development\UEStudyForMMOEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\user1\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
-  LogInit: Display: Loading text-based GConfig....
-  Reflection code generated for UEStudyForMMOEditor in 8.9304577 seconds
+﻿  Using 'git status' to determine working set for adaptive non-unity build (C:\Users\Administrator\UE4_Study_MMO).
   Building UEStudyForMMOEditor...
-  Using Visual Studio 2019 14.29.30137 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Building 34 actions with 16 processes...
-    [1/34] Default.rc2
-    [2/34] SharedPCH.Engine.ShadowErrors.cpp
-    [3/34] FInventoryItem.cpp
-    [4/34] UEStudyForMMO.cpp
-    [5/34] Weapon.cpp
-    [6/34] UEStudyForMMO.init.gen.cpp
-    [7/34] Interactable.gen.cpp
-    [8/34] AutoPickup.cpp
-    [9/34] MyGameModeBase.gen.cpp
-    [10/34] Weapon.gen.cpp
-    [11/34] ManPickup.gen.cpp
-    [12/34] Interactable.cpp
-    [13/34] FireBallMovement.cpp
-    [14/34] MoneyAutoPickup.cpp
-    [15/34] ManPickup.cpp
-    [16/34] MyPlayerController.gen.cpp
-    [17/34] MoneyAutoPickup.gen.cpp
-    [18/34] FireBall.gen.cpp
-    [19/34] MyAnimInstance.cpp
-    [20/34] AutoPickup.gen.cpp
-    [21/34] FInvenItem.cpp
-    [22/34] FireBall.cpp
-    [23/34] FInvenItem.gen.cpp
-    [24/34] MyAnimInstance.gen.cpp
-    [25/34] FireBallMovement.gen.cpp
-    [26/34] MyGameStateBase.cpp
-    [27/34] MyGameStateBase.gen.cpp
-    [28/34] MyGameModeBase.cpp
-    [29/34] MyCharacter.gen.cpp
-    [30/34] MyPlayerController.cpp
-    [31/34] MyCharacter.cpp
-    [32/34] UE4Editor-UEStudyForMMO.lib
-       C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\UE4Editor-UEStudyForMMO.lib 라이브러리 및 C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\UE4Editor-UEStudyForMMO.exp 개체를 생성하고 있습니다.
-    [33/34] UE4Editor-UEStudyForMMO.dll
-       C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\UE4Editor-UEStudyForMMO.suppressed.lib 라이브러리 및 C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\UE4Editor-UEStudyForMMO.suppressed.exp 개체를 생성하고 있습니다.
-    [34/34] UEStudyForMMOEditor.target
-  Total time in Parallel executor: 37.69 seconds
-  Total execution time: 48.85 seconds
+  Using Visual Studio 2019 14.29.30138 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+  Building 4 actions with 6 processes...
+    [1/4] MyCharacter.cpp
+    [2/4] UE4Editor-UEStudyForMMO-0005.lib
+       Creating library C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\UE4Editor-UEStudyForMMO-0005.lib and object C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\UE4Editor-UEStudyForMMO-0005.exp
+    [3/4] UE4Editor-UEStudyForMMO-0005.dll
+       Creating library C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\UE4Editor-UEStudyForMMO-0005.suppressed.lib and object C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\UE4Editor-UEStudyForMMO-0005.suppressed.exp
+    [4/4] UEStudyForMMOEditor.target
+  Total time in Parallel executor: 17.17 seconds
+  Total execution time: 20.46 seconds

@@ -61,10 +61,10 @@ public:
 		class USphereComponent* CollectionSphere;
 
 protected:
-	/** Function to collect every AutoPickup in range. */
+	/** 범위 내의 모든 AutoPickup을 수집하는 기능  */
 	void CollectAutoPickups();
 
-	/** Function to check for the closest Interactable in sight and in range. */
+	/** 시야와 범위 내에서 가장 가까운 Interactable을 확인하는 기능  */
 	void CheckForInteractables();
 
 };

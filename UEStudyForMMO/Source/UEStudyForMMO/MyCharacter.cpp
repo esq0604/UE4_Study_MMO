@@ -7,6 +7,7 @@
 #include "Components/WidgetComponent.h"
 #include "Interactable.h"
 #include "AutoPickup.h"
+#include "FInvenItem.h"
 #include "MyPlayerController.h"
 
 // Sets default values
@@ -158,15 +159,19 @@ void AMyCharacter::PlayMontage()
 
 void AMyCharacter::CollectAutoPickups()
 {
+	// 겹치는 모든 액터를 가져와서 배열에 저장합니다.
 	TArray<AActor*> CollectedActors;
 	CollectionSphere->GetOverlappingActors(CollectedActors);
 
 	AMyPlayerController* IController = Cast<AMyPlayerController>(GetController());
 
+	// For each collected Actor
 	for (int32 iColleted = 0; iColleted < CollectedActors.Num(); ++iColleted)
 	{
+		// Cast the actor to AAutoPickup
 		AAutoPickup* const TestPickup = Cast<AAutoPickup>(CollectedActors[iColleted]);
 		
+		// 캐스트가 성공하고 픽업이 유효하고 활성화된 경우
 		if (TestPickup && !TestPickup->IsPendingKill())
 		{
 			TestPickup->Collect(IController);
@@ -177,7 +182,9 @@ void AMyCharacter::CollectAutoPickups()
 
 void AMyCharacter::CheckForInteractables()
 {
+	// 히트를 확인하기 위해 LineTrace를 만듭니다.
 	FHitResult HitResult;
+
 	int32 Range = 500;
 
 	FVector StartTrace = Camera->GetComponentLocation();

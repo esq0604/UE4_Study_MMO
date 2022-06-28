@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\UEStudyForMMO.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{3A6428E6-613B-411B-AA97-03CACF8FD007}</UniqueIdentifier>
+      <UniqueIdentifier>{08974777-2CBE-4213-A5C5-064CCB071067}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\UEStudyForMMO.Target.cs">
       <Filter>Source</Filter>
@@ -13,7 +13,7 @@
     </None>
     <None Include="..\..\AncientTreasures.png" />
     <Filter Include="Config">
-      <UniqueIdentifier>{2AC5942E-63FA-4C31-B0C4-3995269B7060}</UniqueIdentifier>
+      <UniqueIdentifier>{5BDE1F35-B093-486C-ADCC-0E60E8192CA0}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -31,7 +31,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\UEStudyForMMO">
-      <UniqueIdentifier>{1615EB5D-AF27-41EC-8925-220438A087EA}</UniqueIdentifier>
+      <UniqueIdentifier>{65BEDBDC-B181-4025-846A-F2B50308B7D2}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\UEStudyForMMO\AutoPickup.cpp">
       <Filter>Source\UEStudyForMMO</Filter>

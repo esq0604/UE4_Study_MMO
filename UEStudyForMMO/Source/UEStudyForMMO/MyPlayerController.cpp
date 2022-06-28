@@ -4,7 +4,6 @@
 #include "MyPlayerController.h"
 #include "MyGameStateBase.h"
 #include "MyCharacter.h"
-#include "Interactable.h"
 
 AMyPlayerController::AMyPlayerController()
 {

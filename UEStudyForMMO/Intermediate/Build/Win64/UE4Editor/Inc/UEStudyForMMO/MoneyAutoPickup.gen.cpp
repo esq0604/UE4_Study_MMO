@@ -45,7 +45,6 @@ void EmptyLinkFunctionForGeneratedCodeMoneyAutoPickup() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMoneyAutoPickup_Statics::Class_MetaDataParams[] = {
-		{ "Comment", "/**\n * \n */" },
 		{ "IncludePath", "MoneyAutoPickup.h" },
 		{ "ModuleRelativePath", "MoneyAutoPickup.h" },
 	};
@@ -87,7 +86,7 @@ void EmptyLinkFunctionForGeneratedCodeMoneyAutoPickup() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AMoneyAutoPickup, 2633387244);
+	IMPLEMENT_CLASS(AMoneyAutoPickup, 1839121285);
 	template<> UESTUDYFORMMO_API UClass* StaticClass<AMoneyAutoPickup>()
 	{
 		return AMoneyAutoPickup::StaticClass();

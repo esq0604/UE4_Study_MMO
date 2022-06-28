@@ -5,7 +5,7 @@
 
 AMyGameStateBase::AMyGameStateBase()
 {
-	static ConstructorHelpers::FObjectFinder<UDataTable> BP_ItemDB(TEXT("DataTable/Game/Data/ItemDB_ItemDB"));
+	static ConstructorHelpers::FObjectFinder<UDataTable> BP_ItemDB(TEXT("/Game/Data/ItemDB.ItemDB"));
 	ItemDB = BP_ItemDB.Object;
 }
 

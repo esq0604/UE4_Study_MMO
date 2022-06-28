@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerController.h"
 #include "FInvenItem.h"
+#include "Interactable.h"
 #include "MyPlayerController.generated.h"
 
 UCLASS()
