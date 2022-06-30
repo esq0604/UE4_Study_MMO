@@ -1,12 +1,13 @@
-﻿  Using 'git status' to determine working set for adaptive non-unity build (C:\Users\Administrator\UE4_Study_MMO).
+﻿  Using 'git status' to determine working set for adaptive non-unity build (C:\Users\dltkd\UE4_Study_MMO).
+  Creating makefile for UEStudyForMMOEditor (no existing makefile)
   Building UEStudyForMMOEditor...
-  Using Visual Studio 2019 14.29.30138 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Building 4 actions with 6 processes...
-    [1/4] MyCharacter.cpp
-    [2/4] UE4Editor-UEStudyForMMO-0005.lib
-       Creating library C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\UE4Editor-UEStudyForMMO-0005.lib and object C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\UE4Editor-UEStudyForMMO-0005.exp
-    [3/4] UE4Editor-UEStudyForMMO-0005.dll
-       Creating library C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\UE4Editor-UEStudyForMMO-0005.suppressed.lib and object C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\UE4Editor-UEStudyForMMO-0005.suppressed.exp
+  Using Visual Studio 2019 14.29.30133 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+  Building 4 actions with 8 processes...
+    [1/4] AutoPickup.gen.cpp
+    [2/4] UE4Editor-UEStudyForMMO.lib
+       Creating library C:\Users\dltkd\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\UE4Editor-UEStudyForMMO.lib and object C:\Users\dltkd\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\UE4Editor-UEStudyForMMO.exp
+    [3/4] UE4Editor-UEStudyForMMO.dll
+       Creating library C:\Users\dltkd\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\UE4Editor-UEStudyForMMO.suppressed.lib and object C:\Users\dltkd\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\UE4Editor-UEStudyForMMO.suppressed.exp
     [4/4] UEStudyForMMOEditor.target
-  Total time in Parallel executor: 17.17 seconds
-  Total execution time: 20.46 seconds
+  Total time in Parallel executor: 24.35 seconds
+  Total execution time: 26.97 seconds

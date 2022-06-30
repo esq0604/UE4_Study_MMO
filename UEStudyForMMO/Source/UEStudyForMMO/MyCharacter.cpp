@@ -43,7 +43,7 @@ void AMyCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 	CollectAutoPickups();
-	CheckForInteractables();
+	CheckForInteractables();           
 }
 
 // Called to bind functionality to input
@@ -54,10 +54,11 @@ void AMyCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 	PlayerInputComponent->BindAxis(TEXT("UpDown"), this, &AMyCharacter::UpDown);
 	PlayerInputComponent->BindAxis(TEXT("LeftRight"), this, &AMyCharacter::LeftRight);
 	PlayerInputComponent->BindAction(TEXT("Attack"),EInputEvent::IE_Pressed, this, &AMyCharacter::Attack);
-	PlayerInputComponent->BindAxis("LookUp", this, &APawn::AddControllerPitchInput);
 
 	//카메라 움직임 바인딩 
 	PlayerInputComponent->BindAxis(TEXT("Turn"), this, &AMyCharacter::AddControllerYawInput);
+	PlayerInputComponent->BindAxis("LookUp", this, &APawn::AddControllerPitchInput);
+
 }
 
 void AMyCharacter::GetAnimInstance()
@@ -120,6 +121,8 @@ void AMyCharacter::SetSpringArmComponent()
 {
 	SpringArm=CreateDefaultSubobject<USpringArmComponent>(TEXT("SPRINGARM"));
 	SpringArm->SetupAttachment(GetCapsuleComponent());
+	SpringArm->bUsePawnControlRotation = true;
+	SpringArm->bInheritYaw = true;
 	SpringArm->TargetArmLength = 800.0f;
 	SpringArm->SetRelativeRotation(FRotator(-15.0f, 0.0f, 0.0f));
 }
@@ -186,11 +189,15 @@ void AMyCharacter::CheckForInteractables()
 	// 히트를 확인하기 위해 LineTrace를 만듭니다.
 	FHitResult HitResult;
 
-	int32 Range = 500;
+	int32 Range = 1500;
 
 	FVector StartTrace = Camera->GetComponentLocation();
 	FVector EndTrace = (Camera->GetForwardVector() * Range) + StartTrace;
-
+	
+	//FVector StartTrace = GetActorForwardVector();
+	//FVector EndTrace = (GetActorForwardVector() * Range) + StartTrace;
+	DrawDebugLine(GetWorld(), StartTrace, EndTrace,FColor::Green,false);
+	
 	FCollisionQueryParams QueryParams;
 	QueryParams.AddIgnoredActor(this);
 
