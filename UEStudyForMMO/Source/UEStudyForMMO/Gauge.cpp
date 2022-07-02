@@ -28,10 +28,31 @@ void UGauge::Init()
 			break;
 		}
 	}
+
+	//HP
+	HPBar->Player = this->Player;
+	HPBar->SetType(EGaugeType::Gauge_HP);
+	HPBar->SetColor(HPBarColor);
+	//if (HPBarTex) HPBar->SetTexture(HPBarTex);
+
+	//Resource
+	ResourceBar->Player = this->Player;
+	ResourceBar->SetType(EGaugeType::Gauge_Resource);
+	ResourceBar->SetColor(ResourceBarColor);
+	//if (ResourceBarTex)
+		//ResourceBar->SetTexture(ResourceBarTex);
+
+	//Exp
+	ExpBar->Player = this->Player;
+	ExpBar->SetType(EGaugeType::Gauge_Exp);
+	ExpBar->SetColor(ExBarColor);
+
+
 }
 
 void UGauge::SetType(EGaugeType type)
 {
+	Type = type;
 }
 
 void UGauge::SetValue(float cur, float max)

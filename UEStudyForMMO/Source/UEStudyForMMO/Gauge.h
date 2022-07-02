@@ -7,6 +7,8 @@
 #include "InGameData.h"
 #include "Gauge.generated.h"
 
+class UProgressBar;
+class UTextBlock;
 class UTextrue2D;
 enum EGaugeType;
 /**
@@ -26,15 +28,43 @@ public:
 private:
 	void ChangeText(int cur, int max);
 public:
+	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
-		class UTextBlock* Text;
+	UTextBlock* Text;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta =(BindWidget))
-	class UProgressBar* GaugeBar;
+	UProgressBar* GaugeBar;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 		TEnumAsByte<EGaugeType> Type;
 public:
 	class AMyCharacter* Player;
 
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "ProgressBarData")
+	UTexture2D* HPBarTex;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "ProgressBarData")
+	FLinearColor HPBarColor;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "ProgressBarData")
+	UTexture2D* ResourceBarTex;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "ProgressBarData")
+	FLinearColor ResourceBarColor;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "ProgressBarData")
+	UTexture2D* ExpBarTex;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "ProgressBarData")
+	FLinearColor ExBarColor;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "UI" , meta =(BindWidget))
+		UGauge* HPBar;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "UI", meta = (BindWidget))
+		UGauge* ResourceBar;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "UI", meta = (BindWidget))
+		UGauge* ExpBar;
 };
