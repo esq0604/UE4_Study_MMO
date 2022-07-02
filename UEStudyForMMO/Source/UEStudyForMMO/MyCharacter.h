@@ -6,6 +6,30 @@
 #include "GameFramework/Character.h"
 #include "MyCharacter.generated.h"
 
+USTRUCT(Atomic, BlueprintType)
+struct FAbility
+{
+	GENERATED_BODY()
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		float CurrentHP;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		float MaxHP;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		float CurrentResource;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		float MaxResource;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		float CurrentExp;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		float MaxExp;
+};
+
 UCLASS()
 class UESTUDYFORMMO_API AMyCharacter : public ACharacter
 {
@@ -60,6 +84,9 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowpriavteAccess = "ture"))
 		class USphereComponent* CollectionSphere;
 
+	UPROPERTY(EditAnywhere)
+		FAbility Ability;
+
 protected:
 	/** 범위 내의 모든 AutoPickup을 수집하는 기능  */
 	void CollectAutoPickups();
@@ -68,3 +95,6 @@ protected:
 	void CheckForInteractables();
 
 };
+
+
+

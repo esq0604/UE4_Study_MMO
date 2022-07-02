@@ -21,8 +21,8 @@ void EmptyLinkFunctionForGeneratedCodeUEStudyForMMO_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x88566A79,
-				0xEE5FD30B,
+				0x27F7F932,
+				0xBE4450C0,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);
