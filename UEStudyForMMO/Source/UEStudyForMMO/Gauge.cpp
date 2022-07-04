@@ -29,23 +29,23 @@ void UGauge::Init()
 		}
 	}
 
-	//HP
-	HPBar->Player = this->Player;
-	HPBar->SetType(EGaugeType::Gauge_HP);
-	HPBar->SetColor(HPBarColor);
-	//if (HPBarTex) HPBar->SetTexture(HPBarTex);
+	////HP
+	//HPBar->Player = this->Player;
+	//HPBar->SetType(EGaugeType::Gauge_HP);
+	//HPBar->SetColor(HPBarColor);
+	////if (HPBarTex) HPBar->SetTexture(HPBarTex);
 
-	//Resource
-	ResourceBar->Player = this->Player;
-	ResourceBar->SetType(EGaugeType::Gauge_Resource);
-	ResourceBar->SetColor(ResourceBarColor);
-	//if (ResourceBarTex)
-		//ResourceBar->SetTexture(ResourceBarTex);
+	////Resource
+	//ResourceBar->Player = this->Player;
+	//ResourceBar->SetType(EGaugeType::Gauge_Resource);
+	//ResourceBar->SetColor(ResourceBarColor);
+	////if (ResourceBarTex)
+	//	//ResourceBar->SetTexture(ResourceBarTex);
 
-	//Exp
-	ExpBar->Player = this->Player;
-	ExpBar->SetType(EGaugeType::Gauge_Exp);
-	ExpBar->SetColor(ExBarColor);
+	////Exp
+	//ExpBar->Player = this->Player;
+	//ExpBar->SetType(EGaugeType::Gauge_Exp);
+	//ExpBar->SetColor(ExBarColor);
 
 
 }

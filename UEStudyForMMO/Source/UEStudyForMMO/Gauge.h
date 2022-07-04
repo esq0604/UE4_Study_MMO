@@ -59,12 +59,12 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "ProgressBarData")
 	FLinearColor ExBarColor;
 	
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "UI" , meta =(BindWidget))
+	/*UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "UI" , meta =(BindWidget))
 		UGauge* HPBar;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "UI", meta = (BindWidget))
 		UGauge* ResourceBar;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "UI", meta = (BindWidget))
-		UGauge* ExpBar;
+		UGauge* ExpBar;*/
 };

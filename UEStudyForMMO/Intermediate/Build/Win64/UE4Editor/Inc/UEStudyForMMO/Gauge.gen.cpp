@@ -72,18 +72,6 @@ void EmptyLinkFunctionForGeneratedCodeGauge() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ExBarColor_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ExBarColor;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_HPBar_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_HPBar;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ResourceBar_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ResourceBar;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ExpBar_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ExpBar;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -166,33 +154,6 @@ void EmptyLinkFunctionForGeneratedCodeGauge() {}
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UGauge_Statics::NewProp_ExBarColor = { "ExBarColor", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGauge, ExBarColor), Z_Construct_UScriptStruct_FLinearColor, METADATA_PARAMS(Z_Construct_UClass_UGauge_Statics::NewProp_ExBarColor_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGauge_Statics::NewProp_ExBarColor_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGauge_Statics::NewProp_HPBar_MetaData[] = {
-		{ "BindWidget", "" },
-		{ "Category", "UI" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Gauge.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UGauge_Statics::NewProp_HPBar = { "HPBar", nullptr, (EPropertyFlags)0x001000000008001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGauge, HPBar), Z_Construct_UClass_UGauge_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UGauge_Statics::NewProp_HPBar_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGauge_Statics::NewProp_HPBar_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGauge_Statics::NewProp_ResourceBar_MetaData[] = {
-		{ "BindWidget", "" },
-		{ "Category", "UI" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Gauge.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UGauge_Statics::NewProp_ResourceBar = { "ResourceBar", nullptr, (EPropertyFlags)0x001000000008001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGauge, ResourceBar), Z_Construct_UClass_UGauge_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UGauge_Statics::NewProp_ResourceBar_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGauge_Statics::NewProp_ResourceBar_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGauge_Statics::NewProp_ExpBar_MetaData[] = {
-		{ "BindWidget", "" },
-		{ "Category", "UI" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Gauge.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UGauge_Statics::NewProp_ExpBar = { "ExpBar", nullptr, (EPropertyFlags)0x001000000008001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGauge, ExpBar), Z_Construct_UClass_UGauge_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UGauge_Statics::NewProp_ExpBar_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGauge_Statics::NewProp_ExpBar_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UGauge_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGauge_Statics::NewProp_Text,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGauge_Statics::NewProp_GaugeBar,
@@ -203,9 +164,6 @@ void EmptyLinkFunctionForGeneratedCodeGauge() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGauge_Statics::NewProp_ResourceBarColor,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGauge_Statics::NewProp_ExpBarTex,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGauge_Statics::NewProp_ExBarColor,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGauge_Statics::NewProp_HPBar,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGauge_Statics::NewProp_ResourceBar,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGauge_Statics::NewProp_ExpBar,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UGauge_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UGauge>::IsAbstract,
@@ -234,7 +192,7 @@ void EmptyLinkFunctionForGeneratedCodeGauge() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UGauge, 2663598819);
+	IMPLEMENT_CLASS(UGauge, 598491270);
 	template<> UESTUDYFORMMO_API UClass* StaticClass<UGauge>()
 	{
 		return UGauge::StaticClass();
