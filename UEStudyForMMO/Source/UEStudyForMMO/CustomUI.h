@@ -15,7 +15,7 @@ class UESTUDYFORMMO_API UCustomUI : public UUserWidget
 	GENERATED_BODY()
 
 public:
-	UCustomUI();
+	UCustomUI(const FObjectInitializer& ObjectInitializer);
 
 	virtual void Init();
 

@@ -3,7 +3,7 @@
 
 #include "CustomUI.h"
 
-UCustomUI::UCustomUI()
+UCustomUI::UCustomUI(const FObjectInitializer& ObjectInitializer) :Super(ObjectInitializer)
 {
 
 }

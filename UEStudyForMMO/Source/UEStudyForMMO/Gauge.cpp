@@ -29,25 +29,6 @@ void UGauge::Init()
 		}
 	}
 
-	////HP
-	//HPBar->Player = this->Player;
-	//HPBar->SetType(EGaugeType::Gauge_HP);
-	//HPBar->SetColor(HPBarColor);
-	////if (HPBarTex) HPBar->SetTexture(HPBarTex);
-
-	////Resource
-	//ResourceBar->Player = this->Player;
-	//ResourceBar->SetType(EGaugeType::Gauge_Resource);
-	//ResourceBar->SetColor(ResourceBarColor);
-	////if (ResourceBarTex)
-	//	//ResourceBar->SetTexture(ResourceBarTex);
-
-	////Exp
-	//ExpBar->Player = this->Player;
-	//ExpBar->SetType(EGaugeType::Gauge_Exp);
-	//ExpBar->SetColor(ExBarColor);
-
-
 }
 
 void UGauge::SetType(EGaugeType type)
@@ -70,8 +51,8 @@ void UGauge::SetTexture(UTextrue2D* Tex)
 {
 	if (Tex == nullptr) return;
 	
-	GaugeBar->WidgetStyle.BackgroundImage.SetResourceObject((UObject*)Tex);
-	GaugeBar->WidgetStyle.FillImage.SetResourceObject((UObject*)Tex);
+	GaugeBar->WidgetStyle.BackgroundImage.SetResourceObject(Tex);
+	GaugeBar->WidgetStyle.FillImage.SetResourceObject(Tex);
 }
 
 void UGauge::ChangeText(int cur, int max)

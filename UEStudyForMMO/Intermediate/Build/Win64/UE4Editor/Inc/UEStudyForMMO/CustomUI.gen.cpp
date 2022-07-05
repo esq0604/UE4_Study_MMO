@@ -43,6 +43,7 @@ void EmptyLinkFunctionForGeneratedCodeCustomUI() {}
 		{ "Comment", "/**\n * \n */" },
 		{ "IncludePath", "CustomUI.h" },
 		{ "ModuleRelativePath", "CustomUI.h" },
+		{ "ObjectInitializerConstructorDeclared", "" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UCustomUI_Statics::StaticCppClassTypeInfo = {
@@ -72,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeCustomUI() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UCustomUI, 3691590956);
+	IMPLEMENT_CLASS(UCustomUI, 865915342);
 	template<> UESTUDYFORMMO_API UClass* StaticClass<UCustomUI>()
 	{
 		return UCustomUI::StaticClass();

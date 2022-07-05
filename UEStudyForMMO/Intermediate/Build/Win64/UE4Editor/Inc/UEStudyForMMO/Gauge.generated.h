@@ -21,7 +21,7 @@ private: \
 	static void StaticRegisterNativesUGauge(); \
 	friend struct Z_Construct_UClass_UGauge_Statics; \
 public: \
-	DECLARE_CLASS(UGauge, UUserWidget, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/UEStudyForMMO"), NO_API) \
+	DECLARE_CLASS(UGauge, UCustomUI, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/UEStudyForMMO"), NO_API) \
 	DECLARE_SERIALIZER(UGauge)
 
 
@@ -30,7 +30,7 @@ private: \
 	static void StaticRegisterNativesUGauge(); \
 	friend struct Z_Construct_UClass_UGauge_Statics; \
 public: \
-	DECLARE_CLASS(UGauge, UUserWidget, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/UEStudyForMMO"), NO_API) \
+	DECLARE_CLASS(UGauge, UCustomUI, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/UEStudyForMMO"), NO_API) \
 	DECLARE_SERIALIZER(UGauge)
 
 
