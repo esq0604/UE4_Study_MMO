@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "UEStudyForMMO/MoneyAutoPickup.h"
+#include "UEStudyForMMO/Public/MoneyAutoPickup.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -46,13 +46,13 @@ void EmptyLinkFunctionForGeneratedCodeMoneyAutoPickup() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMoneyAutoPickup_Statics::Class_MetaDataParams[] = {
 		{ "IncludePath", "MoneyAutoPickup.h" },
-		{ "ModuleRelativePath", "MoneyAutoPickup.h" },
+		{ "ModuleRelativePath", "Public/MoneyAutoPickup.h" },
 	};
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMoneyAutoPickup_Statics::NewProp_Value_MetaData[] = {
 		{ "Category", "MoneyAutoPickup" },
-		{ "ModuleRelativePath", "MoneyAutoPickup.h" },
+		{ "ModuleRelativePath", "Public/MoneyAutoPickup.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UClass_AMoneyAutoPickup_Statics::NewProp_Value = { "Value", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMoneyAutoPickup, Value), METADATA_PARAMS(Z_Construct_UClass_AMoneyAutoPickup_Statics::NewProp_Value_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMoneyAutoPickup_Statics::NewProp_Value_MetaData)) };
@@ -86,7 +86,7 @@ void EmptyLinkFunctionForGeneratedCodeMoneyAutoPickup() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AMoneyAutoPickup, 1839121285);
+	IMPLEMENT_CLASS(AMoneyAutoPickup, 2954177576);
 	template<> UESTUDYFORMMO_API UClass* StaticClass<AMoneyAutoPickup>()
 	{
 		return AMoneyAutoPickup::StaticClass();

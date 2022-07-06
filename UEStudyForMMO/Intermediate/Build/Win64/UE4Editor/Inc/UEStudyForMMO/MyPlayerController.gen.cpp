@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "UEStudyForMMO/MyPlayerController.h"
+#include "UEStudyForMMO/Public/MyPlayerController.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -78,7 +78,7 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayerController() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMyPlayerController_AddItemToInventoryByID_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Utils" },
-		{ "ModuleRelativePath", "MyPlayerController.h" },
+		{ "ModuleRelativePath", "Public/MyPlayerController.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AMyPlayerController_AddItemToInventoryByID_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMyPlayerController, nullptr, "AddItemToInventoryByID", nullptr, nullptr, sizeof(MyPlayerController_eventAddItemToInventoryByID_Parms), Z_Construct_UFunction_AMyPlayerController_AddItemToInventoryByID_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AMyPlayerController_AddItemToInventoryByID_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMyPlayerController_AddItemToInventoryByID_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMyPlayerController_AddItemToInventoryByID_Statics::Function_MetaDataParams)) };
@@ -111,7 +111,7 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayerController() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMyPlayerController_GetInventoryWeight_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Utils" },
-		{ "ModuleRelativePath", "MyPlayerController.h" },
+		{ "ModuleRelativePath", "Public/MyPlayerController.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AMyPlayerController_GetInventoryWeight_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMyPlayerController, nullptr, "GetInventoryWeight", nullptr, nullptr, sizeof(MyPlayerController_eventGetInventoryWeight_Parms), Z_Construct_UFunction_AMyPlayerController_GetInventoryWeight_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AMyPlayerController_GetInventoryWeight_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMyPlayerController_GetInventoryWeight_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMyPlayerController_GetInventoryWeight_Statics::Function_MetaDataParams)) };
@@ -133,7 +133,7 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayerController() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMyPlayerController_ReloadInventory_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "MyPlayerController.h" },
+		{ "ModuleRelativePath", "Public/MyPlayerController.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AMyPlayerController_ReloadInventory_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMyPlayerController, nullptr, "ReloadInventory", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMyPlayerController_ReloadInventory_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMyPlayerController_ReloadInventory_Statics::Function_MetaDataParams)) };
@@ -187,21 +187,21 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayerController() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_UEStudyForMMO,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AMyPlayerController_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_AMyPlayerController_AddItemToInventoryByID, "AddItemToInventoryByID" }, // 916746941
-		{ &Z_Construct_UFunction_AMyPlayerController_GetInventoryWeight, "GetInventoryWeight" }, // 1773632595
-		{ &Z_Construct_UFunction_AMyPlayerController_ReloadInventory, "ReloadInventory" }, // 3627928719
+		{ &Z_Construct_UFunction_AMyPlayerController_AddItemToInventoryByID, "AddItemToInventoryByID" }, // 1434066738
+		{ &Z_Construct_UFunction_AMyPlayerController_GetInventoryWeight, "GetInventoryWeight" }, // 3802413969
+		{ &Z_Construct_UFunction_AMyPlayerController_ReloadInventory, "ReloadInventory" }, // 326495126
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyPlayerController_Statics::Class_MetaDataParams[] = {
 		{ "HideCategories", "Collision Rendering Utilities|Transformation" },
 		{ "IncludePath", "MyPlayerController.h" },
-		{ "ModuleRelativePath", "MyPlayerController.h" },
+		{ "ModuleRelativePath", "Public/MyPlayerController.h" },
 	};
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyPlayerController_Statics::NewProp_CurrentInteractable_MetaData[] = {
 		{ "Category", "MyPlayerController" },
-		{ "ModuleRelativePath", "MyPlayerController.h" },
+		{ "ModuleRelativePath", "Public/MyPlayerController.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMyPlayerController_Statics::NewProp_CurrentInteractable = { "CurrentInteractable", nullptr, (EPropertyFlags)0x0010000000020005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyPlayerController, CurrentInteractable), Z_Construct_UClass_AInteractable_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AMyPlayerController_Statics::NewProp_CurrentInteractable_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMyPlayerController_Statics::NewProp_CurrentInteractable_MetaData)) };
@@ -209,28 +209,28 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayerController() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyPlayerController_Statics::NewProp_Inventory_MetaData[] = {
 		{ "Category", "MyPlayerController" },
-		{ "ModuleRelativePath", "MyPlayerController.h" },
+		{ "ModuleRelativePath", "Public/MyPlayerController.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_AMyPlayerController_Statics::NewProp_Inventory = { "Inventory", nullptr, (EPropertyFlags)0x0010000000020005, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyPlayerController, Inventory), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_AMyPlayerController_Statics::NewProp_Inventory_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMyPlayerController_Statics::NewProp_Inventory_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyPlayerController_Statics::NewProp_Money_MetaData[] = {
 		{ "Category", "MyPlayerController" },
-		{ "ModuleRelativePath", "MyPlayerController.h" },
+		{ "ModuleRelativePath", "Public/MyPlayerController.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UClass_AMyPlayerController_Statics::NewProp_Money = { "Money", nullptr, (EPropertyFlags)0x0010000000020005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyPlayerController, Money), METADATA_PARAMS(Z_Construct_UClass_AMyPlayerController_Statics::NewProp_Money_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMyPlayerController_Statics::NewProp_Money_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyPlayerController_Statics::NewProp_InventorySlotLimit_MetaData[] = {
 		{ "Category", "MyPlayerController" },
-		{ "ModuleRelativePath", "MyPlayerController.h" },
+		{ "ModuleRelativePath", "Public/MyPlayerController.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UClass_AMyPlayerController_Statics::NewProp_InventorySlotLimit = { "InventorySlotLimit", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyPlayerController, InventorySlotLimit), METADATA_PARAMS(Z_Construct_UClass_AMyPlayerController_Statics::NewProp_InventorySlotLimit_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMyPlayerController_Statics::NewProp_InventorySlotLimit_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyPlayerController_Statics::NewProp_InventoryWeightLimit_MetaData[] = {
 		{ "Category", "MyPlayerController" },
-		{ "ModuleRelativePath", "MyPlayerController.h" },
+		{ "ModuleRelativePath", "Public/MyPlayerController.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UClass_AMyPlayerController_Statics::NewProp_InventoryWeightLimit = { "InventoryWeightLimit", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyPlayerController, InventoryWeightLimit), METADATA_PARAMS(Z_Construct_UClass_AMyPlayerController_Statics::NewProp_InventoryWeightLimit_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMyPlayerController_Statics::NewProp_InventoryWeightLimit_MetaData)) };
@@ -269,7 +269,7 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayerController() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AMyPlayerController, 3453026366);
+	IMPLEMENT_CLASS(AMyPlayerController, 3239435254);
 	template<> UESTUDYFORMMO_API UClass* StaticClass<AMyPlayerController>()
 	{
 		return AMyPlayerController::StaticClass();

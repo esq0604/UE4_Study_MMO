@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "UEStudyForMMO/FireBallMovement.h"
+#include "UEStudyForMMO/Public/FireBallMovement.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -42,7 +42,7 @@ void EmptyLinkFunctionForGeneratedCodeFireBallMovement() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UFireBallMovement_Statics::Class_MetaDataParams[] = {
 		{ "Comment", "/**\n * \n */" },
 		{ "IncludePath", "FireBallMovement.h" },
-		{ "ModuleRelativePath", "FireBallMovement.h" },
+		{ "ModuleRelativePath", "Public/FireBallMovement.h" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UFireBallMovement_Statics::StaticCppClassTypeInfo = {
@@ -72,7 +72,7 @@ void EmptyLinkFunctionForGeneratedCodeFireBallMovement() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UFireBallMovement, 3563915637);
+	IMPLEMENT_CLASS(UFireBallMovement, 1752678621);
 	template<> UESTUDYFORMMO_API UClass* StaticClass<UFireBallMovement>()
 	{
 		return UFireBallMovement::StaticClass();

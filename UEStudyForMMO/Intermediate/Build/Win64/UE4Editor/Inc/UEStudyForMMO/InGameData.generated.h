@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define UESTUDYFORMMO_InGameData_generated_h
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID UEStudyForMMO_Source_UEStudyForMMO_InGameData_h
+#define CURRENT_FILE_ID UEStudyForMMO_Source_UEStudyForMMO_Public_InGameData_h
 
 
 #define FOREACH_ENUM_EGAUGETYPE(op) \

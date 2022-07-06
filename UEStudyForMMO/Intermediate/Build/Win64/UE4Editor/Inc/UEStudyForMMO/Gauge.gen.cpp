@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "UEStudyForMMO/Gauge.h"
+#include "UEStudyForMMO/Public/Gauge.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -58,7 +58,7 @@ void EmptyLinkFunctionForGeneratedCodeGauge() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGauge_Statics::Class_MetaDataParams[] = {
 		{ "Comment", "/**\n * \n */" },
 		{ "IncludePath", "Gauge.h" },
-		{ "ModuleRelativePath", "Gauge.h" },
+		{ "ModuleRelativePath", "Public/Gauge.h" },
 	};
 #endif
 #if WITH_METADATA
@@ -66,7 +66,7 @@ void EmptyLinkFunctionForGeneratedCodeGauge() {}
 		{ "BindWidget", "" },
 		{ "Category", "Gauge" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Gauge.h" },
+		{ "ModuleRelativePath", "Public/Gauge.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UGauge_Statics::NewProp_Text = { "Text", nullptr, (EPropertyFlags)0x001000000008000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGauge, Text), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UGauge_Statics::NewProp_Text_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGauge_Statics::NewProp_Text_MetaData)) };
@@ -75,14 +75,14 @@ void EmptyLinkFunctionForGeneratedCodeGauge() {}
 		{ "BindWidget", "" },
 		{ "Category", "Gauge" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Gauge.h" },
+		{ "ModuleRelativePath", "Public/Gauge.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UGauge_Statics::NewProp_GaugeBar = { "GaugeBar", nullptr, (EPropertyFlags)0x001000000008000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGauge, GaugeBar), Z_Construct_UClass_UProgressBar_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UGauge_Statics::NewProp_GaugeBar_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGauge_Statics::NewProp_GaugeBar_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGauge_Statics::NewProp_Type_MetaData[] = {
 		{ "Category", "Gauge" },
-		{ "ModuleRelativePath", "Gauge.h" },
+		{ "ModuleRelativePath", "Public/Gauge.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_UGauge_Statics::NewProp_Type = { "Type", nullptr, (EPropertyFlags)0x0010000000020005, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGauge, Type), Z_Construct_UEnum_UEStudyForMMO_EGaugeType, METADATA_PARAMS(Z_Construct_UClass_UGauge_Statics::NewProp_Type_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGauge_Statics::NewProp_Type_MetaData)) };
@@ -118,7 +118,7 @@ void EmptyLinkFunctionForGeneratedCodeGauge() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UGauge, 1288636710);
+	IMPLEMENT_CLASS(UGauge, 3541288513);
 	template<> UESTUDYFORMMO_API UClass* StaticClass<UGauge>()
 	{
 		return UGauge::StaticClass();

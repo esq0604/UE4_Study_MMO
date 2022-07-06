@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "UEStudyForMMO/MyGameStateBase.h"
+#include "UEStudyForMMO/Public/MyGameStateBase.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -49,14 +49,14 @@ void EmptyLinkFunctionForGeneratedCodeMyGameStateBase() {}
 		{ "Comment", "/**\n * \n */" },
 		{ "HideCategories", "Input Movement Collision Rendering Utilities|Transformation" },
 		{ "IncludePath", "MyGameStateBase.h" },
-		{ "ModuleRelativePath", "MyGameStateBase.h" },
+		{ "ModuleRelativePath", "Public/MyGameStateBase.h" },
 		{ "ShowCategories", "Input|MouseInput Input|TouchInput" },
 	};
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyGameStateBase_Statics::NewProp_ItemDB_MetaData[] = {
 		{ "Category", "MyGameStateBase" },
-		{ "ModuleRelativePath", "MyGameStateBase.h" },
+		{ "ModuleRelativePath", "Public/MyGameStateBase.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMyGameStateBase_Statics::NewProp_ItemDB = { "ItemDB", nullptr, (EPropertyFlags)0x0020080000010001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyGameStateBase, ItemDB), Z_Construct_UClass_UDataTable_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AMyGameStateBase_Statics::NewProp_ItemDB_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMyGameStateBase_Statics::NewProp_ItemDB_MetaData)) };
@@ -90,7 +90,7 @@ void EmptyLinkFunctionForGeneratedCodeMyGameStateBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AMyGameStateBase, 3441205361);
+	IMPLEMENT_CLASS(AMyGameStateBase, 941489378);
 	template<> UESTUDYFORMMO_API UClass* StaticClass<AMyGameStateBase>()
 	{
 		return AMyGameStateBase::StaticClass();

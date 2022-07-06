@@ -13,7 +13,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define UESTUDYFORMMO_FInvenItem_generated_h
 
-#define UEStudyForMMO_Source_UEStudyForMMO_FInvenItem_h_13_GENERATED_BODY \
+#define UEStudyForMMO_Source_UEStudyForMMO_Public_FInvenItem_h_13_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FInvenItem_Statics; \
 	UESTUDYFORMMO_API static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;
@@ -22,7 +22,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 template<> UESTUDYFORMMO_API UScriptStruct* StaticStruct<struct FInvenItem>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID UEStudyForMMO_Source_UEStudyForMMO_FInvenItem_h
+#define CURRENT_FILE_ID UEStudyForMMO_Source_UEStudyForMMO_Public_FInvenItem_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

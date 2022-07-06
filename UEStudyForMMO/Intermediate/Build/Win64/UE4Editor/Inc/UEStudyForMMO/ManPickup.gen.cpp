@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "UEStudyForMMO/ManPickup.h"
+#include "UEStudyForMMO/Public/ManPickup.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -52,21 +52,21 @@ void EmptyLinkFunctionForGeneratedCodeManPickup() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AManPickup_Statics::Class_MetaDataParams[] = {
 		{ "Comment", "/**\n * \n */" },
 		{ "IncludePath", "ManPickup.h" },
-		{ "ModuleRelativePath", "ManPickup.h" },
+		{ "ModuleRelativePath", "Public/ManPickup.h" },
 	};
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AManPickup_Statics::NewProp_PickupMesh_MetaData[] = {
 		{ "Category", "ManPickup" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "ManPickup.h" },
+		{ "ModuleRelativePath", "Public/ManPickup.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AManPickup_Statics::NewProp_PickupMesh = { "PickupMesh", nullptr, (EPropertyFlags)0x0020080000080009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AManPickup, PickupMesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AManPickup_Statics::NewProp_PickupMesh_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AManPickup_Statics::NewProp_PickupMesh_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AManPickup_Statics::NewProp_ItemID_MetaData[] = {
 		{ "Category", "ManPickup" },
-		{ "ModuleRelativePath", "ManPickup.h" },
+		{ "ModuleRelativePath", "Public/ManPickup.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UClass_AManPickup_Statics::NewProp_ItemID = { "ItemID", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AManPickup, ItemID), METADATA_PARAMS(Z_Construct_UClass_AManPickup_Statics::NewProp_ItemID_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AManPickup_Statics::NewProp_ItemID_MetaData)) };
@@ -101,7 +101,7 @@ void EmptyLinkFunctionForGeneratedCodeManPickup() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AManPickup, 2706183964);
+	IMPLEMENT_CLASS(AManPickup, 40957607);
 	template<> UESTUDYFORMMO_API UClass* StaticClass<AManPickup>()
 	{
 		return AManPickup::StaticClass();

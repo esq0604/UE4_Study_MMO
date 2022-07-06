@@ -32,6 +32,7 @@
 /wd4244
 /wd4838
 /I .
+/I C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Source\UEStudyForMMO\Private
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\Engine
 /I Runtime
 /I Runtime\Engine\Classes
@@ -233,6 +234,7 @@
 /I Runtime\ClothingSystemRuntimeInterface\Public
 /I C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Inc\UEStudyForMMO
 /I C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Source
+/I C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Source\UEStudyForMMO\Public
 /I ThirdParty\PhysX3\PxShared\include
 /I ThirdParty\PhysX3\PxShared\include\cudamanager
 /I ThirdParty\PhysX3\PxShared\include\filebuf
@@ -265,7 +267,7 @@
 /FI"C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UEStudyForMMOEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
 /Yu"C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UEStudyForMMOEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
 /Fp"C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UEStudyForMMOEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
-"C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Source\UEStudyForMMO\Interactable.cpp"
+"C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Source\UEStudyForMMO\Private\Interactable.cpp"
 /FI"C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\Definitions.UEStudyForMMO.h"
 /Fo"C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\Interactable.cpp.obj"
 /TP

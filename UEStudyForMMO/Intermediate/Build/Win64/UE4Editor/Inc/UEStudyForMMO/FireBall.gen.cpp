@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "UEStudyForMMO/FireBall.h"
+#include "UEStudyForMMO/Public/FireBall.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -62,7 +62,7 @@ void EmptyLinkFunctionForGeneratedCodeFireBall() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFireBall_Statics::Class_MetaDataParams[] = {
 		{ "IncludePath", "FireBall.h" },
-		{ "ModuleRelativePath", "FireBall.h" },
+		{ "ModuleRelativePath", "Public/FireBall.h" },
 	};
 #endif
 #if WITH_METADATA
@@ -70,7 +70,7 @@ void EmptyLinkFunctionForGeneratedCodeFireBall() {}
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Collision" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "FireBall.h" },
+		{ "ModuleRelativePath", "Public/FireBall.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AFireBall_Statics::NewProp_CollisionComponent = { "CollisionComponent", nullptr, (EPropertyFlags)0x00100000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFireBall, CollisionComponent), Z_Construct_UClass_USphereComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AFireBall_Statics::NewProp_CollisionComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AFireBall_Statics::NewProp_CollisionComponent_MetaData)) };
@@ -79,7 +79,7 @@ void EmptyLinkFunctionForGeneratedCodeFireBall() {}
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Projectile" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "FireBall.h" },
+		{ "ModuleRelativePath", "Public/FireBall.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AFireBall_Statics::NewProp_FireBallMovementComponent = { "FireBallMovementComponent", nullptr, (EPropertyFlags)0x00100000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFireBall, FireBallMovementComponent), Z_Construct_UClass_UProjectileMovementComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AFireBall_Statics::NewProp_FireBallMovementComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AFireBall_Statics::NewProp_FireBallMovementComponent_MetaData)) };
@@ -89,7 +89,7 @@ void EmptyLinkFunctionForGeneratedCodeFireBall() {}
 		{ "Category", "Mesh" },
 		{ "Comment", "// ????\xc6\xbd ?\xde\xbd?\n" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "FireBall.h" },
+		{ "ModuleRelativePath", "Public/FireBall.h" },
 		{ "ToolTip", "????\xc6\xbd ?\xde\xbd?" },
 	};
 #endif
@@ -99,7 +99,7 @@ void EmptyLinkFunctionForGeneratedCodeFireBall() {}
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Particle" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "FireBall.h" },
+		{ "ModuleRelativePath", "Public/FireBall.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AFireBall_Statics::NewProp_Particle = { "Particle", nullptr, (EPropertyFlags)0x00100000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFireBall, Particle), Z_Construct_UClass_UParticleSystemComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AFireBall_Statics::NewProp_Particle_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AFireBall_Statics::NewProp_Particle_MetaData)) };
@@ -136,7 +136,7 @@ void EmptyLinkFunctionForGeneratedCodeFireBall() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AFireBall, 2364985781);
+	IMPLEMENT_CLASS(AFireBall, 1552069547);
 	template<> UESTUDYFORMMO_API UClass* StaticClass<AFireBall>()
 	{
 		return AFireBall::StaticClass();

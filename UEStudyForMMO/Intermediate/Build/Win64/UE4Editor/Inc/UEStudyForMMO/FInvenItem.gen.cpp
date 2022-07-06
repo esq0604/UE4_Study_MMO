@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "UEStudyForMMO/FInvenItem.h"
+#include "UEStudyForMMO/Public/FInvenItem.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -79,7 +79,7 @@ static struct FScriptStruct_UEStudyForMMO_StaticRegisterNativesFInvenItem
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FInvenItem_Statics::Struct_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
-		{ "ModuleRelativePath", "FInvenItem.h" },
+		{ "ModuleRelativePath", "Public/FInvenItem.h" },
 	};
 #endif
 	void* Z_Construct_UScriptStruct_FInvenItem_Statics::NewStructOps()
@@ -89,42 +89,42 @@ static struct FScriptStruct_UEStudyForMMO_StaticRegisterNativesFInvenItem
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FInvenItem_Statics::NewProp_ItemID_MetaData[] = {
 		{ "Category", "InvenItem" },
-		{ "ModuleRelativePath", "FInvenItem.h" },
+		{ "ModuleRelativePath", "Public/FInvenItem.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FInvenItem_Statics::NewProp_ItemID = { "ItemID", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FInvenItem, ItemID), METADATA_PARAMS(Z_Construct_UScriptStruct_FInvenItem_Statics::NewProp_ItemID_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FInvenItem_Statics::NewProp_ItemID_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FInvenItem_Statics::NewProp_Name_MetaData[] = {
 		{ "Category", "InvenItem" },
-		{ "ModuleRelativePath", "FInvenItem.h" },
+		{ "ModuleRelativePath", "Public/FInvenItem.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FTextPropertyParams Z_Construct_UScriptStruct_FInvenItem_Statics::NewProp_Name = { "Name", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Text, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FInvenItem, Name), METADATA_PARAMS(Z_Construct_UScriptStruct_FInvenItem_Statics::NewProp_Name_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FInvenItem_Statics::NewProp_Name_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FInvenItem_Statics::NewProp_Weight_MetaData[] = {
 		{ "Category", "InvenItem" },
-		{ "ModuleRelativePath", "FInvenItem.h" },
+		{ "ModuleRelativePath", "Public/FInvenItem.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FInvenItem_Statics::NewProp_Weight = { "Weight", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FInvenItem, Weight), METADATA_PARAMS(Z_Construct_UScriptStruct_FInvenItem_Statics::NewProp_Weight_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FInvenItem_Statics::NewProp_Weight_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FInvenItem_Statics::NewProp_Value_MetaData[] = {
 		{ "Category", "InvenItem" },
-		{ "ModuleRelativePath", "FInvenItem.h" },
+		{ "ModuleRelativePath", "Public/FInvenItem.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FInvenItem_Statics::NewProp_Value = { "Value", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FInvenItem, Value), METADATA_PARAMS(Z_Construct_UScriptStruct_FInvenItem_Statics::NewProp_Value_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FInvenItem_Statics::NewProp_Value_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FInvenItem_Statics::NewProp_Thumbnail_MetaData[] = {
 		{ "Category", "InvenItem" },
-		{ "ModuleRelativePath", "FInvenItem.h" },
+		{ "ModuleRelativePath", "Public/FInvenItem.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UScriptStruct_FInvenItem_Statics::NewProp_Thumbnail = { "Thumbnail", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FInvenItem, Thumbnail), Z_Construct_UClass_UTexture2D_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FInvenItem_Statics::NewProp_Thumbnail_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FInvenItem_Statics::NewProp_Thumbnail_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FInvenItem_Statics::NewProp_Description_MetaData[] = {
 		{ "Category", "InvenItem" },
-		{ "ModuleRelativePath", "FInvenItem.h" },
+		{ "ModuleRelativePath", "Public/FInvenItem.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FTextPropertyParams Z_Construct_UScriptStruct_FInvenItem_Statics::NewProp_Description = { "Description", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Text, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FInvenItem, Description), METADATA_PARAMS(Z_Construct_UScriptStruct_FInvenItem_Statics::NewProp_Description_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FInvenItem_Statics::NewProp_Description_MetaData)) };
@@ -164,7 +164,7 @@ static struct FScriptStruct_UEStudyForMMO_StaticRegisterNativesFInvenItem
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FInvenItem_Hash() { return 2401225190U; }
+	uint32 Get_Z_Construct_UScriptStruct_FInvenItem_Hash() { return 4031259846U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

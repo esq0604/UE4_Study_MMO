@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "UEStudyForMMO/GameUI.h"
+#include "UEStudyForMMO/Public/GameUI.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -81,49 +81,49 @@ void EmptyLinkFunctionForGeneratedCodeGameUI() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGameUI_Statics::Class_MetaDataParams[] = {
 		{ "IncludePath", "GameUI.h" },
-		{ "ModuleRelativePath", "GameUI.h" },
+		{ "ModuleRelativePath", "Public/GameUI.h" },
 		{ "ObjectInitializerConstructorDeclared", "" },
 	};
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGameUI_Statics::NewProp_HPBarTex_MetaData[] = {
 		{ "Category", "ProgressBarData" },
-		{ "ModuleRelativePath", "GameUI.h" },
+		{ "ModuleRelativePath", "Public/GameUI.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UGameUI_Statics::NewProp_HPBarTex = { "HPBarTex", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGameUI, HPBarTex), Z_Construct_UClass_UTexture2D_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UGameUI_Statics::NewProp_HPBarTex_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGameUI_Statics::NewProp_HPBarTex_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGameUI_Statics::NewProp_HPBarColor_MetaData[] = {
 		{ "Category", "ProgressBarData" },
-		{ "ModuleRelativePath", "GameUI.h" },
+		{ "ModuleRelativePath", "Public/GameUI.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UGameUI_Statics::NewProp_HPBarColor = { "HPBarColor", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGameUI, HPBarColor), Z_Construct_UScriptStruct_FLinearColor, METADATA_PARAMS(Z_Construct_UClass_UGameUI_Statics::NewProp_HPBarColor_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGameUI_Statics::NewProp_HPBarColor_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGameUI_Statics::NewProp_ResourceBarTex_MetaData[] = {
 		{ "Category", "ProgressBarData" },
-		{ "ModuleRelativePath", "GameUI.h" },
+		{ "ModuleRelativePath", "Public/GameUI.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UGameUI_Statics::NewProp_ResourceBarTex = { "ResourceBarTex", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGameUI, ResourceBarTex), Z_Construct_UClass_UTexture2D_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UGameUI_Statics::NewProp_ResourceBarTex_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGameUI_Statics::NewProp_ResourceBarTex_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGameUI_Statics::NewProp_ResourceBarColor_MetaData[] = {
 		{ "Category", "ProgressBarData" },
-		{ "ModuleRelativePath", "GameUI.h" },
+		{ "ModuleRelativePath", "Public/GameUI.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UGameUI_Statics::NewProp_ResourceBarColor = { "ResourceBarColor", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGameUI, ResourceBarColor), Z_Construct_UScriptStruct_FLinearColor, METADATA_PARAMS(Z_Construct_UClass_UGameUI_Statics::NewProp_ResourceBarColor_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGameUI_Statics::NewProp_ResourceBarColor_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGameUI_Statics::NewProp_ExpBarTex_MetaData[] = {
 		{ "Category", "ProgressBarData" },
-		{ "ModuleRelativePath", "GameUI.h" },
+		{ "ModuleRelativePath", "Public/GameUI.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UGameUI_Statics::NewProp_ExpBarTex = { "ExpBarTex", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGameUI, ExpBarTex), Z_Construct_UClass_UTexture2D_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UGameUI_Statics::NewProp_ExpBarTex_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGameUI_Statics::NewProp_ExpBarTex_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGameUI_Statics::NewProp_ExBarColor_MetaData[] = {
 		{ "Category", "ProgressBarData" },
-		{ "ModuleRelativePath", "GameUI.h" },
+		{ "ModuleRelativePath", "Public/GameUI.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UGameUI_Statics::NewProp_ExBarColor = { "ExBarColor", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGameUI, ExBarColor), Z_Construct_UScriptStruct_FLinearColor, METADATA_PARAMS(Z_Construct_UClass_UGameUI_Statics::NewProp_ExBarColor_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGameUI_Statics::NewProp_ExBarColor_MetaData)) };
@@ -132,7 +132,7 @@ void EmptyLinkFunctionForGeneratedCodeGameUI() {}
 		{ "BindWidget", "" },
 		{ "Category", "UI" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "GameUI.h" },
+		{ "ModuleRelativePath", "Public/GameUI.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UGameUI_Statics::NewProp_HPBar = { "HPBar", nullptr, (EPropertyFlags)0x001000000008001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGameUI, HPBar), Z_Construct_UClass_UGauge_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UGameUI_Statics::NewProp_HPBar_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGameUI_Statics::NewProp_HPBar_MetaData)) };
@@ -141,7 +141,7 @@ void EmptyLinkFunctionForGeneratedCodeGameUI() {}
 		{ "BindWidget", "" },
 		{ "Category", "UI" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "GameUI.h" },
+		{ "ModuleRelativePath", "Public/GameUI.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UGameUI_Statics::NewProp_ResourceBar = { "ResourceBar", nullptr, (EPropertyFlags)0x001000000008001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGameUI, ResourceBar), Z_Construct_UClass_UGauge_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UGameUI_Statics::NewProp_ResourceBar_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGameUI_Statics::NewProp_ResourceBar_MetaData)) };
@@ -150,7 +150,7 @@ void EmptyLinkFunctionForGeneratedCodeGameUI() {}
 		{ "BindWidget", "" },
 		{ "Category", "UI" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "GameUI.h" },
+		{ "ModuleRelativePath", "Public/GameUI.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UGameUI_Statics::NewProp_ExpBar = { "ExpBar", nullptr, (EPropertyFlags)0x001000000008001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGameUI, ExpBar), Z_Construct_UClass_UGauge_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UGameUI_Statics::NewProp_ExpBar_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGameUI_Statics::NewProp_ExpBar_MetaData)) };
@@ -192,7 +192,7 @@ void EmptyLinkFunctionForGeneratedCodeGameUI() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UGameUI, 2722352333);
+	IMPLEMENT_CLASS(UGameUI, 717503153);
 	template<> UESTUDYFORMMO_API UClass* StaticClass<UGameUI>()
 	{
 		return UGameUI::StaticClass();

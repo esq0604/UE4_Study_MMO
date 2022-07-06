@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\UEStudyForMMO.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{7934E73A-BD84-409C-9793-953382548690}</UniqueIdentifier>
+      <UniqueIdentifier>{E372C6F7-D035-4577-9C28-4BA9CEF76A34}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\UEStudyForMMO.Target.cs">
       <Filter>Source</Filter>
@@ -13,7 +13,7 @@
     </None>
     <None Include="..\..\AncientTreasures.png" />
     <Filter Include="Config">
-      <UniqueIdentifier>{5AE160E5-7543-4884-939B-B1E27DD1C9C0}</UniqueIdentifier>
+      <UniqueIdentifier>{4AB0E2ED-83EA-4D96-8C6C-07E947F35E98}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -31,118 +31,124 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\UEStudyForMMO">
-      <UniqueIdentifier>{DC3C9436-A443-4D83-BDDD-D161C6A7E240}</UniqueIdentifier>
+      <UniqueIdentifier>{CB08EA9C-11A0-487F-A67E-B1C99AA7B98E}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\UEStudyForMMO\AutoPickup.cpp">
-      <Filter>Source\UEStudyForMMO</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\UEStudyForMMO\AutoPickup.h">
-      <Filter>Source\UEStudyForMMO</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\UEStudyForMMO\CustomUI.cpp">
-      <Filter>Source\UEStudyForMMO</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\UEStudyForMMO\CustomUI.h">
-      <Filter>Source\UEStudyForMMO</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\UEStudyForMMO\FInvenItem.cpp">
-      <Filter>Source\UEStudyForMMO</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\UEStudyForMMO\FInvenItem.h">
-      <Filter>Source\UEStudyForMMO</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\UEStudyForMMO\FireBall.cpp">
-      <Filter>Source\UEStudyForMMO</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\UEStudyForMMO\FireBall.h">
-      <Filter>Source\UEStudyForMMO</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\UEStudyForMMO\FireBallMovement.cpp">
-      <Filter>Source\UEStudyForMMO</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\UEStudyForMMO\FireBallMovement.h">
-      <Filter>Source\UEStudyForMMO</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\UEStudyForMMO\GameUI.cpp">
-      <Filter>Source\UEStudyForMMO</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\UEStudyForMMO\GameUI.h">
-      <Filter>Source\UEStudyForMMO</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\UEStudyForMMO\Gauge.cpp">
-      <Filter>Source\UEStudyForMMO</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\UEStudyForMMO\Gauge.h">
-      <Filter>Source\UEStudyForMMO</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\UEStudyForMMO\InGameData.cpp">
-      <Filter>Source\UEStudyForMMO</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\UEStudyForMMO\InGameData.h">
-      <Filter>Source\UEStudyForMMO</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\UEStudyForMMO\Interactable.cpp">
-      <Filter>Source\UEStudyForMMO</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\UEStudyForMMO\Interactable.h">
-      <Filter>Source\UEStudyForMMO</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\UEStudyForMMO\ManPickup.cpp">
-      <Filter>Source\UEStudyForMMO</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\UEStudyForMMO\ManPickup.h">
-      <Filter>Source\UEStudyForMMO</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\UEStudyForMMO\MoneyAutoPickup.cpp">
-      <Filter>Source\UEStudyForMMO</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\UEStudyForMMO\MoneyAutoPickup.h">
-      <Filter>Source\UEStudyForMMO</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\UEStudyForMMO\MyAnimInstance.cpp">
-      <Filter>Source\UEStudyForMMO</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\UEStudyForMMO\MyAnimInstance.h">
-      <Filter>Source\UEStudyForMMO</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\UEStudyForMMO\MyCharacter.cpp">
-      <Filter>Source\UEStudyForMMO</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\UEStudyForMMO\MyCharacter.h">
-      <Filter>Source\UEStudyForMMO</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\UEStudyForMMO\MyGameModeBase.cpp">
-      <Filter>Source\UEStudyForMMO</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\UEStudyForMMO\MyGameModeBase.h">
-      <Filter>Source\UEStudyForMMO</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\UEStudyForMMO\MyGameStateBase.cpp">
-      <Filter>Source\UEStudyForMMO</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\UEStudyForMMO\MyGameStateBase.h">
-      <Filter>Source\UEStudyForMMO</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\UEStudyForMMO\MyPlayerController.cpp">
-      <Filter>Source\UEStudyForMMO</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\UEStudyForMMO\MyPlayerController.h">
-      <Filter>Source\UEStudyForMMO</Filter>
-    </ClInclude>
     <None Include="..\..\Source\UEStudyForMMO\UEStudyForMMO.Build.cs">
       <Filter>Source\UEStudyForMMO</Filter>
     </None>
-    <ClCompile Include="..\..\Source\UEStudyForMMO\UEStudyForMMO.cpp">
-      <Filter>Source\UEStudyForMMO</Filter>
+    <Filter Include="Source\UEStudyForMMO\Private">
+      <UniqueIdentifier>{A895E718-7AEA-408F-BD17-8FF8C48C8417}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\UEStudyForMMO\Private\AutoPickup.cpp">
+      <Filter>Source\UEStudyForMMO\Private</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\UEStudyForMMO\UEStudyForMMO.h">
-      <Filter>Source\UEStudyForMMO</Filter>
+    <ClCompile Include="..\..\Source\UEStudyForMMO\Private\CustomUI.cpp">
+      <Filter>Source\UEStudyForMMO\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\UEStudyForMMO\Private\FInvenItem.cpp">
+      <Filter>Source\UEStudyForMMO\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\UEStudyForMMO\Private\FireBall.cpp">
+      <Filter>Source\UEStudyForMMO\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\UEStudyForMMO\Private\FireBallMovement.cpp">
+      <Filter>Source\UEStudyForMMO\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\UEStudyForMMO\Private\GameUI.cpp">
+      <Filter>Source\UEStudyForMMO\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\UEStudyForMMO\Private\Gauge.cpp">
+      <Filter>Source\UEStudyForMMO\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\UEStudyForMMO\Private\InGameData.cpp">
+      <Filter>Source\UEStudyForMMO\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\UEStudyForMMO\Private\Interactable.cpp">
+      <Filter>Source\UEStudyForMMO\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\UEStudyForMMO\Private\ManPickup.cpp">
+      <Filter>Source\UEStudyForMMO\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\UEStudyForMMO\Private\MoneyAutoPickup.cpp">
+      <Filter>Source\UEStudyForMMO\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\UEStudyForMMO\Private\MyAnimInstance.cpp">
+      <Filter>Source\UEStudyForMMO\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\UEStudyForMMO\Private\MyCharacter.cpp">
+      <Filter>Source\UEStudyForMMO\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\UEStudyForMMO\Private\MyGameModeBase.cpp">
+      <Filter>Source\UEStudyForMMO\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\UEStudyForMMO\Private\MyGameStateBase.cpp">
+      <Filter>Source\UEStudyForMMO\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\UEStudyForMMO\Private\MyPlayerController.cpp">
+      <Filter>Source\UEStudyForMMO\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\UEStudyForMMO\Private\UEStudyForMMO.cpp">
+      <Filter>Source\UEStudyForMMO\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\UEStudyForMMO\Private\Weapon.cpp">
+      <Filter>Source\UEStudyForMMO\Private</Filter>
+    </ClCompile>
+    <Filter Include="Source\UEStudyForMMO\Public">
+      <UniqueIdentifier>{7C13573E-AD0D-4AEB-B853-F6B525D077B6}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\UEStudyForMMO\Public\AutoPickup.h">
+      <Filter>Source\UEStudyForMMO\Public</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\UEStudyForMMO\Weapon.cpp">
-      <Filter>Source\UEStudyForMMO</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\UEStudyForMMO\Weapon.h">
-      <Filter>Source\UEStudyForMMO</Filter>
+    <ClInclude Include="..\..\Source\UEStudyForMMO\Public\CustomUI.h">
+      <Filter>Source\UEStudyForMMO\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\UEStudyForMMO\Public\FInvenItem.h">
+      <Filter>Source\UEStudyForMMO\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\UEStudyForMMO\Public\FireBall.h">
+      <Filter>Source\UEStudyForMMO\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\UEStudyForMMO\Public\FireBallMovement.h">
+      <Filter>Source\UEStudyForMMO\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\UEStudyForMMO\Public\GameUI.h">
+      <Filter>Source\UEStudyForMMO\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\UEStudyForMMO\Public\Gauge.h">
+      <Filter>Source\UEStudyForMMO\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\UEStudyForMMO\Public\InGameData.h">
+      <Filter>Source\UEStudyForMMO\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\UEStudyForMMO\Public\Interactable.h">
+      <Filter>Source\UEStudyForMMO\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\UEStudyForMMO\Public\ManPickup.h">
+      <Filter>Source\UEStudyForMMO\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\UEStudyForMMO\Public\MoneyAutoPickup.h">
+      <Filter>Source\UEStudyForMMO\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\UEStudyForMMO\Public\MyAnimInstance.h">
+      <Filter>Source\UEStudyForMMO\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\UEStudyForMMO\Public\MyCharacter.h">
+      <Filter>Source\UEStudyForMMO\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\UEStudyForMMO\Public\MyGameModeBase.h">
+      <Filter>Source\UEStudyForMMO\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\UEStudyForMMO\Public\MyGameStateBase.h">
+      <Filter>Source\UEStudyForMMO\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\UEStudyForMMO\Public\MyPlayerController.h">
+      <Filter>Source\UEStudyForMMO\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\UEStudyForMMO\Public\UEStudyForMMO.h">
+      <Filter>Source\UEStudyForMMO\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\UEStudyForMMO\Public\Weapon.h">
+      <Filter>Source\UEStudyForMMO\Public</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

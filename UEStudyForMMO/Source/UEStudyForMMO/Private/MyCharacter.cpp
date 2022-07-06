@@ -1,0 +1,247 @@
+// Fill out your copyright notice in the Description page of Project Settings.
+
+
+#include "MyCharacter.h"
+#include "MyAnimInstance.h"
+#include "FireBall.h"
+#include "Components/WidgetComponent.h"
+#include "Interactable.h"
+#include "AutoPickup.h"
+#include "FInvenItem.h"
+#include "MyPlayerController.h"
+
+// Sets default values
+AMyCharacter::AMyCharacter()
+{
+ 	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	PrimaryActorTick.bCanEverTick = true;
+	GetWizardMesh();
+	GetWeaponMesh();
+	SetSpringArmComponent();
+	SetCameraComponent();
+	GetAnimInstance();
+	GetFireBallBP();
+
+	//AbilityInit();
+	AbilityInit();
+
+	/// Create the collection sphere
+
+	CollectionSphere = CreateDefaultSubobject<USphereComponent>(TEXT("CollectionSphere"));
+	CollectionSphere->SetupAttachment(RootComponent);
+	CollectionSphere->SetSphereRadius(200.f);
+
+}
+
+// Called when the game starts or when spawned
+void AMyCharacter::BeginPlay()
+{
+	Super::BeginPlay();
+	
+
+	if (GameUIClass != nullptr)
+	{
+		APlayerController* con = Cast<APlayerController>(Controller);
+			if (con == nullptr) 
+				return;
+			GameUIWidget = CreateWidget<UGameUI>(con, GameUIClass);
+			GameUIWidget->Player = this;
+			GameUIWidget->Init();
+			//GameUIWidget->AddToViewport();
+	}
+}
+
+// Called every frame
+void AMyCharacter::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+	CollectAutoPickups();
+	CheckForInteractables();           
+}
+
+// Called to bind functionality to input
+void AMyCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
+{
+	Super::SetupPlayerInputComponent(PlayerInputComponent);
+	//캐릭터 움직임 바인딩 
+	PlayerInputComponent->BindAxis(TEXT("UpDown"), this, &AMyCharacter::UpDown);
+	PlayerInputComponent->BindAxis(TEXT("LeftRight"), this, &AMyCharacter::LeftRight);
+	PlayerInputComponent->BindAction(TEXT("Attack"),EInputEvent::IE_Pressed, this, &AMyCharacter::Attack);
+
+	//카메라 움직임 바인딩 
+	PlayerInputComponent->BindAxis(TEXT("Turn"), this, &AMyCharacter::AddControllerYawInput);
+	PlayerInputComponent->BindAxis("LookUp", this, &APawn::AddControllerPitchInput);
+
+}
+
+void AMyCharacter::GetAnimInstance()
+{
+	GetMesh()->SetAnimationMode(EAnimationMode::AnimationBlueprint);
+
+	static ConstructorHelpers::FClassFinder<UAnimInstance> Wizard_Anim(TEXT("/Game/BattleWizardPolyart/Animations/WizardAnim.WizardAnim_C"));
+
+	if (Wizard_Anim.Succeeded())
+	{
+		GetMesh()->SetAnimInstanceClass(Wizard_Anim.Class);
+	}
+}
+
+void AMyCharacter::Attack()
+{
+	UE_LOG(LogTemp, Warning, TEXT("Attack"));
+
+	PlayMontage();
+	FireBallSpwan();
+}
+
+void AMyCharacter::AbilityInit()
+{
+	Ability.MaxHP = 2000.0f;
+	Ability.CurrentHP = 2000.0f;
+	Ability.MaxResource = 1000.0f;
+	Ability.CurrentResource = 1000.0f;
+	Ability.MaxExp = 20.0f;
+	Ability.CurrentExp = 0.0f;
+}
+
+void AMyCharacter::UpDown(float NewAxisValue)
+{
+	AddMovementInput(GetActorForwardVector(), NewAxisValue);
+}
+
+void AMyCharacter::LeftRight(float NewAxisValue)
+{
+	AddMovementInput(GetActorRightVector(), NewAxisValue);
+}
+
+void AMyCharacter::GetWizardMesh()
+{
+	GetMesh()->SetRelativeLocationAndRotation(FVector(0.0f, 0.0f, -88.0f), FRotator(0.0f, -90.0f, 0.0f));
+	static ConstructorHelpers::FObjectFinder<USkeletalMesh> Wizrd(TEXT("/Game/BattleWizardPolyart/Meshes/WizardSM.WizardSM"));
+	if (Wizrd.Succeeded())
+	{
+		GetMesh()->SetSkeletalMesh(Wizrd.Object);
+	}
+}
+
+void AMyCharacter::GetWeaponMesh()
+{
+	FName WeaponSocket(TEXT("WeaponSocket"));
+	if (GetMesh()->DoesSocketExist(WeaponSocket))
+	{
+		UE_LOG(LogTemp,Warning,TEXT("WeaponSocket is exist"))
+		Weapon = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("WEAPON"));
+		static ConstructorHelpers::FObjectFinder<UStaticMesh> WZ_WEAPON(TEXT("/Game/BattleWizardPolyart/Meshes/MagicStaffs/Staff01SM.Staff01SM"));
+		if (WZ_WEAPON.Succeeded())
+		{
+			Weapon->SetStaticMesh(WZ_WEAPON.Object);
+		}
+		Weapon->SetupAttachment(GetMesh(), WeaponSocket);
+	}
+}
+
+void AMyCharacter::SetSpringArmComponent()
+{
+	SpringArm=CreateDefaultSubobject<USpringArmComponent>(TEXT("SPRINGARM"));
+	SpringArm->SetupAttachment(GetCapsuleComponent());
+	SpringArm->bUsePawnControlRotation = true;
+	SpringArm->bInheritYaw = true;
+	SpringArm->TargetArmLength = 800.0f;
+	SpringArm->SetRelativeRotation(FRotator(-15.0f, 0.0f, 0.0f));
+}
+
+void AMyCharacter::SetCameraComponent()
+{
+	Camera=CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
+	Camera->SetupAttachment(SpringArm);
+}
+
+void AMyCharacter::GetFireBallBP()
+{
+	static ConstructorHelpers::FClassFinder<AFireBall> FireBallAsset(TEXT("/Game/Blueprint/MyFireBall.MyFireBall_C"));
+	if (FireBallAsset.Succeeded())
+		FireBallClass = FireBallAsset.Class;
+}
+
+void AMyCharacter::FireBallSpwan()
+{
+	FVector vPos = GetActorLocation() + GetActorForwardVector() * 100.0f;
+	FActorSpawnParameters params;
+	params.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn;
+
+	AFireBall* FireBall = GetWorld()->SpawnActor<AFireBall>(FireBallClass, vPos, GetActorRotation(), params);
+	UE_LOG(LogTemp, Warning, TEXT("Spawn Fire"));
+}
+
+void AMyCharacter::PlayMontage()
+{
+	auto AnimInstance = Cast<UMyAnimInstance>(GetMesh()->GetAnimInstance());
+	if (nullptr == AnimInstance)
+	{
+		return;
+	}
+	AnimInstance->PlayAttackMontage();
+
+}
+
+void AMyCharacter::CollectAutoPickups()
+{
+	// 겹치는 모든 액터를 가져와서 배열에 저장합니다.
+	TArray<AActor*> CollectedActors;
+	CollectionSphere->GetOverlappingActors(CollectedActors);
+
+	AMyPlayerController* IController = Cast<AMyPlayerController>(GetController());
+
+	// For each collected Actor
+	for (int32 iColleted = 0; iColleted < CollectedActors.Num(); ++iColleted)
+	{
+		// Cast the actor to AAutoPickup
+		AAutoPickup* const TestPickup = Cast<AAutoPickup>(CollectedActors[iColleted]);
+		
+		// 캐스트가 성공하고 픽업이 유효하고 활성화된 경우
+		if (TestPickup && !TestPickup->IsPendingKill())
+		{
+			TestPickup->Collect(IController);
+		}
+	}
+
+}
+
+void AMyCharacter::CheckForInteractables()
+{
+	// 히트를 확인하기 위해 LineTrace를 만듭니다.
+	FHitResult HitResult;
+
+	int32 Range = 1500;
+
+	FVector StartTrace = Camera->GetComponentLocation();
+	FVector EndTrace = (Camera->GetForwardVector() * Range) + StartTrace;
+	
+	//FVector StartTrace = GetActorForwardVector();
+	//FVector EndTrace = (GetActorForwardVector() * Range) + StartTrace;
+	DrawDebugLine(GetWorld(), StartTrace, EndTrace,FColor::Green,false);
+	
+	FCollisionQueryParams QueryParams;
+	QueryParams.AddIgnoredActor(this);
+
+	AMyPlayerController* IController = Cast<AMyPlayerController>(GetController());
+
+	if (IController)
+	{
+		//Check if something is hit
+		if (GetWorld()->LineTraceSingleByChannel(HitResult, StartTrace, EndTrace, ECC_Visibility, QueryParams))
+		{
+			//Cast ths actor to Ainteractable
+			AInteractable* Interactable = Cast<AInteractable>(HitResult.GetActor());
+			
+			if (Interactable)
+			{
+				IController->CurrentInteractable = Interactable;
+				return;
+			}
+		}
+
+		IController->CurrentInteractable = nullptr;
+	}
+}
+

@@ -13,10 +13,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define UESTUDYFORMMO_MyGameStateBase_generated_h
 
-#define UEStudyForMMO_Source_UEStudyForMMO_MyGameStateBase_h_15_SPARSE_DATA
-#define UEStudyForMMO_Source_UEStudyForMMO_MyGameStateBase_h_15_RPC_WRAPPERS
-#define UEStudyForMMO_Source_UEStudyForMMO_MyGameStateBase_h_15_RPC_WRAPPERS_NO_PURE_DECLS
-#define UEStudyForMMO_Source_UEStudyForMMO_MyGameStateBase_h_15_INCLASS_NO_PURE_DECLS \
+#define UEStudyForMMO_Source_UEStudyForMMO_Public_MyGameStateBase_h_15_SPARSE_DATA
+#define UEStudyForMMO_Source_UEStudyForMMO_Public_MyGameStateBase_h_15_RPC_WRAPPERS
+#define UEStudyForMMO_Source_UEStudyForMMO_Public_MyGameStateBase_h_15_RPC_WRAPPERS_NO_PURE_DECLS
+#define UEStudyForMMO_Source_UEStudyForMMO_Public_MyGameStateBase_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAMyGameStateBase(); \
 	friend struct Z_Construct_UClass_AMyGameStateBase_Statics; \
@@ -25,7 +25,7 @@ public: \
 	DECLARE_SERIALIZER(AMyGameStateBase)
 
 
-#define UEStudyForMMO_Source_UEStudyForMMO_MyGameStateBase_h_15_INCLASS \
+#define UEStudyForMMO_Source_UEStudyForMMO_Public_MyGameStateBase_h_15_INCLASS \
 private: \
 	static void StaticRegisterNativesAMyGameStateBase(); \
 	friend struct Z_Construct_UClass_AMyGameStateBase_Statics; \
@@ -34,7 +34,7 @@ public: \
 	DECLARE_SERIALIZER(AMyGameStateBase)
 
 
-#define UEStudyForMMO_Source_UEStudyForMMO_MyGameStateBase_h_15_STANDARD_CONSTRUCTORS \
+#define UEStudyForMMO_Source_UEStudyForMMO_Public_MyGameStateBase_h_15_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AMyGameStateBase(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AMyGameStateBase) \
@@ -47,7 +47,7 @@ private: \
 public:
 
 
-#define UEStudyForMMO_Source_UEStudyForMMO_MyGameStateBase_h_15_ENHANCED_CONSTRUCTORS \
+#define UEStudyForMMO_Source_UEStudyForMMO_Public_MyGameStateBase_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AMyGameStateBase(AMyGameStateBase&&); \
@@ -58,31 +58,31 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AMyGameStateBase)
 
 
-#define UEStudyForMMO_Source_UEStudyForMMO_MyGameStateBase_h_15_PRIVATE_PROPERTY_OFFSET \
+#define UEStudyForMMO_Source_UEStudyForMMO_Public_MyGameStateBase_h_15_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__ItemDB() { return STRUCT_OFFSET(AMyGameStateBase, ItemDB); }
 
 
-#define UEStudyForMMO_Source_UEStudyForMMO_MyGameStateBase_h_12_PROLOG
-#define UEStudyForMMO_Source_UEStudyForMMO_MyGameStateBase_h_15_GENERATED_BODY_LEGACY \
+#define UEStudyForMMO_Source_UEStudyForMMO_Public_MyGameStateBase_h_12_PROLOG
+#define UEStudyForMMO_Source_UEStudyForMMO_Public_MyGameStateBase_h_15_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	UEStudyForMMO_Source_UEStudyForMMO_MyGameStateBase_h_15_PRIVATE_PROPERTY_OFFSET \
-	UEStudyForMMO_Source_UEStudyForMMO_MyGameStateBase_h_15_SPARSE_DATA \
-	UEStudyForMMO_Source_UEStudyForMMO_MyGameStateBase_h_15_RPC_WRAPPERS \
-	UEStudyForMMO_Source_UEStudyForMMO_MyGameStateBase_h_15_INCLASS \
-	UEStudyForMMO_Source_UEStudyForMMO_MyGameStateBase_h_15_STANDARD_CONSTRUCTORS \
+	UEStudyForMMO_Source_UEStudyForMMO_Public_MyGameStateBase_h_15_PRIVATE_PROPERTY_OFFSET \
+	UEStudyForMMO_Source_UEStudyForMMO_Public_MyGameStateBase_h_15_SPARSE_DATA \
+	UEStudyForMMO_Source_UEStudyForMMO_Public_MyGameStateBase_h_15_RPC_WRAPPERS \
+	UEStudyForMMO_Source_UEStudyForMMO_Public_MyGameStateBase_h_15_INCLASS \
+	UEStudyForMMO_Source_UEStudyForMMO_Public_MyGameStateBase_h_15_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define UEStudyForMMO_Source_UEStudyForMMO_MyGameStateBase_h_15_GENERATED_BODY \
+#define UEStudyForMMO_Source_UEStudyForMMO_Public_MyGameStateBase_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	UEStudyForMMO_Source_UEStudyForMMO_MyGameStateBase_h_15_PRIVATE_PROPERTY_OFFSET \
-	UEStudyForMMO_Source_UEStudyForMMO_MyGameStateBase_h_15_SPARSE_DATA \
-	UEStudyForMMO_Source_UEStudyForMMO_MyGameStateBase_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	UEStudyForMMO_Source_UEStudyForMMO_MyGameStateBase_h_15_INCLASS_NO_PURE_DECLS \
-	UEStudyForMMO_Source_UEStudyForMMO_MyGameStateBase_h_15_ENHANCED_CONSTRUCTORS \
+	UEStudyForMMO_Source_UEStudyForMMO_Public_MyGameStateBase_h_15_PRIVATE_PROPERTY_OFFSET \
+	UEStudyForMMO_Source_UEStudyForMMO_Public_MyGameStateBase_h_15_SPARSE_DATA \
+	UEStudyForMMO_Source_UEStudyForMMO_Public_MyGameStateBase_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	UEStudyForMMO_Source_UEStudyForMMO_Public_MyGameStateBase_h_15_INCLASS_NO_PURE_DECLS \
+	UEStudyForMMO_Source_UEStudyForMMO_Public_MyGameStateBase_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -90,7 +90,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> UESTUDYFORMMO_API UClass* StaticClass<class AMyGameStateBase>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID UEStudyForMMO_Source_UEStudyForMMO_MyGameStateBase_h
+#define CURRENT_FILE_ID UEStudyForMMO_Source_UEStudyForMMO_Public_MyGameStateBase_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

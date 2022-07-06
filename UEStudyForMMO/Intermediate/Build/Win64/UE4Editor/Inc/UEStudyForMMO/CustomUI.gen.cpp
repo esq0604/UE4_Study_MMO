@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "UEStudyForMMO/CustomUI.h"
+#include "UEStudyForMMO/Public/CustomUI.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -42,7 +42,7 @@ void EmptyLinkFunctionForGeneratedCodeCustomUI() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCustomUI_Statics::Class_MetaDataParams[] = {
 		{ "Comment", "/**\n * \n */" },
 		{ "IncludePath", "CustomUI.h" },
-		{ "ModuleRelativePath", "CustomUI.h" },
+		{ "ModuleRelativePath", "Public/CustomUI.h" },
 		{ "ObjectInitializerConstructorDeclared", "" },
 	};
 #endif
@@ -73,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeCustomUI() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UCustomUI, 865915342);
+	IMPLEMENT_CLASS(UCustomUI, 2589640955);
 	template<> UESTUDYFORMMO_API UClass* StaticClass<UCustomUI>()
 	{
 		return UCustomUI::StaticClass();

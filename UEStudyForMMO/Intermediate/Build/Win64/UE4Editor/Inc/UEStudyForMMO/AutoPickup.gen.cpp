@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "UEStudyForMMO/AutoPickup.h"
+#include "UEStudyForMMO/Public/AutoPickup.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -58,7 +58,7 @@ void EmptyLinkFunctionForGeneratedCodeAutoPickup() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AAutoPickup_Collect_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "AutoPickup.h" },
+		{ "ModuleRelativePath", "Public/AutoPickup.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AAutoPickup_Collect_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AAutoPickup, nullptr, "Collect", nullptr, nullptr, sizeof(AutoPickup_eventCollect_Parms), Z_Construct_UFunction_AAutoPickup_Collect_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AAutoPickup_Collect_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020C00, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AAutoPickup_Collect_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AAutoPickup_Collect_Statics::Function_MetaDataParams)) };
@@ -99,26 +99,26 @@ void EmptyLinkFunctionForGeneratedCodeAutoPickup() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_UEStudyForMMO,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AAutoPickup_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_AAutoPickup_Collect, "Collect" }, // 4222939258
+		{ &Z_Construct_UFunction_AAutoPickup_Collect, "Collect" }, // 1122965562
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAutoPickup_Statics::Class_MetaDataParams[] = {
 		{ "IncludePath", "AutoPickup.h" },
-		{ "ModuleRelativePath", "AutoPickup.h" },
+		{ "ModuleRelativePath", "Public/AutoPickup.h" },
 	};
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAutoPickup_Statics::NewProp_PickupMesh_MetaData[] = {
 		{ "Category", "AutoPickup" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "AutoPickup.h" },
+		{ "ModuleRelativePath", "Public/AutoPickup.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AAutoPickup_Statics::NewProp_PickupMesh = { "PickupMesh", nullptr, (EPropertyFlags)0x0020080000080009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAutoPickup, PickupMesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AAutoPickup_Statics::NewProp_PickupMesh_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAutoPickup_Statics::NewProp_PickupMesh_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAutoPickup_Statics::NewProp_ItemID_MetaData[] = {
 		{ "Category", "AutoPickup" },
-		{ "ModuleRelativePath", "AutoPickup.h" },
+		{ "ModuleRelativePath", "Public/AutoPickup.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UClass_AAutoPickup_Statics::NewProp_ItemID = { "ItemID", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAutoPickup, ItemID), METADATA_PARAMS(Z_Construct_UClass_AAutoPickup_Statics::NewProp_ItemID_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAutoPickup_Statics::NewProp_ItemID_MetaData)) };
@@ -153,7 +153,7 @@ void EmptyLinkFunctionForGeneratedCodeAutoPickup() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAutoPickup, 3112986192);
+	IMPLEMENT_CLASS(AAutoPickup, 17787068);
 	template<> UESTUDYFORMMO_API UClass* StaticClass<AAutoPickup>()
 	{
 		return AAutoPickup::StaticClass();
