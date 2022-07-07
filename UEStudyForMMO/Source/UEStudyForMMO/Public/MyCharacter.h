@@ -89,7 +89,7 @@ public:
 	UPROPERTY(EditAnywhere)
 		FAbility Ability;
 
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "UI")
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "UI")
 		TSubclassOf<UGameUI> GameUIClass;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "UI")

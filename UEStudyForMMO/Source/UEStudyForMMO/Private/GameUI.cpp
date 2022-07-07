@@ -7,7 +7,7 @@
 
 UGameUI::UGameUI(const FObjectInitializer& ObjectInitializer) :Super(ObjectInitializer)
 {
-	
+
 }
 
 void UGameUI::Init()
