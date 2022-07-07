@@ -779,13 +779,5 @@ C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Source\UEStudyForMMO\Public\MyAnimIns
 C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Inc\UEStudyForMMO\MyAnimInstance.generated.h
 C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Source\UEStudyForMMO\Public\FireBall.h
 C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Inc\UEStudyForMMO\FireBall.generated.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\UMG\Public\Components/WidgetComponent.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\WidgetComponent.generated.h
-C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Source\UEStudyForMMO\Public\Interactable.h
-C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Inc\UEStudyForMMO\Interactable.generated.h
-C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Source\UEStudyForMMO\Public\AutoPickup.h
-C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Inc\UEStudyForMMO\AutoPickup.generated.h
-C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Source\UEStudyForMMO\Public\FInvenItem.h
-C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Inc\UEStudyForMMO\FInvenItem.generated.h
 C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Source\UEStudyForMMO\Public\MyPlayerController.h
 C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Inc\UEStudyForMMO\MyPlayerController.generated.h

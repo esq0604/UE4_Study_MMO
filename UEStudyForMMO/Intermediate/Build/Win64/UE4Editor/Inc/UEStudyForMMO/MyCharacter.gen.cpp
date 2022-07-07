@@ -21,7 +21,6 @@ void EmptyLinkFunctionForGeneratedCodeMyCharacter() {}
 	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
-	UMG_API UClass* Z_Construct_UClass_UWidgetComponent_NoRegister();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	UESTUDYFORMMO_API UClass* Z_Construct_UClass_AFireBall_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USphereComponent_NoRegister();
@@ -232,10 +231,6 @@ static struct FScriptStruct_UEStudyForMMO_StaticRegisterNativesFAbility
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Weapon;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_UI_Inventory_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_UI_Inventory;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FireBallClass_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FClassPropertyParams NewProp_FireBallClass;
@@ -298,14 +293,6 @@ static struct FScriptStruct_UEStudyForMMO_StaticRegisterNativesFAbility
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMyCharacter_Statics::NewProp_Weapon = { "Weapon", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyCharacter, Weapon), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AMyCharacter_Statics::NewProp_Weapon_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMyCharacter_Statics::NewProp_Weapon_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyCharacter_Statics::NewProp_UI_Inventory_MetaData[] = {
-		{ "Category", "UI" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/MyCharacter.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMyCharacter_Statics::NewProp_UI_Inventory = { "UI_Inventory", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyCharacter, UI_Inventory), Z_Construct_UClass_UWidgetComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AMyCharacter_Statics::NewProp_UI_Inventory_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMyCharacter_Statics::NewProp_UI_Inventory_MetaData)) };
-#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyCharacter_Statics::NewProp_FireBallClass_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "FireAttack" },
@@ -348,7 +335,6 @@ static struct FScriptStruct_UEStudyForMMO_StaticRegisterNativesFAbility
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyCharacter_Statics::NewProp_SpringArm,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyCharacter_Statics::NewProp_Camera,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyCharacter_Statics::NewProp_Weapon,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyCharacter_Statics::NewProp_UI_Inventory,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyCharacter_Statics::NewProp_FireBallClass,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyCharacter_Statics::NewProp_CollectionSphere,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyCharacter_Statics::NewProp_Ability,
@@ -382,7 +368,7 @@ static struct FScriptStruct_UEStudyForMMO_StaticRegisterNativesFAbility
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AMyCharacter, 947580679);
+	IMPLEMENT_CLASS(AMyCharacter, 195409725);
 	template<> UESTUDYFORMMO_API UClass* StaticClass<AMyCharacter>()
 	{
 		return AMyCharacter::StaticClass();

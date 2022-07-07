@@ -1,12 +1,5 @@
 C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\Definitions.UEStudyForMMO.h
 C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Source\UEStudyForMMO\Public\MyPlayerController.h
-C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Source\UEStudyForMMO\Public\FInvenItem.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/DataTable.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Public\DataTableUtils.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\DataTable.generated.h
-C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Inc\UEStudyForMMO\FInvenItem.generated.h
-C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Source\UEStudyForMMO\Public\Interactable.h
-C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Inc\UEStudyForMMO\Interactable.generated.h
 C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Inc\UEStudyForMMO\MyPlayerController.generated.h
 C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Source\UEStudyForMMO\Public\MyGameStateBase.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Public\Engine.h
@@ -424,6 +417,9 @@ C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Curves/
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CurveVector.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/CurveTable.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CurveTable.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Public\DataTableUtils.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/DataTable.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\DataTable.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Sound/DialogueVoice.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\DialogueVoice.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Sound/DialogueWave.h

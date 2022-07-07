@@ -4,10 +4,6 @@
 #include "MyCharacter.h"
 #include "MyAnimInstance.h"
 #include "FireBall.h"
-#include "Components/WidgetComponent.h"
-#include "Interactable.h"
-#include "AutoPickup.h"
-#include "FInvenItem.h"
 #include "MyPlayerController.h"
 
 // Sets default values
@@ -55,8 +51,6 @@ void AMyCharacter::BeginPlay()
 void AMyCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	CollectAutoPickups();
-	CheckForInteractables();           
 }
 
 // Called to bind functionality to input
@@ -184,64 +178,4 @@ void AMyCharacter::PlayMontage()
 
 }
 
-void AMyCharacter::CollectAutoPickups()
-{
-	// 겹치는 모든 액터를 가져와서 배열에 저장합니다.
-	TArray<AActor*> CollectedActors;
-	CollectionSphere->GetOverlappingActors(CollectedActors);
-
-	AMyPlayerController* IController = Cast<AMyPlayerController>(GetController());
-
-	// For each collected Actor
-	for (int32 iColleted = 0; iColleted < CollectedActors.Num(); ++iColleted)
-	{
-		// Cast the actor to AAutoPickup
-		AAutoPickup* const TestPickup = Cast<AAutoPickup>(CollectedActors[iColleted]);
-		
-		// 캐스트가 성공하고 픽업이 유효하고 활성화된 경우
-		if (TestPickup && !TestPickup->IsPendingKill())
-		{
-			TestPickup->Collect(IController);
-		}
-	}
-
-}
-
-void AMyCharacter::CheckForInteractables()
-{
-	// 히트를 확인하기 위해 LineTrace를 만듭니다.
-	FHitResult HitResult;
-
-	int32 Range = 1500;
-
-	FVector StartTrace = Camera->GetComponentLocation();
-	FVector EndTrace = (Camera->GetForwardVector() * Range) + StartTrace;
-	
-	//FVector StartTrace = GetActorForwardVector();
-	//FVector EndTrace = (GetActorForwardVector() * Range) + StartTrace;
-	DrawDebugLine(GetWorld(), StartTrace, EndTrace,FColor::Green,false);
-	
-	FCollisionQueryParams QueryParams;
-	QueryParams.AddIgnoredActor(this);
-
-	AMyPlayerController* IController = Cast<AMyPlayerController>(GetController());
-
-	if (IController)
-	{
-		//Check if something is hit
-		if (GetWorld()->LineTraceSingleByChannel(HitResult, StartTrace, EndTrace, ECC_Visibility, QueryParams))
-		{
-			//Cast ths actor to Ainteractable
-			AInteractable* Interactable = Cast<AInteractable>(HitResult.GetActor());
-			
-			if (Interactable)
-			{
-				IController->CurrentInteractable = Interactable;
-				return;
-			}
-		}
-
-		IController->CurrentInteractable = nullptr;
-	}
-}
 

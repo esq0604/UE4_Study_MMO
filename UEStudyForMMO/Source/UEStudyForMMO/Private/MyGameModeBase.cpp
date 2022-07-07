@@ -9,6 +9,4 @@ AMyGameModeBase::AMyGameModeBase()
 {
 	DefaultPawnClass = AMyCharacter::StaticClass();
 
-	static ConstructorHelpers::FObjectFinder<UBlueprint> PlayerControlerObject(TEXT("Blueprint'/Game/Blueprint/BP_MyPlayerController.BP_MyPlayerController'"));
-	PlayerControllerClass = (UClass*)PlayerControlerObject.Object->GeneratedClass;
 }

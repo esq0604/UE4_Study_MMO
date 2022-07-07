@@ -778,8 +778,4 @@ C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\In
 C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Inc\UEStudyForMMO\GameUI.generated.h
 C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Inc\UEStudyForMMO\MyCharacter.generated.h
 C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Source\UEStudyForMMO\Public\MyPlayerController.h
-C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Source\UEStudyForMMO\Public\FInvenItem.h
-C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Inc\UEStudyForMMO\FInvenItem.generated.h
-C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Source\UEStudyForMMO\Public\Interactable.h
-C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Inc\UEStudyForMMO\Interactable.generated.h
 C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Inc\UEStudyForMMO\MyPlayerController.generated.h

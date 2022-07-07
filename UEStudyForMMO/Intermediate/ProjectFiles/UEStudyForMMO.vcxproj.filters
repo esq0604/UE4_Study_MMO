@@ -39,13 +39,7 @@
     <Filter Include="Source\UEStudyForMMO\Private">
       <UniqueIdentifier>{A895E718-7AEA-408F-BD17-8FF8C48C8417}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\UEStudyForMMO\Private\AutoPickup.cpp">
-      <Filter>Source\UEStudyForMMO\Private</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Source\UEStudyForMMO\Private\CustomUI.cpp">
-      <Filter>Source\UEStudyForMMO\Private</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\UEStudyForMMO\Private\FInvenItem.cpp">
       <Filter>Source\UEStudyForMMO\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\UEStudyForMMO\Private\FireBall.cpp">
@@ -61,15 +55,6 @@
       <Filter>Source\UEStudyForMMO\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\UEStudyForMMO\Private\InGameData.cpp">
-      <Filter>Source\UEStudyForMMO\Private</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\UEStudyForMMO\Private\Interactable.cpp">
-      <Filter>Source\UEStudyForMMO\Private</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\UEStudyForMMO\Private\ManPickup.cpp">
-      <Filter>Source\UEStudyForMMO\Private</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\UEStudyForMMO\Private\MoneyAutoPickup.cpp">
       <Filter>Source\UEStudyForMMO\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\UEStudyForMMO\Private\MyAnimInstance.cpp">
@@ -96,13 +81,7 @@
     <Filter Include="Source\UEStudyForMMO\Public">
       <UniqueIdentifier>{7C13573E-AD0D-4AEB-B853-F6B525D077B6}</UniqueIdentifier>
     </Filter>
-    <ClInclude Include="..\..\Source\UEStudyForMMO\Public\AutoPickup.h">
-      <Filter>Source\UEStudyForMMO\Public</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\Source\UEStudyForMMO\Public\CustomUI.h">
-      <Filter>Source\UEStudyForMMO\Public</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\UEStudyForMMO\Public\FInvenItem.h">
       <Filter>Source\UEStudyForMMO\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\UEStudyForMMO\Public\FireBall.h">
@@ -118,15 +97,6 @@
       <Filter>Source\UEStudyForMMO\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\UEStudyForMMO\Public\InGameData.h">
-      <Filter>Source\UEStudyForMMO\Public</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\UEStudyForMMO\Public\Interactable.h">
-      <Filter>Source\UEStudyForMMO\Public</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\UEStudyForMMO\Public\ManPickup.h">
-      <Filter>Source\UEStudyForMMO\Public</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\UEStudyForMMO\Public\MoneyAutoPickup.h">
       <Filter>Source\UEStudyForMMO\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\UEStudyForMMO\Public\MyAnimInstance.h">

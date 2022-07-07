@@ -78,8 +78,6 @@ public:
 	UPROPERTY(VisibleAnywhere, Category = Weapon)
 		UStaticMeshComponent* Weapon;
 
-	UPROPERTY(VisibleAnywhere, Category = UI)
-		class UWidgetComponent* UI_Inventory;
 
 	UPROPERTY(Category = FireAttack, VisibleAnywhere, BlueprintReadOnly, Meta = (AllowPrivateAccess = "true"))
 		TSubclassOf<class AFireBall> FireBallClass; 
@@ -96,14 +94,6 @@ public:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "UI")
 		UGameUI* GameUIWidget;
-
-
-protected:
-	/** 범위 내의 모든 AutoPickup을 수집하는 기능  */
-	void CollectAutoPickups();
-
-	/** 시야와 범위 내에서 가장 가까운 Interactable을 확인하는 기능  */
-	void CheckForInteractables();
 
 };
 
