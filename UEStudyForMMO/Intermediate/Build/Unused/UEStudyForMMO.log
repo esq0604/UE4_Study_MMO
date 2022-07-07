@@ -1,12 +1,20 @@
-﻿  Using 'git status' to determine working set for adaptive non-unity build (C:\Users\user1\UE4_Study_MMO).
+﻿  Using 'git status' to determine working set for adaptive non-unity build (C:\Users\Administrator\UE4_Study_MMO).
+  Parsing headers for UEStudyForMMOEditor
+    Running UnrealHeaderTool "C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\UEStudyForMMO.uproject" "C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UEStudyForMMOEditor\Development\UEStudyForMMOEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\Administrator\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
+  LogInit: Display: Loading text-based GConfig....
+  Reflection code generated for UEStudyForMMOEditor in 11.9661615 seconds
   Building UEStudyForMMOEditor...
-  Using Visual Studio 2019 14.29.30137 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Building 4 actions with 16 processes...
-    [1/4] MyGameModeBase.cpp
-    [2/4] UE4Editor-UEStudyForMMO.lib
-       Creating library C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\UE4Editor-UEStudyForMMO.lib and object C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\UE4Editor-UEStudyForMMO.exp
-    [3/4] UE4Editor-UEStudyForMMO.dll
-       Creating library C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\UE4Editor-UEStudyForMMO.suppressed.lib and object C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\UE4Editor-UEStudyForMMO.suppressed.exp
-    [4/4] UEStudyForMMOEditor.target
-  Total time in Parallel executor: 8.00 seconds
-  Total execution time: 8.40 seconds
+  Using Visual Studio 2019 14.29.30138 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+  Building 7 actions with 6 processes...
+    [1/7] MyPlayerController.gen.cpp
+    [2/7] MyPlayerController.cpp
+    [3/7] MyGameModeBase.cpp
+    [4/7] MyCharacter.cpp
+    [5/7] UE4Editor-UEStudyForMMO-0009.lib
+       Creating library C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\UE4Editor-UEStudyForMMO-0009.lib and object C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\UE4Editor-UEStudyForMMO-0009.exp
+    [6/7] UE4Editor-UEStudyForMMO-0009.dll
+       Creating library C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\UE4Editor-UEStudyForMMO-0009.suppressed.lib and object C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\UE4Editor-UEStudyForMMO-0009.suppressed.exp
+MyPlayerController.cpp.obj : error LNK2001: unresolved external symbol "public: virtual void __cdecl AMyPlayerController::BeginPlay(void)" (?BeginPlay@AMyPlayerController@@UEAAXXZ)
+MyPlayerController.gen.cpp.obj : error LNK2001: unresolved external symbol "public: virtual void __cdecl AMyPlayerController::BeginPlay(void)" (?BeginPlay@AMyPlayerController@@UEAAXXZ)
+C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Binaries\Win64\UE4Editor-UEStudyForMMO-0009.dll : fatal error LNK1120: 1 unresolved externals
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.MakeFile.Targets(45,5): error MSB3073: The command ""C:\Program Files\Epic Games\UE_4.27\Engine\Build\BatchFiles\Build.bat" UEStudyForMMOEditor Win64 Development -Project="C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\UEStudyForMMO.uproject" -WaitMutex -FromMsBuild" exited with code 6.

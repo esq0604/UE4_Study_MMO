@@ -10,6 +10,7 @@
 
 void UGauge::Init()
 {
+	UE_LOG(LogTemp,Warning, TEXT("UGauge::Init"));
 	switch(Type)
 	{
 		case EGaugeType::Gauge_HP:

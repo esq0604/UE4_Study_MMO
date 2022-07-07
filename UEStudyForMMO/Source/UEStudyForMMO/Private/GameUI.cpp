@@ -12,6 +12,7 @@ UGameUI::UGameUI(const FObjectInitializer& ObjectInitializer) :Super(ObjectIniti
 
 void UGameUI::Init()
 {
+	UE_LOG(LogTemp, Warning, TEXT("UGameUI::Init()"));    
 	//HP Bar
 	HPBar->Player = this->Player;
 	HPBar->SetType(EGaugeType::Gauge_HP);

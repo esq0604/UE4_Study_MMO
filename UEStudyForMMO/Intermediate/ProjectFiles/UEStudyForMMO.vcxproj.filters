@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\UEStudyForMMO.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{E372C6F7-D035-4577-9C28-4BA9CEF76A34}</UniqueIdentifier>
+      <UniqueIdentifier>{B61B223B-5AEA-4821-BD77-A9D31ACEF1BF}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\UEStudyForMMO.Target.cs">
       <Filter>Source</Filter>
@@ -13,7 +13,7 @@
     </None>
     <None Include="..\..\AncientTreasures.png" />
     <Filter Include="Config">
-      <UniqueIdentifier>{4AB0E2ED-83EA-4D96-8C6C-07E947F35E98}</UniqueIdentifier>
+      <UniqueIdentifier>{12C97A2A-3320-4064-AF4F-3E625B870506}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -31,13 +31,13 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\UEStudyForMMO">
-      <UniqueIdentifier>{CB08EA9C-11A0-487F-A67E-B1C99AA7B98E}</UniqueIdentifier>
+      <UniqueIdentifier>{DA4C43F9-772D-47A2-989E-2B170A5FD915}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\UEStudyForMMO\UEStudyForMMO.Build.cs">
       <Filter>Source\UEStudyForMMO</Filter>
     </None>
     <Filter Include="Source\UEStudyForMMO\Private">
-      <UniqueIdentifier>{A895E718-7AEA-408F-BD17-8FF8C48C8417}</UniqueIdentifier>
+      <UniqueIdentifier>{5B74624D-21C6-4B83-9D89-39B608D4236F}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\UEStudyForMMO\Private\CustomUI.cpp">
       <Filter>Source\UEStudyForMMO\Private</Filter>
@@ -79,7 +79,7 @@
       <Filter>Source\UEStudyForMMO\Private</Filter>
     </ClCompile>
     <Filter Include="Source\UEStudyForMMO\Public">
-      <UniqueIdentifier>{7C13573E-AD0D-4AEB-B853-F6B525D077B6}</UniqueIdentifier>
+      <UniqueIdentifier>{E5903F64-73D5-4EF0-95FD-A7DAFE7C5A59}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\UEStudyForMMO\Public\CustomUI.h">
       <Filter>Source\UEStudyForMMO\Public</Filter>

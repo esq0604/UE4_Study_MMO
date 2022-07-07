@@ -30,7 +30,7 @@ void EmptyLinkFunctionForGeneratedCodeInGameData() {}
 		return EGaugeType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EGaugeType(EGaugeType_StaticEnum, TEXT("/Script/UEStudyForMMO"), TEXT("EGaugeType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_UEStudyForMMO_EGaugeType_Hash() { return 2209679088U; }
+	uint32 Get_Z_Construct_UEnum_UEStudyForMMO_EGaugeType_Hash() { return 700939629U; }
 	UEnum* Z_Construct_UEnum_UEStudyForMMO_EGaugeType()
 	{
 #if WITH_HOT_RELOAD
@@ -51,7 +51,7 @@ void EmptyLinkFunctionForGeneratedCodeInGameData() {}
 				{ "BlueprintType", "true" },
 				{ "Gauge_Exp.DisplayName", "Exp" },
 				{ "Gauge_Exp.Name", "Gauge_Exp" },
-				{ "Gauge_HP.DisplayName", "HP" },
+				{ "Gauge_HP.DisplayName", "HP_Enum" },
 				{ "Gauge_HP.Name", "Gauge_HP" },
 				{ "Gauge_Resource.DisplayName", "Resource" },
 				{ "Gauge_Resource.Name", "Gauge_Resource" },

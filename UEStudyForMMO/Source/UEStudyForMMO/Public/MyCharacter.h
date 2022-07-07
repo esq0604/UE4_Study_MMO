@@ -4,7 +4,6 @@
 
 #include "Engine.h"
 #include "GameFramework/Character.h"
-#include "GameUI.h"
 #include "MyCharacter.generated.h"
 
 
@@ -89,11 +88,6 @@ public:
 	UPROPERTY(EditAnywhere)
 		FAbility Ability;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "UI")
-		TSubclassOf<UGameUI> GameUIClass;
-
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "UI")
-		UGameUI* GameUIWidget;
 
 };
 

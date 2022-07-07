@@ -35,16 +35,6 @@ void AMyCharacter::BeginPlay()
 	Super::BeginPlay();
 	
 
-	if (GameUIClass != nullptr)
-	{
-		APlayerController* con = Cast<APlayerController>(Controller);
-			if (con == nullptr) 
-				return;
-			GameUIWidget = CreateWidget<UGameUI>(con, GameUIClass);
-			GameUIWidget->Player = this;
-			GameUIWidget->Init();
-			//GameUIWidget->AddToViewport();
-	}
 }
 
 // Called every frame

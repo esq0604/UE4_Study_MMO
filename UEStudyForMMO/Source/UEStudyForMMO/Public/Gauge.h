@@ -36,7 +36,7 @@ public:
 	UProgressBar* GaugeBar;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
-		TEnumAsByte<EGaugeType> Type;
+	TEnumAsByte<EGaugeType> Type;
 
 
 };
