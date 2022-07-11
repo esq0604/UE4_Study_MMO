@@ -5,7 +5,8 @@
 #include "MyAnimInstance.h"
 #include "FireBall.h"
 #include "MyPlayerController.h"
-
+#include "GameUI.h"
+#include "MyPlayerController.h"
 // Sets default values
 AMyCharacter::AMyCharacter()
 {
@@ -17,7 +18,7 @@ AMyCharacter::AMyCharacter()
 	SetCameraComponent();
 	GetAnimInstance();
 	GetFireBallBP();
-
+	GetGameUIBP();
 	//AbilityInit();
 	AbilityInit();
 
@@ -34,7 +35,24 @@ void AMyCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	UE_LOG(LogTemp, Warning, TEXT("Player - BeginPlay"))
 
+
+		if (GameUIWidget != nullptr)
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Character - CreateWidget"))
+				APlayerController* con = Cast<APlayerController>(AMyController);
+			if (con == nullptr)
+				return;
+			GameUIWidget = CreateWidget<UGameUI>(con, GameUIClass);
+			GameUIWidget->Player = this;
+			GameUIWidget->Init();
+			//GameUIWidget->AddToViewport();
+		}
+		else
+		{
+			UE_LOG(LogTemp, Warning, TEXT("GameUIWidget == nullptr"))
+		}
 }
 
 // Called every frame
@@ -145,6 +163,13 @@ void AMyCharacter::GetFireBallBP()
 	static ConstructorHelpers::FClassFinder<AFireBall> FireBallAsset(TEXT("/Game/Blueprint/MyFireBall.MyFireBall_C"));
 	if (FireBallAsset.Succeeded())
 		FireBallClass = FireBallAsset.Class;
+}
+
+void AMyCharacter::GetGameUIBP()
+{
+	static ConstructorHelpers::FClassFinder<UGameUI> BP_GameUI(TEXT("/Game/Blueprint/BP_GameUI.BP_GameUI_C"));
+	if (BP_GameUI.Succeeded())
+		GameUIClass = BP_GameUI.Class;
 }
 
 void AMyCharacter::FireBallSpwan()

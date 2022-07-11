@@ -6,6 +6,7 @@
 #include "GameFramework/Character.h"
 #include "MyCharacter.generated.h"
 
+class UGameUI;
 
 USTRUCT(Atomic, BlueprintType)
 struct FAbility
@@ -60,13 +61,18 @@ public:
 private:
 	void UpDown(float NewAxisValue);
 	void LeftRight(float NewAxisValue);
+	
 	void GetWizardMesh();
 	void GetWeaponMesh();
+	void GetFireBallBP();
+	void GetGameUIBP();
+
 	void SetSpringArmComponent();
 	void SetCameraComponent();
-	void GetFireBallBP();
+	
 	void FireBallSpwan();
 	void PlayMontage();
+	
 public:
 	UPROPERTY(VisibleAnywhere, Category = Camera)
 		USpringArmComponent* SpringArm;
@@ -77,6 +83,8 @@ public:
 	UPROPERTY(VisibleAnywhere, Category = Weapon)
 		UStaticMeshComponent* Weapon;
 
+	UPROPERTY(VisibleAnywhere, Category = Weapon)
+		class AMyPlayerController* AMyController;
 
 	UPROPERTY(Category = FireAttack, VisibleAnywhere, BlueprintReadOnly, Meta = (AllowPrivateAccess = "true"))
 		TSubclassOf<class AFireBall> FireBallClass; 
@@ -88,7 +96,11 @@ public:
 	UPROPERTY(EditAnywhere)
 		FAbility Ability;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "UI")
+		TSubclassOf<UGameUI> GameUIClass;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "UI")
+		UGameUI* GameUIWidget;
 };
 
 

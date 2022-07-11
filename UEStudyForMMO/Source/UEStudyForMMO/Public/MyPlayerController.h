@@ -4,7 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerController.h"
-//#include "MyCharacter.h"
+#include "MyCharacter.h"
 #include "MyPlayerController.generated.h"
 
 class UGameUI;
@@ -20,14 +20,4 @@ public:
 
 	void BeginPlay() override;
 
-public:
-
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "UI")
-		TSubclassOf<UGameUI> GameUIClass;
-
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "UI")
-		UGameUI* GameUIWidget;
-
-	/*UPROPERTY(EditAnywhere, Category = "Charcter")
-		AMyCharacter* Player;*/
 };

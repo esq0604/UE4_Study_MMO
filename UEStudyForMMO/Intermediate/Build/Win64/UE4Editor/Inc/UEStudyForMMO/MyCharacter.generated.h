@@ -13,25 +13,25 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define UESTUDYFORMMO_MyCharacter_generated_h
 
-#define UEStudyForMMO_Source_UEStudyForMMO_Public_MyCharacter_h_13_GENERATED_BODY \
+#define UEStudyForMMO_Source_UEStudyForMMO_Public_MyCharacter_h_14_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FAbility_Statics; \
 	UESTUDYFORMMO_API static class UScriptStruct* StaticStruct();
 
 
 template<> UESTUDYFORMMO_API UScriptStruct* StaticStruct<struct FAbility>();
 
-#define UEStudyForMMO_Source_UEStudyForMMO_Public_MyCharacter_h_37_SPARSE_DATA
-#define UEStudyForMMO_Source_UEStudyForMMO_Public_MyCharacter_h_37_RPC_WRAPPERS \
+#define UEStudyForMMO_Source_UEStudyForMMO_Public_MyCharacter_h_38_SPARSE_DATA
+#define UEStudyForMMO_Source_UEStudyForMMO_Public_MyCharacter_h_38_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execAttack);
 
 
-#define UEStudyForMMO_Source_UEStudyForMMO_Public_MyCharacter_h_37_RPC_WRAPPERS_NO_PURE_DECLS \
+#define UEStudyForMMO_Source_UEStudyForMMO_Public_MyCharacter_h_38_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execAttack);
 
 
-#define UEStudyForMMO_Source_UEStudyForMMO_Public_MyCharacter_h_37_INCLASS_NO_PURE_DECLS \
+#define UEStudyForMMO_Source_UEStudyForMMO_Public_MyCharacter_h_38_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAMyCharacter(); \
 	friend struct Z_Construct_UClass_AMyCharacter_Statics; \
@@ -40,7 +40,7 @@ public: \
 	DECLARE_SERIALIZER(AMyCharacter)
 
 
-#define UEStudyForMMO_Source_UEStudyForMMO_Public_MyCharacter_h_37_INCLASS \
+#define UEStudyForMMO_Source_UEStudyForMMO_Public_MyCharacter_h_38_INCLASS \
 private: \
 	static void StaticRegisterNativesAMyCharacter(); \
 	friend struct Z_Construct_UClass_AMyCharacter_Statics; \
@@ -49,7 +49,7 @@ public: \
 	DECLARE_SERIALIZER(AMyCharacter)
 
 
-#define UEStudyForMMO_Source_UEStudyForMMO_Public_MyCharacter_h_37_STANDARD_CONSTRUCTORS \
+#define UEStudyForMMO_Source_UEStudyForMMO_Public_MyCharacter_h_38_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AMyCharacter(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AMyCharacter) \
@@ -62,7 +62,7 @@ private: \
 public:
 
 
-#define UEStudyForMMO_Source_UEStudyForMMO_Public_MyCharacter_h_37_ENHANCED_CONSTRUCTORS \
+#define UEStudyForMMO_Source_UEStudyForMMO_Public_MyCharacter_h_38_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AMyCharacter(AMyCharacter&&); \
@@ -73,28 +73,28 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AMyCharacter)
 
 
-#define UEStudyForMMO_Source_UEStudyForMMO_Public_MyCharacter_h_37_PRIVATE_PROPERTY_OFFSET
-#define UEStudyForMMO_Source_UEStudyForMMO_Public_MyCharacter_h_34_PROLOG
-#define UEStudyForMMO_Source_UEStudyForMMO_Public_MyCharacter_h_37_GENERATED_BODY_LEGACY \
+#define UEStudyForMMO_Source_UEStudyForMMO_Public_MyCharacter_h_38_PRIVATE_PROPERTY_OFFSET
+#define UEStudyForMMO_Source_UEStudyForMMO_Public_MyCharacter_h_35_PROLOG
+#define UEStudyForMMO_Source_UEStudyForMMO_Public_MyCharacter_h_38_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	UEStudyForMMO_Source_UEStudyForMMO_Public_MyCharacter_h_37_PRIVATE_PROPERTY_OFFSET \
-	UEStudyForMMO_Source_UEStudyForMMO_Public_MyCharacter_h_37_SPARSE_DATA \
-	UEStudyForMMO_Source_UEStudyForMMO_Public_MyCharacter_h_37_RPC_WRAPPERS \
-	UEStudyForMMO_Source_UEStudyForMMO_Public_MyCharacter_h_37_INCLASS \
-	UEStudyForMMO_Source_UEStudyForMMO_Public_MyCharacter_h_37_STANDARD_CONSTRUCTORS \
+	UEStudyForMMO_Source_UEStudyForMMO_Public_MyCharacter_h_38_PRIVATE_PROPERTY_OFFSET \
+	UEStudyForMMO_Source_UEStudyForMMO_Public_MyCharacter_h_38_SPARSE_DATA \
+	UEStudyForMMO_Source_UEStudyForMMO_Public_MyCharacter_h_38_RPC_WRAPPERS \
+	UEStudyForMMO_Source_UEStudyForMMO_Public_MyCharacter_h_38_INCLASS \
+	UEStudyForMMO_Source_UEStudyForMMO_Public_MyCharacter_h_38_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define UEStudyForMMO_Source_UEStudyForMMO_Public_MyCharacter_h_37_GENERATED_BODY \
+#define UEStudyForMMO_Source_UEStudyForMMO_Public_MyCharacter_h_38_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	UEStudyForMMO_Source_UEStudyForMMO_Public_MyCharacter_h_37_PRIVATE_PROPERTY_OFFSET \
-	UEStudyForMMO_Source_UEStudyForMMO_Public_MyCharacter_h_37_SPARSE_DATA \
-	UEStudyForMMO_Source_UEStudyForMMO_Public_MyCharacter_h_37_RPC_WRAPPERS_NO_PURE_DECLS \
-	UEStudyForMMO_Source_UEStudyForMMO_Public_MyCharacter_h_37_INCLASS_NO_PURE_DECLS \
-	UEStudyForMMO_Source_UEStudyForMMO_Public_MyCharacter_h_37_ENHANCED_CONSTRUCTORS \
+	UEStudyForMMO_Source_UEStudyForMMO_Public_MyCharacter_h_38_PRIVATE_PROPERTY_OFFSET \
+	UEStudyForMMO_Source_UEStudyForMMO_Public_MyCharacter_h_38_SPARSE_DATA \
+	UEStudyForMMO_Source_UEStudyForMMO_Public_MyCharacter_h_38_RPC_WRAPPERS_NO_PURE_DECLS \
+	UEStudyForMMO_Source_UEStudyForMMO_Public_MyCharacter_h_38_INCLASS_NO_PURE_DECLS \
+	UEStudyForMMO_Source_UEStudyForMMO_Public_MyCharacter_h_38_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
