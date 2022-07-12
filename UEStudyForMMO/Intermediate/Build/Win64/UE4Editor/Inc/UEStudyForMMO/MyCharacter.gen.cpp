@@ -21,8 +21,8 @@ void EmptyLinkFunctionForGeneratedCodeMyCharacter() {}
 	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
-	UESTUDYFORMMO_API UClass* Z_Construct_UClass_AMyPlayerController_NoRegister();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
+	UESTUDYFORMMO_API UClass* Z_Construct_UClass_AMyPlayerController_NoRegister();
 	UESTUDYFORMMO_API UClass* Z_Construct_UClass_AFireBall_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USphereComponent_NoRegister();
 	UESTUDYFORMMO_API UClass* Z_Construct_UClass_UGameUI_NoRegister();
@@ -234,7 +234,7 @@ static struct FScriptStruct_UEStudyForMMO_StaticRegisterNativesFAbility
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AMyController_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_AMyController;
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_AMyController;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FireBallClass_MetaData[];
 #endif
@@ -299,11 +299,11 @@ static struct FScriptStruct_UEStudyForMMO_StaticRegisterNativesFAbility
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMyCharacter_Statics::NewProp_Weapon = { "Weapon", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyCharacter, Weapon), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AMyCharacter_Statics::NewProp_Weapon_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMyCharacter_Statics::NewProp_Weapon_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyCharacter_Statics::NewProp_AMyController_MetaData[] = {
-		{ "Category", "Weapon" },
+		{ "Category", "Controller" },
 		{ "ModuleRelativePath", "Public/MyCharacter.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMyCharacter_Statics::NewProp_AMyController = { "AMyController", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyCharacter, AMyController), Z_Construct_UClass_AMyPlayerController_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AMyCharacter_Statics::NewProp_AMyController_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMyCharacter_Statics::NewProp_AMyController_MetaData)) };
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_AMyCharacter_Statics::NewProp_AMyController = { "AMyController", nullptr, (EPropertyFlags)0x0014000000010015, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyCharacter, AMyController), Z_Construct_UClass_AMyPlayerController_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_AMyCharacter_Statics::NewProp_AMyController_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMyCharacter_Statics::NewProp_AMyController_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyCharacter_Statics::NewProp_FireBallClass_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
@@ -334,7 +334,7 @@ static struct FScriptStruct_UEStudyForMMO_StaticRegisterNativesFAbility
 		{ "ModuleRelativePath", "Public/MyCharacter.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_AMyCharacter_Statics::NewProp_GameUIClass = { "GameUIClass", nullptr, (EPropertyFlags)0x0014000000020005, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyCharacter, GameUIClass), Z_Construct_UClass_UGameUI_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_AMyCharacter_Statics::NewProp_GameUIClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMyCharacter_Statics::NewProp_GameUIClass_MetaData)) };
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_AMyCharacter_Statics::NewProp_GameUIClass = { "GameUIClass", nullptr, (EPropertyFlags)0x0014000000010015, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyCharacter, GameUIClass), Z_Construct_UClass_UGameUI_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_AMyCharacter_Statics::NewProp_GameUIClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMyCharacter_Statics::NewProp_GameUIClass_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyCharacter_Statics::NewProp_GameUIWidget_MetaData[] = {
 		{ "Category", "UI" },
@@ -342,7 +342,7 @@ static struct FScriptStruct_UEStudyForMMO_StaticRegisterNativesFAbility
 		{ "ModuleRelativePath", "Public/MyCharacter.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMyCharacter_Statics::NewProp_GameUIWidget = { "GameUIWidget", nullptr, (EPropertyFlags)0x00100000000a000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyCharacter, GameUIWidget), Z_Construct_UClass_UGameUI_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AMyCharacter_Statics::NewProp_GameUIWidget_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMyCharacter_Statics::NewProp_GameUIWidget_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMyCharacter_Statics::NewProp_GameUIWidget = { "GameUIWidget", nullptr, (EPropertyFlags)0x00100000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyCharacter, GameUIWidget), Z_Construct_UClass_UGameUI_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AMyCharacter_Statics::NewProp_GameUIWidget_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMyCharacter_Statics::NewProp_GameUIWidget_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AMyCharacter_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyCharacter_Statics::NewProp_SpringArm,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyCharacter_Statics::NewProp_Camera,
@@ -381,7 +381,7 @@ static struct FScriptStruct_UEStudyForMMO_StaticRegisterNativesFAbility
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AMyCharacter, 3078176496);
+	IMPLEMENT_CLASS(AMyCharacter, 2229276417);
 	template<> UESTUDYFORMMO_API UClass* StaticClass<AMyCharacter>()
 	{
 		return AMyCharacter::StaticClass();

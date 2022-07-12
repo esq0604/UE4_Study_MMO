@@ -6,7 +6,6 @@
 #include "FireBall.h"
 #include "MyPlayerController.h"
 #include "GameUI.h"
-#include "MyPlayerController.h"
 // Sets default values
 AMyCharacter::AMyCharacter()
 {
@@ -18,7 +17,7 @@ AMyCharacter::AMyCharacter()
 	SetCameraComponent();
 	GetAnimInstance();
 	GetFireBallBP();
-	GetGameUIBP();
+	//GetGameUIBP();
 	//AbilityInit();
 	AbilityInit();
 
@@ -35,24 +34,22 @@ void AMyCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 	
-	UE_LOG(LogTemp, Warning, TEXT("Player - BeginPlay"))
-
-
-		if (GameUIWidget != nullptr)
+		if (GameUIClass != nullptr)
 		{
-			UE_LOG(LogTemp, Warning, TEXT("Character - CreateWidget"))
-				APlayerController* con = Cast<APlayerController>(AMyController);
+			APlayerController* con = Cast<APlayerController>(GetController());
 			if (con == nullptr)
+			{
+				UE_LOG(LogTemp, Warning, TEXT("con - nullptr"))
 				return;
+			}
 			GameUIWidget = CreateWidget<UGameUI>(con, GameUIClass);
+			if (!GameUIWidget)
+				return;
 			GameUIWidget->Player = this;
 			GameUIWidget->Init();
-			//GameUIWidget->AddToViewport();
+			GameUIWidget->AddToViewport();
 		}
-		else
-		{
-			UE_LOG(LogTemp, Warning, TEXT("GameUIWidget == nullptr"))
-		}
+		
 }
 
 // Called every frame

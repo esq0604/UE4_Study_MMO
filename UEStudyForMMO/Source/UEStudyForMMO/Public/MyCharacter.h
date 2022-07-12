@@ -83,8 +83,8 @@ public:
 	UPROPERTY(VisibleAnywhere, Category = Weapon)
 		UStaticMeshComponent* Weapon;
 
-	UPROPERTY(VisibleAnywhere, Category = Weapon)
-		class AMyPlayerController* AMyController;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="Controller")
+		TSubclassOf<class AMyPlayerController> AMyController;
 
 	UPROPERTY(Category = FireAttack, VisibleAnywhere, BlueprintReadOnly, Meta = (AllowPrivateAccess = "true"))
 		TSubclassOf<class AFireBall> FireBallClass; 
@@ -96,11 +96,13 @@ public:
 	UPROPERTY(EditAnywhere)
 		FAbility Ability;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "UI")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "UI")
 		TSubclassOf<UGameUI> GameUIClass;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "UI")
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "UI")
 		UGameUI* GameUIWidget;
+
+	
 };
 
 
