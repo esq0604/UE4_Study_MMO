@@ -18,7 +18,7 @@ public:
 UENUM(BlueprintType)
 enum EGaugeType
 {
-	Gauge_HP UMETA(DisplayName = "HP_Enum"),
+	Gauge_HP UMETA(DisplayName = "HP"),
 	Gauge_Resource UMETA(DisplayName = "Resource"),
 	Gauge_Exp UMETA(DisplayName = "Exp")
 };

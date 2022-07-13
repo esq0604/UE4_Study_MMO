@@ -15,6 +15,7 @@ void UGauge::Init()
 	{
 		case EGaugeType::Gauge_HP:
 		{
+			UE_LOG(LogTemp, Warning, TEXT("Init - Case :Gauge HP"))
 			SetValue(Player->Ability.CurrentHP, Player->Ability.MaxHP);
 			break;
 		}
@@ -40,6 +41,7 @@ void UGauge::SetType(EGaugeType type)
 
 void UGauge::SetValue(float cur, float max)
 {
+	UE_LOG(LogTemp, Warning, TEXT("SetValue - SetPercent %f %f"),cur,max)
 	GaugeBar->SetPercent(cur / max);
 	ChangeText(cur, max);
 }

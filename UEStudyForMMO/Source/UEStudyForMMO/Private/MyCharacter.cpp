@@ -96,11 +96,11 @@ void AMyCharacter::Attack()
 void AMyCharacter::AbilityInit()
 {
 	Ability.MaxHP = 2000.0f;
-	Ability.CurrentHP = 2000.0f;
+	Ability.CurrentHP = 1000.0f;
 	Ability.MaxResource = 1000.0f;
-	Ability.CurrentResource = 1000.0f;
-	Ability.MaxExp = 20.0f;
-	Ability.CurrentExp = 0.0f;
+	Ability.CurrentResource = 500.0f;
+	Ability.MaxExp = 100.0f;
+	Ability.CurrentExp = 20.0f;
 }
 
 void AMyCharacter::UpDown(float NewAxisValue)

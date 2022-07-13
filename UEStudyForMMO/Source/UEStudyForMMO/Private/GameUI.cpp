@@ -14,9 +14,10 @@ void UGameUI::Init()
 {
 	UE_LOG(LogTemp, Warning, TEXT("UGameUI::Init()"));    
 	//HP Bar
+	
 	HPBar->Player = this->Player;
 	HPBar->SetType(EGaugeType::Gauge_HP);
-	HPBar->SetColor(HPBarColor);
+	HPBar->SetColor(HPBarColor); //alpa값 같이 설정해주기 
 	//if (HPBarTex)
 		//HPBar->SetTexture((UTexture2D*)HPBarTex);
 	HPBar->Init();
@@ -33,6 +34,7 @@ void UGameUI::Init()
 	ExpBar->Player = this->Player;
 	ExpBar->SetType(EGaugeType::Gauge_Exp);
 	ExpBar->SetColor(ExBarColor);
+	//ExpBar->SetRenderScale(FVector2D(4.5f, 0.5f));
 	//if (ExpBar)
 		//ExpBar->SetTexture(ExpBarTex);
 	ExpBar->Init();
