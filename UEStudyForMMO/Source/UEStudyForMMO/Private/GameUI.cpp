@@ -34,7 +34,7 @@ void UGameUI::Init()
 	ExpBar->Player = this->Player;
 	ExpBar->SetType(EGaugeType::Gauge_Exp);
 	ExpBar->SetColor(ExBarColor);
-	//ExpBar->SetRenderScale(FVector2D(4.5f, 0.5f));
+	ExpBar->SetRenderScale(FVector2D(4.5f, 0.5f));
 	//if (ExpBar)
 		//ExpBar->SetTexture(ExpBarTex);
 	ExpBar->Init();
