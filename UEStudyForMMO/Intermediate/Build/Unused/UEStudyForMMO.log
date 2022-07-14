@@ -1,47 +1,21 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build (C:\Users\Administrator\UE4_Study_MMO).
-  Deleted hot-reload file: C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Binaries\Win64\UE4Editor-UEStudyForMMO-0009.pdb
-  Deleted hot-reload file: C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Binaries\Win64\UE4Editor-UEStudyForMMO-0420.dll
-  Deleted hot-reload file: C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Binaries\Win64\UE4Editor-UEStudyForMMO-0420.pdb
-  Deleted hot-reload file: C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Binaries\Win64\UE4Editor-UEStudyForMMO-1957.dll
-  Deleted hot-reload file: C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Binaries\Win64\UE4Editor-UEStudyForMMO-1957.pdb
-  Deleted hot-reload file: C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Binaries\Win64\UE4Editor-UEStudyForMMO-2239.dll
-  Deleted hot-reload file: C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Binaries\Win64\UE4Editor-UEStudyForMMO-2239.pdb
-  Deleted hot-reload file: C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Binaries\Win64\UE4Editor-UEStudyForMMO-3579.dll
-  Deleted hot-reload file: C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Binaries\Win64\UE4Editor-UEStudyForMMO-3579.pdb
-  Deleted hot-reload file: C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Binaries\Win64\UE4Editor-UEStudyForMMO-3933.dll
-  Deleted hot-reload file: C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Binaries\Win64\UE4Editor-UEStudyForMMO-3933.pdb
-  Deleted hot-reload file: C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Binaries\Win64\UE4Editor-UEStudyForMMO-5267.dll
-  Deleted hot-reload file: C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Binaries\Win64\UE4Editor-UEStudyForMMO-5267.pdb
-  Deleted hot-reload file: C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Binaries\Win64\UE4Editor-UEStudyForMMO-6142.dll
-  Deleted hot-reload file: C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Binaries\Win64\UE4Editor-UEStudyForMMO-6142.pdb
-  Deleted hot-reload file: C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Binaries\Win64\UE4Editor-UEStudyForMMO-6347.dll
-  Deleted hot-reload file: C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Binaries\Win64\UE4Editor-UEStudyForMMO-6347.pdb
-  Deleted hot-reload file: C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Binaries\Win64\UE4Editor-UEStudyForMMO-6737.dll
-  Deleted hot-reload file: C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Binaries\Win64\UE4Editor-UEStudyForMMO-6737.pdb
-  Deleted hot-reload file: C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Binaries\Win64\UE4Editor-UEStudyForMMO-8536.dll
-  Deleted hot-reload file: C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Binaries\Win64\UE4Editor-UEStudyForMMO-8536.pdb
-  Deleted hot-reload file: C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Binaries\Win64\UE4Editor-UEStudyForMMO-9658.dll
-  Deleted hot-reload file: C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Binaries\Win64\UE4Editor-UEStudyForMMO-9658.pdb
-  Deleted hot-reload file: C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\UE4Editor-UEStudyForMMO-0009.lib
-  Deleted hot-reload file: C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\UE4Editor-UEStudyForMMO-0420.lib
-  Deleted hot-reload file: C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\UE4Editor-UEStudyForMMO-1957.lib
-  Deleted hot-reload file: C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\UE4Editor-UEStudyForMMO-2239.lib
-  Deleted hot-reload file: C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\UE4Editor-UEStudyForMMO-3579.lib
-  Deleted hot-reload file: C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\UE4Editor-UEStudyForMMO-3933.lib
-  Deleted hot-reload file: C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\UE4Editor-UEStudyForMMO-5267.lib
-  Deleted hot-reload file: C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\UE4Editor-UEStudyForMMO-6142.lib
-  Deleted hot-reload file: C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\UE4Editor-UEStudyForMMO-6347.lib
-  Deleted hot-reload file: C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\UE4Editor-UEStudyForMMO-6737.lib
-  Deleted hot-reload file: C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\UE4Editor-UEStudyForMMO-8536.lib
-  Deleted hot-reload file: C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\UE4Editor-UEStudyForMMO-9658.lib
+  Creating makefile for UEStudyForMMOEditor (no existing makefile)
+  Parsing headers for UEStudyForMMOEditor
+    Running UnrealHeaderTool "C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\UEStudyForMMO.uproject" "C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UEStudyForMMOEditor\Development\UEStudyForMMOEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\Administrator\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
+  LogInit: Display: Loading text-based GConfig....
+  Reflection code generated for UEStudyForMMOEditor in 5.5147991 seconds
   Building UEStudyForMMOEditor...
   Using Visual Studio 2019 14.29.30138 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Building 4 actions with 6 processes...
-    [1/4] MyPlayerController.cpp
-    [2/4] UE4Editor-UEStudyForMMO.lib
-       Creating library C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\UE4Editor-UEStudyForMMO.lib and object C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\UE4Editor-UEStudyForMMO.exp
-    [3/4] UE4Editor-UEStudyForMMO.dll
-       Creating library C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\UE4Editor-UEStudyForMMO.suppressed.lib and object C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\UE4Editor-UEStudyForMMO.suppressed.exp
-    [4/4] UEStudyForMMOEditor.target
-  Total time in Parallel executor: 26.18 seconds
-  Total execution time: 27.17 seconds
+  Building 8 actions with 6 processes...
+    [1/8] UEStudyForMMO.init.gen.cpp
+    [2/8] Inventory.cpp
+    [3/8] Slot.cpp
+    [4/8] Inventory.gen.cpp
+    [5/8] Slot.gen.cpp
+    [6/8] UE4Editor-UEStudyForMMO-0002.lib
+       Creating library C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\UE4Editor-UEStudyForMMO-0002.lib and object C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\UE4Editor-UEStudyForMMO-0002.exp
+    [7/8] UE4Editor-UEStudyForMMO-0002.dll
+       Creating library C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\UE4Editor-UEStudyForMMO-0002.suppressed.lib and object C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\UE4Editor-UEStudyForMMO-0002.suppressed.exp
+    [8/8] UEStudyForMMOEditor.target
+  Total time in Parallel executor: 16.35 seconds
+  Total execution time: 25.06 seconds

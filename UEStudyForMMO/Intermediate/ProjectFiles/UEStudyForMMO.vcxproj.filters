@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\UEStudyForMMO.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{C45D321A-618E-4913-9B14-A10D0E5E3C11}</UniqueIdentifier>
+      <UniqueIdentifier>{97E6B6A1-D6B3-4423-BAE8-851348BD9F8D}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\UEStudyForMMO.Target.cs">
       <Filter>Source</Filter>
@@ -13,7 +13,7 @@
     </None>
     <None Include="..\..\AncientTreasures.png" />
     <Filter Include="Config">
-      <UniqueIdentifier>{BD9B096F-2DE7-4A5B-BF2B-1DF21596AC1D}</UniqueIdentifier>
+      <UniqueIdentifier>{4C2429A7-0AF9-4C08-98EA-3AEC19E6D99C}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -31,13 +31,13 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\UEStudyForMMO">
-      <UniqueIdentifier>{A4D4CE77-C3D1-401F-BBA4-72FDD7673653}</UniqueIdentifier>
+      <UniqueIdentifier>{C1764A85-8F40-40AA-9505-D013D86B0332}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\UEStudyForMMO\UEStudyForMMO.Build.cs">
       <Filter>Source\UEStudyForMMO</Filter>
     </None>
     <Filter Include="Source\UEStudyForMMO\Private">
-      <UniqueIdentifier>{ECFB716F-48F6-46C1-B285-80BB28FDB860}</UniqueIdentifier>
+      <UniqueIdentifier>{4FB3CAEE-85C8-46C7-AA31-E698EE3B4A39}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\UEStudyForMMO\Private\CustomUI.cpp">
       <Filter>Source\UEStudyForMMO\Private</Filter>
@@ -57,6 +57,9 @@
     <ClCompile Include="..\..\Source\UEStudyForMMO\Private\InGameData.cpp">
       <Filter>Source\UEStudyForMMO\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\UEStudyForMMO\Private\Inventory.cpp">
+      <Filter>Source\UEStudyForMMO\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\UEStudyForMMO\Private\MyAnimInstance.cpp">
       <Filter>Source\UEStudyForMMO\Private</Filter>
     </ClCompile>
@@ -72,6 +75,9 @@
     <ClCompile Include="..\..\Source\UEStudyForMMO\Private\MyPlayerController.cpp">
       <Filter>Source\UEStudyForMMO\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\UEStudyForMMO\Private\Slot.cpp">
+      <Filter>Source\UEStudyForMMO\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\UEStudyForMMO\Private\UEStudyForMMO.cpp">
       <Filter>Source\UEStudyForMMO\Private</Filter>
     </ClCompile>
@@ -79,7 +85,7 @@
       <Filter>Source\UEStudyForMMO\Private</Filter>
     </ClCompile>
     <Filter Include="Source\UEStudyForMMO\Public">
-      <UniqueIdentifier>{44DA7655-F7A9-4242-821D-5B4C5236650C}</UniqueIdentifier>
+      <UniqueIdentifier>{D2F3B69A-987C-49E6-B234-FA0707B4EB54}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\UEStudyForMMO\Public\CustomUI.h">
       <Filter>Source\UEStudyForMMO\Public</Filter>
@@ -99,6 +105,9 @@
     <ClInclude Include="..\..\Source\UEStudyForMMO\Public\InGameData.h">
       <Filter>Source\UEStudyForMMO\Public</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\UEStudyForMMO\Public\Inventory.h">
+      <Filter>Source\UEStudyForMMO\Public</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\UEStudyForMMO\Public\MyAnimInstance.h">
       <Filter>Source\UEStudyForMMO\Public</Filter>
     </ClInclude>
@@ -112,6 +121,9 @@
       <Filter>Source\UEStudyForMMO\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\UEStudyForMMO\Public\MyPlayerController.h">
+      <Filter>Source\UEStudyForMMO\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\UEStudyForMMO\Public\Slot.h">
       <Filter>Source\UEStudyForMMO\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\UEStudyForMMO\Public\UEStudyForMMO.h">
