@@ -13,12 +13,83 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeInGameData() {}
 // Cross Module References
-	UESTUDYFORMMO_API UEnum* Z_Construct_UEnum_UEStudyForMMO_EItemType();
+	UESTUDYFORMMO_API UEnum* Z_Construct_UEnum_UEStudyForMMO_ESlotType();
 	UPackage* Z_Construct_UPackage__Script_UEStudyForMMO();
+	UESTUDYFORMMO_API UEnum* Z_Construct_UEnum_UEStudyForMMO_EItemType();
 	UESTUDYFORMMO_API UEnum* Z_Construct_UEnum_UEStudyForMMO_EGaugeType();
 	UESTUDYFORMMO_API UScriptStruct* Z_Construct_UScriptStruct_FItemData();
 	ENGINE_API UClass* Z_Construct_UClass_UTexture2D_NoRegister();
 // End Cross Module References
+	static UEnum* ESlotType_StaticEnum()
+	{
+		static UEnum* Singleton = nullptr;
+		if (!Singleton)
+		{
+			Singleton = GetStaticEnum(Z_Construct_UEnum_UEStudyForMMO_ESlotType, Z_Construct_UPackage__Script_UEStudyForMMO(), TEXT("ESlotType"));
+		}
+		return Singleton;
+	}
+	template<> UESTUDYFORMMO_API UEnum* StaticEnum<ESlotType>()
+	{
+		return ESlotType_StaticEnum();
+	}
+	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ESlotType(ESlotType_StaticEnum, TEXT("/Script/UEStudyForMMO"), TEXT("ESlotType"), false, nullptr, nullptr);
+	uint32 Get_Z_Construct_UEnum_UEStudyForMMO_ESlotType_Hash() { return 1916598362U; }
+	UEnum* Z_Construct_UEnum_UEStudyForMMO_ESlotType()
+	{
+#if WITH_HOT_RELOAD
+		UPackage* Outer = Z_Construct_UPackage__Script_UEStudyForMMO();
+		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("ESlotType"), 0, Get_Z_Construct_UEnum_UEStudyForMMO_ESlotType_Hash(), false);
+#else
+		static UEnum* ReturnEnum = nullptr;
+#endif // WITH_HOT_RELOAD
+		if (!ReturnEnum)
+		{
+			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
+				{ "SLOT_None", (int64)SLOT_None },
+				{ "SLOT_Item", (int64)SLOT_Item },
+				{ "SLOT_Skill", (int64)SLOT_Skill },
+				{ "SLOT_Quick", (int64)SLOT_Quick },
+				{ "SLOT_Q_Item", (int64)SLOT_Q_Item },
+				{ "SLOT_Q_Skill", (int64)SLOT_Q_Skill },
+			};
+#if WITH_METADATA
+			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+				{ "BlueprintType", "true" },
+				{ "Comment", "//Slot Type\n" },
+				{ "ModuleRelativePath", "Public/InGameData.h" },
+				{ "SLOT_Item.DisplayName", "Item" },
+				{ "SLOT_Item.Name", "SLOT_Item" },
+				{ "SLOT_None.DisplayName", "None" },
+				{ "SLOT_None.Name", "SLOT_None" },
+				{ "SLOT_Q_Item.DisplayName", "Q_Item" },
+				{ "SLOT_Q_Item.Name", "SLOT_Q_Item" },
+				{ "SLOT_Q_Skill.DisplayName", "Q_Skill" },
+				{ "SLOT_Q_Skill.Name", "SLOT_Q_Skill" },
+				{ "SLOT_Quick.DisplayName", "Quick" },
+				{ "SLOT_Quick.Name", "SLOT_Quick" },
+				{ "SLOT_Skill.DisplayName", "Skill" },
+				{ "SLOT_Skill.Name", "SLOT_Skill" },
+				{ "ToolTip", "Slot Type" },
+			};
+#endif
+			static const UE4CodeGen_Private::FEnumParams EnumParams = {
+				(UObject*(*)())Z_Construct_UPackage__Script_UEStudyForMMO,
+				nullptr,
+				"ESlotType",
+				"ESlotType",
+				Enumerators,
+				UE_ARRAY_COUNT(Enumerators),
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EEnumFlags::None,
+				UE4CodeGen_Private::EDynamicType::NotDynamic,
+				(uint8)UEnum::ECppForm::Regular,
+				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
+			};
+			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
+		}
+		return ReturnEnum;
+	}
 	static UEnum* EItemType_StaticEnum()
 	{
 		static UEnum* Singleton = nullptr;

@@ -4,6 +4,7 @@
 
 #include "Engine.h"
 #include "GameFramework/Character.h"
+#include "InGameData.h"
 #include "MyCharacter.generated.h"
 
 class UGameUI;
@@ -74,6 +75,9 @@ private:
 	void PlayMontage();
 	
 public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "UI")
+		TArray<FItemData> Data;
+
 	UPROPERTY(VisibleAnywhere, Category = Camera)
 		USpringArmComponent* SpringArm;
 	

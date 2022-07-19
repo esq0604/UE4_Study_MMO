@@ -13,7 +13,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define UESTUDYFORMMO_InGameData_generated_h
 
-#define UEStudyForMMO_Source_UEStudyForMMO_Public_InGameData_h_44_GENERATED_BODY \
+#define UEStudyForMMO_Source_UEStudyForMMO_Public_InGameData_h_55_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FItemData_Statics; \
 	UESTUDYFORMMO_API static class UScriptStruct* StaticStruct();
 
@@ -24,6 +24,13 @@ template<> UESTUDYFORMMO_API UScriptStruct* StaticStruct<struct FItemData>();
 #define CURRENT_FILE_ID UEStudyForMMO_Source_UEStudyForMMO_Public_InGameData_h
 
 
+#define FOREACH_ENUM_ESLOTTYPE(op) \
+	op(SLOT_None) \
+	op(SLOT_Item) \
+	op(SLOT_Skill) \
+	op(SLOT_Quick) \
+	op(SLOT_Q_Item) \
+	op(SLOT_Q_Skill) 
 #define FOREACH_ENUM_EITEMTYPE(op) \
 	op(ITEM_None) \
 	op(ITEM_Useable) \

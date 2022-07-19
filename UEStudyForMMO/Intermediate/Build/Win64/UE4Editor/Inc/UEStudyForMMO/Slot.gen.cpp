@@ -17,6 +17,9 @@ void EmptyLinkFunctionForGeneratedCodeSlot() {}
 	UESTUDYFORMMO_API UClass* Z_Construct_UClass_USlot();
 	UESTUDYFORMMO_API UClass* Z_Construct_UClass_UCustomUI();
 	UPackage* Z_Construct_UPackage__Script_UEStudyForMMO();
+	UESTUDYFORMMO_API UEnum* Z_Construct_UEnum_UEStudyForMMO_ESlotType();
+	UMG_API UClass* Z_Construct_UClass_UImage_NoRegister();
+	UMG_API UClass* Z_Construct_UClass_UTextBlock_NoRegister();
 // End Cross Module References
 	void USlot::StaticRegisterNativesUSlot()
 	{
@@ -39,6 +42,18 @@ void EmptyLinkFunctionForGeneratedCodeSlot() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Count_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_Count;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Type_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FBytePropertyParams NewProp_Type;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Img_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Img;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Text_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Text;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -69,9 +84,37 @@ void EmptyLinkFunctionForGeneratedCodeSlot() {}
 	};
 #endif
 	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_USlot_Statics::NewProp_Count = { "Count", nullptr, (EPropertyFlags)0x0010000000020005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(USlot, Count), METADATA_PARAMS(Z_Construct_UClass_USlot_Statics::NewProp_Count_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_USlot_Statics::NewProp_Count_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_USlot_Statics::NewProp_Type_MetaData[] = {
+		{ "Category", "Slot" },
+		{ "ModuleRelativePath", "Public/Slot.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_USlot_Statics::NewProp_Type = { "Type", nullptr, (EPropertyFlags)0x0010000000020005, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(USlot, Type), Z_Construct_UEnum_UEStudyForMMO_ESlotType, METADATA_PARAMS(Z_Construct_UClass_USlot_Statics::NewProp_Type_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_USlot_Statics::NewProp_Type_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_USlot_Statics::NewProp_Img_MetaData[] = {
+		{ "BindWidget", "" },
+		{ "Category", "Slot" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/Slot.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_USlot_Statics::NewProp_Img = { "Img", nullptr, (EPropertyFlags)0x00100000000a000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(USlot, Img), Z_Construct_UClass_UImage_NoRegister, METADATA_PARAMS(Z_Construct_UClass_USlot_Statics::NewProp_Img_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_USlot_Statics::NewProp_Img_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_USlot_Statics::NewProp_Text_MetaData[] = {
+		{ "BindWidget", "" },
+		{ "Category", "Slot" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/Slot.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_USlot_Statics::NewProp_Text = { "Text", nullptr, (EPropertyFlags)0x00100000000a000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(USlot, Text), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(Z_Construct_UClass_USlot_Statics::NewProp_Text_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_USlot_Statics::NewProp_Text_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_USlot_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USlot_Statics::NewProp_Solotnum,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USlot_Statics::NewProp_Count,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USlot_Statics::NewProp_Type,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USlot_Statics::NewProp_Img,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USlot_Statics::NewProp_Text,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_USlot_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<USlot>::IsAbstract,
@@ -100,7 +143,7 @@ void EmptyLinkFunctionForGeneratedCodeSlot() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(USlot, 2141341624);
+	IMPLEMENT_CLASS(USlot, 1255924302);
 	template<> UESTUDYFORMMO_API UClass* StaticClass<USlot>()
 	{
 		return USlot::StaticClass();

@@ -37,6 +37,17 @@ enum EItemType
 	ITEM_Equiment	UMETA(DisplayName = "Equiment")
 };
 
+//Slot Type
+UENUM(BlueprintType)
+enum ESlotType
+{
+	SLOT_None		UMETA(DisplayName = "None"),
+	SLOT_Item		UMETA(DisplayName = "Item"),
+	SLOT_Skill		UMETA(DisplayName ="Skill"),
+	SLOT_Quick		UMETA(DisplayName = "Quick"),
+	SLOT_Q_Item		UMETA(DisplayName = "Q_Item"),
+	SLOT_Q_Skill	UMETA(DisplayName = "Q_Skill")
+};
 
 USTRUCT(BlueprintType)
 struct FItemData
@@ -49,8 +60,8 @@ public:
 		: Name(TEXT("")), Texture(nullptr), Type(EItemType::ITEM_None), Count(0)
 	{};
 
-	//virtual void Clear(); //정보를 초기화할것임 상속받은쪽에서 오버라이딩 할예정
-	//virtual void Use(AMyCharacter* player);
+	 void Clear(); //정보를 초기화할것임 상속받은쪽에서 오버라이딩 할예정
+	 void Use(AMyCharacter* player);
 
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
