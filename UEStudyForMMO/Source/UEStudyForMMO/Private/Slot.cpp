@@ -2,21 +2,56 @@
 
 
 #include "Slot.h"
-#include "Blueprint/WidgetTree.h"
 #include "Components/Image.h"
 #include "Components/TextBlock.h"
+#include "MyCharacter.h"
 
-bool USlot::Initialize()
+void USlot::Init()
 {
-	//WidgetTree
-	UPanelWidget* panel = Cast<UPanelWidget>(WidgetTree->RootWidget);
-	panel->ClearChildren();
-
-	Img = WidgetTree->ConstructWidget<UImage>();
-	Text = WidgetTree->ConstructWidget<UTextBlock>();
-
-	panel->AddChild(Cast<UWidget>(Img));
-	panel->AddChild(Cast<UWidget>(Text));
-
-	return Super::Initialize();
+	Refresh();
 }
+
+void USlot::SetType(enum ESlotType type)
+{
+	Type = type;
+}
+
+void USlot::SetTexture(UTexture2D* tex)
+{
+	if (tex == nullptr) return;
+	Img->SetBrushFromTexture(tex);
+}
+
+void USlot::Refresh()
+{
+	switch (Type)
+	{
+	case ESlotType::SLOT_Item:
+	{
+		FItemData& data = Player->Inventory[Slotnum];
+
+		if (data.Texture != nullptr)
+		{
+			SetTexture(data.Texture);
+		}
+
+		Count = data.Count;
+
+		if (Count <= 1)
+			Text->SetVisibility(ESlateVisibility::Hidden);
+		else
+		{
+			Text->SetVisibility(ESlateVisibility::Visible);
+			Text->SetText(FText::FromString(FString::FromInt(Count)));
+		}
+		break;
+	}
+	case ESlotType::SLOT_Skill:
+	{		
+		break;
+	}
+	
+}
+}
+
+

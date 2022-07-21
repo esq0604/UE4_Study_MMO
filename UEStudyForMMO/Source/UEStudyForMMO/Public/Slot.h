@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "CustomUI.h"
+#include "InGameData.h"
+
 #include "Slot.generated.h"
 
 /**
@@ -19,17 +21,20 @@ class UESTUDYFORMMO_API USlot : public UCustomUI
 	GENERATED_BODY()
 	
 public:
-	//void Init() override;
-	bool Initialize() override;
+	void Init() override;
+	void SetType(enum ESlotType type);
+	void SetTexture(UTexture2D* tex);
+
+	void Refresh();
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (UIMax = 31, UIMin = -1))
-		int Solotnum;
+		int Slotnum;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 		int Count;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
-		TEnumAsByte<ESlotType> Type;
+		TEnumAsByte<ESlotType> Type=ESlotType::SLOT_Item;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, meta=(BindWidget))
 		UImage* Img;

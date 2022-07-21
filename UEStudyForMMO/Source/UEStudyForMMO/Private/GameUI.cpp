@@ -3,6 +3,8 @@
 
 #include "GameUI.h"
 #include "Gauge.h"
+#include "MyCharacter.h"
+#include "Inventory.h"
 #include "Engine/Texture2D.h"
 
 UGameUI::UGameUI(const FObjectInitializer& ObjectInitializer) :Super(ObjectInitializer)
@@ -12,7 +14,14 @@ UGameUI::UGameUI(const FObjectInitializer& ObjectInitializer) :Super(ObjectIniti
 
 void UGameUI::Init()
 {
-	UE_LOG(LogTemp, Warning, TEXT("UGameUI::Init()"));    
+	
+	
+	UE_LOG(LogTemp, Warning, TEXT("UGameUI::Init()"));  
+	
+	
+	Inventory->Player = this->Player;
+	Inventory->Init();
+
 	//HP Bar
 	
 	HPBar->Player = this->Player;

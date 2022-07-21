@@ -78,6 +78,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "UI")
 		TArray<FItemData> Data;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "UI")
+		TArray<FItemData> Inventory;
+
 	UPROPERTY(VisibleAnywhere, Category = Camera)
 		USpringArmComponent* SpringArm;
 	
@@ -99,6 +102,7 @@ public:
 
 	UPROPERTY(EditAnywhere)
 		FAbility Ability;
+
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "UI")
 		TSubclassOf<UGameUI> GameUIClass;

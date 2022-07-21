@@ -18,15 +18,17 @@ class UESTUDYFORMMO_API UInventory : public UCustomUI
 	GENERATED_BODY()
 
 public:
-	UInventory(const FObjectInitializer& ObjectInitializer);
 
 	void Init() override;
 
 public:
+	const int Max_Slot = 32;
+	
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		UTexture2D* DefTex;
 
 
 private:
-	TArray<USlot*> Sloats;
+	TArray<USlot*> Slots;
 };

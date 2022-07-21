@@ -48,7 +48,6 @@ void EmptyLinkFunctionForGeneratedCodeInventory() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UInventory_Statics::Class_MetaDataParams[] = {
 		{ "IncludePath", "Inventory.h" },
 		{ "ModuleRelativePath", "Public/Inventory.h" },
-		{ "ObjectInitializerConstructorDeclared", "" },
 	};
 #endif
 #if WITH_METADATA
@@ -88,7 +87,7 @@ void EmptyLinkFunctionForGeneratedCodeInventory() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UInventory, 439137971);
+	IMPLEMENT_CLASS(UInventory, 1417549376);
 	template<> UESTUDYFORMMO_API UClass* StaticClass<UInventory>()
 	{
 		return UInventory::StaticClass();

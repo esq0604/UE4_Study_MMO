@@ -10,7 +10,7 @@
  * 
  */
 class UGauge;
-
+class UInventory;
 
 
 UCLASS()
@@ -22,8 +22,11 @@ public:
 
 	void Init() override;
 
+//Inventory
 public:
-
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "UI", meta = (BindWidget))
+		UInventory* Inventory;
+//Gauge
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "ProgressBarData")
 		UTexture2D* HPBarTex;

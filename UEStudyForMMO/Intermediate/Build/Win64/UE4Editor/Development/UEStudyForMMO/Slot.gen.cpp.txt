@@ -103,4 +103,6 @@ C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\In
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\WidgetBlueprintGeneratedClass.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\UserWidget.generated.h
 D:\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Inc\UEStudyForMMO\CustomUI.generated.h
+D:\UE4_Study_MMO\UEStudyForMMO\Source\UEStudyForMMO\Public\InGameData.h
+D:\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Inc\UEStudyForMMO\InGameData.generated.h
 D:\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Inc\UEStudyForMMO\Slot.generated.h
