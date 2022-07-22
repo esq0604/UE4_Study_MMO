@@ -28,7 +28,7 @@ enum EGaugeType
 	Gauge_Exp UMETA(DisplayName = "Exp")
 };
 
-//Inventory Data
+//Inventory Item Data
 UENUM(BlueprintType)
 enum EItemType
 {

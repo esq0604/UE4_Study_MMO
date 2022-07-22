@@ -18,9 +18,12 @@ void UGameUI::Init()
 	
 	UE_LOG(LogTemp, Warning, TEXT("UGameUI::Init()"));  
 	
-	
-	Inventory->Player = this->Player;
-	Inventory->Init();
+	if (Inventory)
+	{
+
+		Inventory->Player = this->Player;
+		Inventory->Init();
+	}
 
 	//HP Bar
 	

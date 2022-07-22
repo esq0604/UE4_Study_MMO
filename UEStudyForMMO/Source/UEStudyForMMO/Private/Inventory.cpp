@@ -13,7 +13,9 @@ void UInventory::Init()
 	for (int i = 0; i < Max_Slot; i++)
 	{
 		if (Player->Inventory[i].Type == EItemType::ITEM_None)
+		{
 			Player->Inventory[i].Texture = DefTex;
+		}
 	}
 	Slots.Init(nullptr, 32);
 	TArray<UWidget*> widgets;

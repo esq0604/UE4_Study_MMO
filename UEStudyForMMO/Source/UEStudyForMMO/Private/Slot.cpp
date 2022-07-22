@@ -18,7 +18,10 @@ void USlot::SetType(enum ESlotType type)
 
 void USlot::SetTexture(UTexture2D* tex)
 {
-	if (tex == nullptr) return;
+	if (tex == nullptr)
+	{
+		return;
+	}
 	Img->SetBrushFromTexture(tex);
 }
 
@@ -29,7 +32,6 @@ void USlot::Refresh()
 	case ESlotType::SLOT_Item:
 	{
 		FItemData& data = Player->Inventory[Slotnum];
-
 		if (data.Texture != nullptr)
 		{
 			SetTexture(data.Texture);

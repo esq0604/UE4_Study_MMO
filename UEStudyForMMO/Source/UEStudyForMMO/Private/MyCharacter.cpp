@@ -16,7 +16,7 @@ AMyCharacter::AMyCharacter()
 	SetSpringArmComponent();
 	SetCameraComponent();
 	GetAnimInstance();
-	GetFireBallBP();
+	//GetFireBallBP();
 	//GetGameUIBP();
 	//AbilityInit();
 	AbilityInit();

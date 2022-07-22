@@ -1,8 +1,8 @@
 {
 	"SourceFiles": [
-		"D:\\UE4_Study_MMO\\UEStudyForMMO\\Source\\UEStudyForMMO\\UEStudyForMMO.Build.cs",
-		"D:\\UE4_Study_MMO\\UEStudyForMMO\\Source\\UEStudyForMMO.Target.cs",
-		"D:\\UE4_Study_MMO\\UEStudyForMMO\\Source\\UEStudyForMMOEditor.Target.cs"
+		"C:\\Users\\dltkd\\UE4_Study_MMO\\UEStudyForMMO\\Source\\UEStudyForMMO\\UEStudyForMMO.Build.cs",
+		"C:\\Users\\dltkd\\UE4_Study_MMO\\UEStudyForMMO\\Source\\UEStudyForMMO.Target.cs",
+		"C:\\Users\\dltkd\\UE4_Study_MMO\\UEStudyForMMO\\Source\\UEStudyForMMOEditor.Target.cs"
 	],
 	"EngineVersion": "4.27.2"
 }
