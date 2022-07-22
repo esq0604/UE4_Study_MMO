@@ -20,6 +20,7 @@ void EmptyLinkFunctionForGeneratedCodeInGameData() {}
 	UESTUDYFORMMO_API UScriptStruct* Z_Construct_UScriptStruct_FItemData();
 	ENGINE_API UClass* Z_Construct_UClass_UTexture2D_NoRegister();
 	UESTUDYFORMMO_API UScriptStruct* Z_Construct_UScriptStruct_FPotionData();
+	UESTUDYFORMMO_API UScriptStruct* Z_Construct_UScriptStruct_FCharacterAbility();
 // End Cross Module References
 	static UEnum* ESlotType_StaticEnum()
 	{
@@ -267,7 +268,9 @@ static struct FScriptStruct_UEStudyForMMO_StaticRegisterNativesFItemData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FItemData_Statics::Struct_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
+		{ "Comment", "//Item Data\n" },
 		{ "ModuleRelativePath", "Public/InGameData.h" },
+		{ "ToolTip", "Item Data" },
 	};
 #endif
 	void* Z_Construct_UScriptStruct_FItemData_Statics::NewStructOps()
@@ -344,7 +347,7 @@ static struct FScriptStruct_UEStudyForMMO_StaticRegisterNativesFItemData
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FItemData_Hash() { return 2782218744U; }
+	uint32 Get_Z_Construct_UScriptStruct_FItemData_Hash() { return 3230483660U; }
 class UScriptStruct* FPotionData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -387,7 +390,9 @@ static struct FScriptStruct_UEStudyForMMO_StaticRegisterNativesFPotionData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FPotionData_Statics::Struct_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
+		{ "Comment", "//Potion Data\n" },
 		{ "ModuleRelativePath", "Public/InGameData.h" },
+		{ "ToolTip", "Potion Data" },
 	};
 #endif
 	void* Z_Construct_UScriptStruct_FPotionData_Statics::NewStructOps()
@@ -440,7 +445,177 @@ static struct FScriptStruct_UEStudyForMMO_StaticRegisterNativesFPotionData
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FPotionData_Hash() { return 2843130119U; }
+	uint32 Get_Z_Construct_UScriptStruct_FPotionData_Hash() { return 45453629U; }
+class UScriptStruct* FCharacterAbility::StaticStruct()
+{
+	static class UScriptStruct* Singleton = NULL;
+	if (!Singleton)
+	{
+		extern UESTUDYFORMMO_API uint32 Get_Z_Construct_UScriptStruct_FCharacterAbility_Hash();
+		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FCharacterAbility, Z_Construct_UPackage__Script_UEStudyForMMO(), TEXT("CharacterAbility"), sizeof(FCharacterAbility), Get_Z_Construct_UScriptStruct_FCharacterAbility_Hash());
+	}
+	return Singleton;
+}
+template<> UESTUDYFORMMO_API UScriptStruct* StaticStruct<FCharacterAbility>()
+{
+	return FCharacterAbility::StaticStruct();
+}
+static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FCharacterAbility(FCharacterAbility::StaticStruct, TEXT("/Script/UEStudyForMMO"), TEXT("CharacterAbility"), false, nullptr, nullptr);
+static struct FScriptStruct_UEStudyForMMO_StaticRegisterNativesFCharacterAbility
+{
+	FScriptStruct_UEStudyForMMO_StaticRegisterNativesFCharacterAbility()
+	{
+		UScriptStruct::DeferCppStructOps<FCharacterAbility>(FName(TEXT("CharacterAbility")));
+	}
+} ScriptStruct_UEStudyForMMO_StaticRegisterNativesFCharacterAbility;
+	struct Z_Construct_UScriptStruct_FCharacterAbility_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
+#endif
+		static void* NewStructOps();
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Level_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_Level;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CurrentHP_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_CurrentHP;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaxHP_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MaxHP;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Ability_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Ability;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CurrentResource_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_CurrentResource;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaxResource_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MaxResource;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CurrentExp_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_CurrentExp;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaxExp_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MaxExp;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FCharacterAbility_Statics::Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "Comment", "//TODO : GetPlayer Pointer \n" },
+		{ "ModuleRelativePath", "Public/InGameData.h" },
+		{ "ToolTip", "TODO : GetPlayer Pointer" },
+	};
+#endif
+	void* Z_Construct_UScriptStruct_FCharacterAbility_Statics::NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FCharacterAbility>();
+	}
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FCharacterAbility_Statics::NewProp_Level_MetaData[] = {
+		{ "Category", "CharacterAbility" },
+		{ "ModuleRelativePath", "Public/InGameData.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UScriptStruct_FCharacterAbility_Statics::NewProp_Level = { "Level", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FCharacterAbility, Level), METADATA_PARAMS(Z_Construct_UScriptStruct_FCharacterAbility_Statics::NewProp_Level_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FCharacterAbility_Statics::NewProp_Level_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FCharacterAbility_Statics::NewProp_CurrentHP_MetaData[] = {
+		{ "Category", "CharacterAbility" },
+		{ "ModuleRelativePath", "Public/InGameData.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FCharacterAbility_Statics::NewProp_CurrentHP = { "CurrentHP", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FCharacterAbility, CurrentHP), METADATA_PARAMS(Z_Construct_UScriptStruct_FCharacterAbility_Statics::NewProp_CurrentHP_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FCharacterAbility_Statics::NewProp_CurrentHP_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FCharacterAbility_Statics::NewProp_MaxHP_MetaData[] = {
+		{ "Category", "CharacterAbility" },
+		{ "ModuleRelativePath", "Public/InGameData.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FCharacterAbility_Statics::NewProp_MaxHP = { "MaxHP", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FCharacterAbility, MaxHP), METADATA_PARAMS(Z_Construct_UScriptStruct_FCharacterAbility_Statics::NewProp_MaxHP_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FCharacterAbility_Statics::NewProp_MaxHP_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FCharacterAbility_Statics::NewProp_Ability_MetaData[] = {
+		{ "Category", "CharacterAbility" },
+		{ "ModuleRelativePath", "Public/InGameData.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FCharacterAbility_Statics::NewProp_Ability = { "Ability", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FCharacterAbility, Ability), METADATA_PARAMS(Z_Construct_UScriptStruct_FCharacterAbility_Statics::NewProp_Ability_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FCharacterAbility_Statics::NewProp_Ability_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FCharacterAbility_Statics::NewProp_CurrentResource_MetaData[] = {
+		{ "Category", "CharacterAbility" },
+		{ "ModuleRelativePath", "Public/InGameData.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FCharacterAbility_Statics::NewProp_CurrentResource = { "CurrentResource", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FCharacterAbility, CurrentResource), METADATA_PARAMS(Z_Construct_UScriptStruct_FCharacterAbility_Statics::NewProp_CurrentResource_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FCharacterAbility_Statics::NewProp_CurrentResource_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FCharacterAbility_Statics::NewProp_MaxResource_MetaData[] = {
+		{ "Category", "CharacterAbility" },
+		{ "ModuleRelativePath", "Public/InGameData.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FCharacterAbility_Statics::NewProp_MaxResource = { "MaxResource", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FCharacterAbility, MaxResource), METADATA_PARAMS(Z_Construct_UScriptStruct_FCharacterAbility_Statics::NewProp_MaxResource_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FCharacterAbility_Statics::NewProp_MaxResource_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FCharacterAbility_Statics::NewProp_CurrentExp_MetaData[] = {
+		{ "Category", "CharacterAbility" },
+		{ "ModuleRelativePath", "Public/InGameData.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FCharacterAbility_Statics::NewProp_CurrentExp = { "CurrentExp", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FCharacterAbility, CurrentExp), METADATA_PARAMS(Z_Construct_UScriptStruct_FCharacterAbility_Statics::NewProp_CurrentExp_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FCharacterAbility_Statics::NewProp_CurrentExp_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FCharacterAbility_Statics::NewProp_MaxExp_MetaData[] = {
+		{ "Category", "CharacterAbility" },
+		{ "ModuleRelativePath", "Public/InGameData.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FCharacterAbility_Statics::NewProp_MaxExp = { "MaxExp", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FCharacterAbility, MaxExp), METADATA_PARAMS(Z_Construct_UScriptStruct_FCharacterAbility_Statics::NewProp_MaxExp_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FCharacterAbility_Statics::NewProp_MaxExp_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FCharacterAbility_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FCharacterAbility_Statics::NewProp_Level,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FCharacterAbility_Statics::NewProp_CurrentHP,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FCharacterAbility_Statics::NewProp_MaxHP,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FCharacterAbility_Statics::NewProp_Ability,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FCharacterAbility_Statics::NewProp_CurrentResource,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FCharacterAbility_Statics::NewProp_MaxResource,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FCharacterAbility_Statics::NewProp_CurrentExp,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FCharacterAbility_Statics::NewProp_MaxExp,
+	};
+	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FCharacterAbility_Statics::ReturnStructParams = {
+		(UObject* (*)())Z_Construct_UPackage__Script_UEStudyForMMO,
+		nullptr,
+		&NewStructOps,
+		"CharacterAbility",
+		sizeof(FCharacterAbility),
+		alignof(FCharacterAbility),
+		Z_Construct_UScriptStruct_FCharacterAbility_Statics::PropPointers,
+		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FCharacterAbility_Statics::PropPointers),
+		RF_Public|RF_Transient|RF_MarkAsNative,
+		EStructFlags(0x00000001),
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FCharacterAbility_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FCharacterAbility_Statics::Struct_MetaDataParams))
+	};
+	UScriptStruct* Z_Construct_UScriptStruct_FCharacterAbility()
+	{
+#if WITH_HOT_RELOAD
+		extern uint32 Get_Z_Construct_UScriptStruct_FCharacterAbility_Hash();
+		UPackage* Outer = Z_Construct_UPackage__Script_UEStudyForMMO();
+		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("CharacterAbility"), sizeof(FCharacterAbility), Get_Z_Construct_UScriptStruct_FCharacterAbility_Hash(), false);
+#else
+		static UScriptStruct* ReturnStruct = nullptr;
+#endif
+		if (!ReturnStruct)
+		{
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FCharacterAbility_Statics::ReturnStructParams);
+		}
+		return ReturnStruct;
+	}
+	uint32 Get_Z_Construct_UScriptStruct_FCharacterAbility_Hash() { return 242020781U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

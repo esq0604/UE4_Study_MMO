@@ -14,6 +14,9 @@ struct FAbility
 {
 	GENERATED_BODY()
 public:
+	//void ChangeHP(float hp);
+	//void ChangeResource(float resource);
+public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		float CurrentHP;
 

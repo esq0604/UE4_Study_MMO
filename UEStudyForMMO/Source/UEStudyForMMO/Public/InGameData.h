@@ -19,6 +19,44 @@ public:
 };
 
 
+//TODO : GetPlayer Pointer 
+USTRUCT(BlueprintType)
+struct FCharacterAbility
+{
+	GENERATED_USTRUCT_BODY()
+
+public:
+	FCharacterAbility();
+
+	void ChangeHP(float value);
+	void ChangeResource(float value);
+
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		int Level;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		float CurrentHP;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		float MaxHP;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		float Ability;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		float CurrentResource;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		float MaxResource;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		float CurrentExp;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		float MaxExp;
+};
+
 //Gague Data
 UENUM(BlueprintType)
 enum EGaugeType
@@ -49,6 +87,7 @@ enum ESlotType
 	SLOT_Q_Skill	UMETA(DisplayName = "Q_Skill")
 };
 
+//Potion Data
 USTRUCT(BlueprintType)
 struct FPotionData
 {
@@ -68,6 +107,7 @@ public:
 		float ResourceValue;
 };
 
+//Item Data
 USTRUCT(BlueprintType)
 struct FItemData
 {

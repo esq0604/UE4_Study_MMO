@@ -5,7 +5,6 @@
 #include "CoreMinimal.h"
 #include "CustomUI.h"
 #include "InGameData.h"
-
 #include "Slot.generated.h"
 
 /**
@@ -14,6 +13,7 @@
 enum ESlotType;
 class UImage;
 class UTextBlock;
+//class FReply
 
 UCLASS()
 class UESTUDYFORMMO_API USlot : public UCustomUI
@@ -24,8 +24,10 @@ public:
 	void Init() override;
 	void SetType(enum ESlotType type);
 	void SetTexture(UTexture2D* tex);
-
 	void Refresh();
+
+protected:
+	FReply NativeOnMouseButtonDown(const FGeometry& InGeometry, const FPointerEvent& InMouseEvent) override;
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (UIMax = 31, UIMin = -1))
 		int Slotnum;
