@@ -50,6 +50,25 @@ enum ESlotType
 };
 
 USTRUCT(BlueprintType)
+struct FPotionData
+{
+	GENERATED_USTRUCT_BODY()
+public:
+	FPotionData()
+		: HPValue(0), ResourceValue(0)
+	{}
+
+	void Clear();
+	void Use(AMyCharacter* Player);
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+		float HPValue;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+		float ResourceValue;
+};
+
+USTRUCT(BlueprintType)
 struct FItemData
 {
 	GENERATED_USTRUCT_BODY()
@@ -75,6 +94,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		int Count;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		FPotionData potion;
 };
 
 

@@ -19,6 +19,7 @@ void EmptyLinkFunctionForGeneratedCodeInGameData() {}
 	UESTUDYFORMMO_API UEnum* Z_Construct_UEnum_UEStudyForMMO_EGaugeType();
 	UESTUDYFORMMO_API UScriptStruct* Z_Construct_UScriptStruct_FItemData();
 	ENGINE_API UClass* Z_Construct_UClass_UTexture2D_NoRegister();
+	UESTUDYFORMMO_API UScriptStruct* Z_Construct_UScriptStruct_FPotionData();
 // End Cross Module References
 	static UEnum* ESlotType_StaticEnum()
 	{
@@ -104,7 +105,7 @@ void EmptyLinkFunctionForGeneratedCodeInGameData() {}
 		return EItemType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EItemType(EItemType_StaticEnum, TEXT("/Script/UEStudyForMMO"), TEXT("EItemType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_UEStudyForMMO_EItemType_Hash() { return 987474385U; }
+	uint32 Get_Z_Construct_UEnum_UEStudyForMMO_EItemType_Hash() { return 4162407414U; }
 	UEnum* Z_Construct_UEnum_UEStudyForMMO_EItemType()
 	{
 #if WITH_HOT_RELOAD
@@ -123,7 +124,7 @@ void EmptyLinkFunctionForGeneratedCodeInGameData() {}
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 				{ "BlueprintType", "true" },
-				{ "Comment", "//Inventory Data\n" },
+				{ "Comment", "//Inventory Item Data\n" },
 				{ "ITEM_Equiment.DisplayName", "Equiment" },
 				{ "ITEM_Equiment.Name", "ITEM_Equiment" },
 				{ "ITEM_None.DisplayName", "None" },
@@ -131,7 +132,7 @@ void EmptyLinkFunctionForGeneratedCodeInGameData() {}
 				{ "ITEM_Useable.DisplayName", "Useable" },
 				{ "ITEM_Useable.Name", "ITEM_Useable" },
 				{ "ModuleRelativePath", "Public/InGameData.h" },
-				{ "ToolTip", "Inventory Data" },
+				{ "ToolTip", "Inventory Item Data" },
 			};
 #endif
 			static const UE4CodeGen_Private::FEnumParams EnumParams = {
@@ -256,6 +257,10 @@ static struct FScriptStruct_UEStudyForMMO_StaticRegisterNativesFItemData
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Count_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_Count;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_potion_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_potion;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
@@ -297,11 +302,19 @@ static struct FScriptStruct_UEStudyForMMO_StaticRegisterNativesFItemData
 	};
 #endif
 	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UScriptStruct_FItemData_Statics::NewProp_Count = { "Count", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FItemData, Count), METADATA_PARAMS(Z_Construct_UScriptStruct_FItemData_Statics::NewProp_Count_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FItemData_Statics::NewProp_Count_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FItemData_Statics::NewProp_potion_MetaData[] = {
+		{ "Category", "ItemData" },
+		{ "ModuleRelativePath", "Public/InGameData.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FItemData_Statics::NewProp_potion = { "potion", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FItemData, potion), Z_Construct_UScriptStruct_FPotionData, METADATA_PARAMS(Z_Construct_UScriptStruct_FItemData_Statics::NewProp_potion_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FItemData_Statics::NewProp_potion_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FItemData_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemData_Statics::NewProp_Name,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemData_Statics::NewProp_Texture,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemData_Statics::NewProp_Type,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemData_Statics::NewProp_Count,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemData_Statics::NewProp_potion,
 	};
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FItemData_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_UEStudyForMMO,
@@ -331,7 +344,103 @@ static struct FScriptStruct_UEStudyForMMO_StaticRegisterNativesFItemData
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FItemData_Hash() { return 1035609324U; }
+	uint32 Get_Z_Construct_UScriptStruct_FItemData_Hash() { return 2782218744U; }
+class UScriptStruct* FPotionData::StaticStruct()
+{
+	static class UScriptStruct* Singleton = NULL;
+	if (!Singleton)
+	{
+		extern UESTUDYFORMMO_API uint32 Get_Z_Construct_UScriptStruct_FPotionData_Hash();
+		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FPotionData, Z_Construct_UPackage__Script_UEStudyForMMO(), TEXT("PotionData"), sizeof(FPotionData), Get_Z_Construct_UScriptStruct_FPotionData_Hash());
+	}
+	return Singleton;
+}
+template<> UESTUDYFORMMO_API UScriptStruct* StaticStruct<FPotionData>()
+{
+	return FPotionData::StaticStruct();
+}
+static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FPotionData(FPotionData::StaticStruct, TEXT("/Script/UEStudyForMMO"), TEXT("PotionData"), false, nullptr, nullptr);
+static struct FScriptStruct_UEStudyForMMO_StaticRegisterNativesFPotionData
+{
+	FScriptStruct_UEStudyForMMO_StaticRegisterNativesFPotionData()
+	{
+		UScriptStruct::DeferCppStructOps<FPotionData>(FName(TEXT("PotionData")));
+	}
+} ScriptStruct_UEStudyForMMO_StaticRegisterNativesFPotionData;
+	struct Z_Construct_UScriptStruct_FPotionData_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
+#endif
+		static void* NewStructOps();
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_HPValue_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_HPValue;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ResourceValue_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ResourceValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FPotionData_Statics::Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "Public/InGameData.h" },
+	};
+#endif
+	void* Z_Construct_UScriptStruct_FPotionData_Statics::NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FPotionData>();
+	}
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FPotionData_Statics::NewProp_HPValue_MetaData[] = {
+		{ "Category", "PotionData" },
+		{ "ModuleRelativePath", "Public/InGameData.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FPotionData_Statics::NewProp_HPValue = { "HPValue", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FPotionData, HPValue), METADATA_PARAMS(Z_Construct_UScriptStruct_FPotionData_Statics::NewProp_HPValue_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FPotionData_Statics::NewProp_HPValue_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FPotionData_Statics::NewProp_ResourceValue_MetaData[] = {
+		{ "Category", "PotionData" },
+		{ "ModuleRelativePath", "Public/InGameData.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FPotionData_Statics::NewProp_ResourceValue = { "ResourceValue", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FPotionData, ResourceValue), METADATA_PARAMS(Z_Construct_UScriptStruct_FPotionData_Statics::NewProp_ResourceValue_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FPotionData_Statics::NewProp_ResourceValue_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FPotionData_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FPotionData_Statics::NewProp_HPValue,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FPotionData_Statics::NewProp_ResourceValue,
+	};
+	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FPotionData_Statics::ReturnStructParams = {
+		(UObject* (*)())Z_Construct_UPackage__Script_UEStudyForMMO,
+		nullptr,
+		&NewStructOps,
+		"PotionData",
+		sizeof(FPotionData),
+		alignof(FPotionData),
+		Z_Construct_UScriptStruct_FPotionData_Statics::PropPointers,
+		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FPotionData_Statics::PropPointers),
+		RF_Public|RF_Transient|RF_MarkAsNative,
+		EStructFlags(0x00000001),
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FPotionData_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FPotionData_Statics::Struct_MetaDataParams))
+	};
+	UScriptStruct* Z_Construct_UScriptStruct_FPotionData()
+	{
+#if WITH_HOT_RELOAD
+		extern uint32 Get_Z_Construct_UScriptStruct_FPotionData_Hash();
+		UPackage* Outer = Z_Construct_UPackage__Script_UEStudyForMMO();
+		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("PotionData"), sizeof(FPotionData), Get_Z_Construct_UScriptStruct_FPotionData_Hash(), false);
+#else
+		static UScriptStruct* ReturnStruct = nullptr;
+#endif
+		if (!ReturnStruct)
+		{
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FPotionData_Statics::ReturnStructParams);
+		}
+		return ReturnStruct;
+	}
+	uint32 Get_Z_Construct_UScriptStruct_FPotionData_Hash() { return 2843130119U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

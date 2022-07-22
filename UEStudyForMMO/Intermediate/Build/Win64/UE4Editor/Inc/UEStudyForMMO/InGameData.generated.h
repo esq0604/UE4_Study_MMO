@@ -13,12 +13,19 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define UESTUDYFORMMO_InGameData_generated_h
 
-#define UEStudyForMMO_Source_UEStudyForMMO_Public_InGameData_h_55_GENERATED_BODY \
+#define UEStudyForMMO_Source_UEStudyForMMO_Public_InGameData_h_74_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FItemData_Statics; \
 	UESTUDYFORMMO_API static class UScriptStruct* StaticStruct();
 
 
 template<> UESTUDYFORMMO_API UScriptStruct* StaticStruct<struct FItemData>();
+
+#define UEStudyForMMO_Source_UEStudyForMMO_Public_InGameData_h_55_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FPotionData_Statics; \
+	UESTUDYFORMMO_API static class UScriptStruct* StaticStruct();
+
+
+template<> UESTUDYFORMMO_API UScriptStruct* StaticStruct<struct FPotionData>();
 
 #undef CURRENT_FILE_ID
 #define CURRENT_FILE_ID UEStudyForMMO_Source_UEStudyForMMO_Public_InGameData_h

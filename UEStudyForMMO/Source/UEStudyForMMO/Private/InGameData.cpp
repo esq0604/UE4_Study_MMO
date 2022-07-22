@@ -10,3 +10,11 @@ InGameData::InGameData()
 InGameData::~InGameData()
 {
 }
+
+void FItemData::Clear()
+{
+	/*switch (Type)
+	{
+	case EItemType::ITEM_Useable:potion.Clear(); break;
+	}*/
+}
