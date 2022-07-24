@@ -51,3 +51,8 @@ void UGameUI::Init()
 		//ExpBar->SetTexture(ExpBarTex);
 	ExpBar->Init();
 }
+
+void UGameUI::RefreshInventory(int slotnum)
+{
+	Inventory->RefreshSlot(slotnum);
+}

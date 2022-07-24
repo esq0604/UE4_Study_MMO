@@ -20,7 +20,7 @@ void AWeapon::BeginPlay()
 
 void AWeapon::GetWeaponObject()
 {
-	Weapon = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("WEAPON"));
+	Weapon = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("WEAPOqN"));
 
 	static ConstructorHelpers::FObjectFinder<USkeletalMesh> WEAPON(TEXT("/Game/BattleWizardPolyart/Meshes/MagicStaffs/Staff01SM.Staff01SM"));
 	if (WEAPON.Succeeded())

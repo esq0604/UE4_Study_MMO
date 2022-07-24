@@ -21,6 +21,8 @@ public:
 
 	void Init() override;
 
+	void RefreshSlot(int slotnum);
+
 public:
 	const int Max_Slot = 32;
 	

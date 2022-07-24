@@ -28,9 +28,12 @@ public:
 
 protected:
 	void NativeOnDragDetected(const FGeometry& InGeometry, const FPointerEvent& InMouseEvent, UDragDropOperation*& OutOperation) override;
-	bool NativeOnDrop(const FGeometry& InGeometry,const FDragDropEvent& InDragDropEvent, UDragDropOperation*& OutOperation) override;
+	bool NativeOnDrop(const FGeometry& InGeometry,const FDragDropEvent& InDragDropEvent, UDragDropOperation* InOperation) override;
 	FReply NativeOnMouseButtonDown(const FGeometry& InGeometry, const FPointerEvent& InMouseEvent) override;
 public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		TSubclassOf<USlot> DragVisualClass;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (UIMax = 31, UIMin = -1))
 		int Slotnum;
 

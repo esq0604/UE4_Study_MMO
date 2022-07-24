@@ -33,3 +33,11 @@ void UInventory::Init()
 		Slots[slot->Slotnum] = slot;
 	}
 }
+
+void UInventory::RefreshSlot(int slotnum)
+{
+	if (Player->Inventory[slotnum].Type == EItemType::ITEM_None)
+		Player->Inventory[slotnum].Texture = DefTex;
+
+	Slots[slotnum]->Refresh();
+}

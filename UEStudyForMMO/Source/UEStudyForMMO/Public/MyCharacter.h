@@ -35,6 +35,10 @@ public:
 
 	void AbilityInit();
 
+	bool DraggingSwap(int from, ESlotType fromtype, int to, ESlotType totype);
+	bool SwapInven(int from, int to);
+
+
 private:
 	void UpDown(float NewAxisValue);
 	void LeftRight(float NewAxisValue);

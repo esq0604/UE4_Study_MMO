@@ -7,6 +7,7 @@
 #include "MyCharacter.h"
 #include "Input/Reply.h"
 #include "Blueprint/WidgetBlueprintLibrary.h"
+#include "SlotDrag.h"
 
 
 void USlot::Init()
@@ -61,12 +62,58 @@ void USlot::Refresh()
 
 void USlot::NativeOnDragDetected(const FGeometry& InGeometry, const FPointerEvent& InMouseEvent, UDragDropOperation*& OutOperation)
 {
+	Super::NativeOnDragDetected(InGeometry, InMouseEvent, OutOperation);
+	
+	if (OutOperation == nullptr)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Green, TEXT("Drag : Draging Start"));
 
+		USlotDrag* oper = NewObject<USlotDrag>();
+		OutOperation = oper;
+		oper->FromNum = this->Slotnum;
+		oper->Type = this->Type;
+
+		if (DragVisualClass != nullptr)
+		{
+			USlot* visual = CreateWidget<USlot>(Cast<APlayerController>(Player->Controller), DragVisualClass);
+			visual->Type = this->Type;
+			visual->Player = this->Player;
+			visual->Slotnum = this->Slotnum;
+			visual->Refresh();
+
+			oper->DefaultDragVisual = visual;
+		}
+	}
+
+	else
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Green, TEXT("Drag : Draging Again"));
+	}
+}
+
+bool USlot::NativeOnDrop(const FGeometry& InGeometry, const FDragDropEvent& InDragDropEvent, UDragDropOperation* InOperation)
+{
+	Super::NativeOnDrop(InGeometry, InDragDropEvent, InOperation);
+	
+	USlotDrag* oper = Cast<USlotDrag>(InOperation);
+
+	GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Green, TEXT("Drag : Dragning End"));
+
+	if (oper != nullptr)
+	{
+		Player->DraggingSwap(oper->FromNum, oper->Type, this->Slotnum, this->Type);
+		GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Green, TEXT("Drag : Draging Success"));
+		return true;
+	}
+	else
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Green, TEXT("Drag : Draging Fail"));
+		return false;
+	}
 }
 
 FReply USlot::NativeOnMouseButtonDown(const FGeometry& InGeometry, const FPointerEvent& InMouseEvent)
 {
-	UE_LOG(LogTemp, Warning, TEXT("NativeOnMouseButtonDown"));
 
 	FEventReply reply;
 	reply.NativeReply = Super::NativeOnMouseButtonDown(InGeometry, InMouseEvent);
@@ -109,7 +156,9 @@ FReply USlot::NativeOnMouseButtonDown(const FGeometry& InGeometry, const FPointe
 			case SLOT_Q_Item:
 			{
 				if (Player->Inventory[Slotnum].Type != ITEM_None)
+				{
 					reply = UWidgetBlueprintLibrary::DetectDragIfPressed(InMouseEvent, this, EKeys::LeftMouseButton);
+				}
 				break;
 			}
 		}

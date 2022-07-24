@@ -22,6 +22,7 @@ public:
 
 	void Init() override;
 
+	void RefreshInventory(int slotnum);
 //Inventory
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "UI", meta = (BindWidget))
