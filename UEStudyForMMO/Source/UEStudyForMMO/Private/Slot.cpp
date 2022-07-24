@@ -6,6 +6,7 @@
 #include "Components/TextBlock.h"
 #include "MyCharacter.h"
 #include "Input/Reply.h"
+#include "Blueprint/WidgetBlueprintLibrary.h"
 
 
 void USlot::Init()
@@ -58,6 +59,11 @@ void USlot::Refresh()
 }
 }
 
+void USlot::NativeOnDragDetected(const FGeometry& InGeometry, const FPointerEvent& InMouseEvent, UDragDropOperation*& OutOperation)
+{
+
+}
+
 FReply USlot::NativeOnMouseButtonDown(const FGeometry& InGeometry, const FPointerEvent& InMouseEvent)
 {
 	UE_LOG(LogTemp, Warning, TEXT("NativeOnMouseButtonDown"));
@@ -88,6 +94,27 @@ FReply USlot::NativeOnMouseButtonDown(const FGeometry& InGeometry, const FPointe
 		}
 		Refresh();
 	}
+
+	else if (InMouseEvent.IsMouseButtonDown(EKeys::LeftMouseButton) == true)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Green, TEXT("Drag : Left Button Down"));
+	
+		switch (Type)
+		{
+			case SLOT_None:
+			case SLOT_Quick:
+				break;
+
+			case SLOT_Item:
+			case SLOT_Q_Item:
+			{
+				if (Player->Inventory[Slotnum].Type != ITEM_None)
+					reply = UWidgetBlueprintLibrary::DetectDragIfPressed(InMouseEvent, this, EKeys::LeftMouseButton);
+				break;
+			}
+		}
+	}	
+
 	return reply.NativeReply;
 }
 
