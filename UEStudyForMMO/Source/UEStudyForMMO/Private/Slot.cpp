@@ -60,11 +60,14 @@ void USlot::Refresh()
 
 FReply USlot::NativeOnMouseButtonDown(const FGeometry& InGeometry, const FPointerEvent& InMouseEvent)
 {
+	UE_LOG(LogTemp, Warning, TEXT("NativeOnMouseButtonDown"));
+
 	FEventReply reply;
 	reply.NativeReply = Super::NativeOnMouseButtonDown(InGeometry, InMouseEvent);
 	
 	if (InMouseEvent.IsMouseButtonDown(EKeys::RightMouseButton) == true)
 	{
+		UE_LOG(LogTemp, Warning, TEXT(" RightMouseButton, IsMouseButtonDown"));
 		if (Player->Inventory[Slotnum].Type == ITEM_None)
 			return reply.NativeReply;
 

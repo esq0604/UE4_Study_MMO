@@ -16,7 +16,8 @@ InGameData::~InGameData()
 
 FCharacterAbility::FCharacterAbility()
 {
-	Level = 0.0f;
+	
+	/*Level = 0.0f;
 
 	CurrentHP = 1000.0f;
 	MaxHP = 2000.0f;
@@ -25,7 +26,7 @@ FCharacterAbility::FCharacterAbility()
 	MaxResource = 2000.0f;
 
 	CurrentExp = 1000.0f;
-	MaxExp = 2000.0f;
+	MaxExp = 2000.0f;*/
 }
 
 void FCharacterAbility::ChangeHP(float value)
@@ -63,14 +64,14 @@ void FPotionData::Clear()
 
 void FPotionData::Use(AMyCharacter* player)
 {
-	/*if (HPValue != 0)
+	if (HPValue != 0)
 	{
 		player->Ability.ChangeHP(HPValue);
 	}
 	if (ResourceValue != 0)
 	{
 		player->Ability.ChangeResource(ResourceValue);
-	}*/
+	}
 }
 void FItemData::Clear()
 {

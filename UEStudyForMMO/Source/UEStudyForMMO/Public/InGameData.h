@@ -94,7 +94,7 @@ struct FPotionData
 	GENERATED_USTRUCT_BODY()
 public:
 	FPotionData()
-		: HPValue(0), ResourceValue(0)
+		: HPValue(100), ResourceValue(0)
 	{}
 
 	void Clear();

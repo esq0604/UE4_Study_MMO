@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\UEStudyForMMO.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{C0F9F569-65C1-4C97-B28D-5B002623A7D7}</UniqueIdentifier>
+      <UniqueIdentifier>{24AA519E-04F4-4B98-A799-9D34C1F852F1}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\UEStudyForMMO.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{C72919A8-3DD4-4661-9C7D-DA9139D7C900}</UniqueIdentifier>
+      <UniqueIdentifier>{66897EC7-D346-4843-A104-F66477CD66D1}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -30,13 +30,13 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\UEStudyForMMO">
-      <UniqueIdentifier>{AE4277E2-05C3-4FFD-88F8-6CECA26E3122}</UniqueIdentifier>
+      <UniqueIdentifier>{9428C2B0-6B8C-4AEA-9215-74F75125A9E8}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\UEStudyForMMO\UEStudyForMMO.Build.cs">
       <Filter>Source\UEStudyForMMO</Filter>
     </None>
     <Filter Include="Source\UEStudyForMMO\Private">
-      <UniqueIdentifier>{13D3A296-7B98-4CD5-B9B8-57544D53A680}</UniqueIdentifier>
+      <UniqueIdentifier>{9F4728A6-F0AE-49FD-B640-F8A10F459430}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\UEStudyForMMO\Private\CustomUI.cpp">
       <Filter>Source\UEStudyForMMO\Private</Filter>
@@ -84,7 +84,7 @@
       <Filter>Source\UEStudyForMMO\Private</Filter>
     </ClCompile>
     <Filter Include="Source\UEStudyForMMO\Public">
-      <UniqueIdentifier>{1EAA6466-A8A7-41D2-AC78-55F4151C7A26}</UniqueIdentifier>
+      <UniqueIdentifier>{BCBDD427-D903-441F-AB77-7ACDCF318F9A}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\UEStudyForMMO\Public\CustomUI.h">
       <Filter>Source\UEStudyForMMO\Public</Filter>

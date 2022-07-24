@@ -9,33 +9,6 @@
 
 class UGameUI;
 
-USTRUCT(Atomic, BlueprintType)
-struct FAbility
-{
-	GENERATED_BODY()
-public:
-	//void ChangeHP(float hp);
-	//void ChangeResource(float resource);
-public:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-		float CurrentHP;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-		float MaxHP;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-		float CurrentResource;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-		float MaxResource;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-		float CurrentExp;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-		float MaxExp;
-};
-
 UCLASS()
 class UESTUDYFORMMO_API AMyCharacter : public ACharacter
 {
@@ -78,8 +51,8 @@ private:
 	void PlayMontage();
 	
 public:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "UI")
-		TArray<FItemData> Data;
+	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "UI")
+	//	TArray<FItemData> Data;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "UI")
 		TArray<FItemData> Inventory;
@@ -104,7 +77,7 @@ public:
 		class USphereComponent* CollectionSphere;
 
 	UPROPERTY(EditAnywhere)
-		FAbility Ability;
+		FCharacterAbility Ability;
 
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "UI")
