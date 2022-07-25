@@ -25,15 +25,10 @@ void FCharacterAbility::SetOwner(AMyCharacter* owner, bool player)
 }
 void FCharacterAbility::ChangeHP(float value)
 {
-	FString str = FString::Printf(TEXT("Current HP : %d"), (int)CurrentHP);
-	GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Red, str);
-
 	CurrentHP += value;
 	if (CurrentHP < 1) CurrentHP = 0;
 	if (CurrentHP > MaxHP) CurrentHP = MaxHP;
 
-	str = FString::Printf(TEXT("Current HP : %d"), (int)CurrentHP);
-	GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Green, str);
 
 	if (isPlayer == true)
 	{
@@ -49,15 +44,9 @@ void FCharacterAbility::ChangeHP(float value)
 
 void FCharacterAbility::ChangeResource(float value)
 {
-	FString str = FString::Printf(TEXT("Current CurrentResource : %d"), (int)CurrentResource);
-	GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Red, str);
-
 	CurrentResource += value;
 	if (CurrentResource < 1) CurrentResource = 0;
 	if (CurrentResource > MaxResource) CurrentResource = MaxResource;
-
-	str = FString::Printf(TEXT("Current CurrentResource : %d"), (int)CurrentResource);
-	GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Green, str);
 
 	if (isPlayer == true)
 	{

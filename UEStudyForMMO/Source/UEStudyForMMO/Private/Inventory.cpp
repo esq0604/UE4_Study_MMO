@@ -17,7 +17,8 @@ void UInventory::Init()
 			Player->Inventory[i].Texture = DefTex;
 		}
 	}
-	Slots.Init(nullptr, 32);
+
+	Slots.Init(nullptr, Max_Slot);
 	TArray<UWidget*> widgets;
 	WidgetTree->GetAllWidgets(widgets);
 

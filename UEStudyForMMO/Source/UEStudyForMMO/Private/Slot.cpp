@@ -66,7 +66,6 @@ void USlot::NativeOnDragDetected(const FGeometry& InGeometry, const FPointerEven
 	
 	if (OutOperation == nullptr)
 	{
-		GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Green, TEXT("Drag : Draging Start"));
 
 		USlotDrag* oper = NewObject<USlotDrag>();
 		OutOperation = oper;
@@ -81,10 +80,12 @@ void USlot::NativeOnDragDetected(const FGeometry& InGeometry, const FPointerEven
 			visual->Slotnum = this->Slotnum;
 			visual->Refresh();
 
+
+			
+			//항목을 드래그시 표시할 위젯
 			oper->DefaultDragVisual = visual;
 		}
 	}
-
 	else
 	{
 		GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Green, TEXT("Drag : Draging Again"));
@@ -97,17 +98,13 @@ bool USlot::NativeOnDrop(const FGeometry& InGeometry, const FDragDropEvent& InDr
 	
 	USlotDrag* oper = Cast<USlotDrag>(InOperation);
 
-	GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Green, TEXT("Drag : Dragning End"));
-
 	if (oper != nullptr)
 	{
 		Player->DraggingSwap(oper->FromNum, oper->Type, this->Slotnum, this->Type);
-		GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Green, TEXT("Drag : Draging Success"));
 		return true;
 	}
 	else
 	{
-		GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Green, TEXT("Drag : Draging Fail"));
 		return false;
 	}
 }
