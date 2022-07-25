@@ -70,7 +70,7 @@ enum EGaugeType
 	Gauge_Exp UMETA(DisplayName = "Exp")
 };
 
-//Inventory Item Data
+//Inventory Item Data 없거나, 포션, 장비 
 UENUM(BlueprintType)
 enum EItemType
 {
@@ -79,7 +79,7 @@ enum EItemType
 	ITEM_Equiment	UMETA(DisplayName = "Equiment")
 };
 
-//Slot Type
+//Slot Type 없거나, Item, Skil,
 UENUM(BlueprintType)
 enum ESlotType
 {

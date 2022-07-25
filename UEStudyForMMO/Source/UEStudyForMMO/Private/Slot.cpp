@@ -74,6 +74,8 @@ void USlot::NativeOnDragDetected(const FGeometry& InGeometry, const FPointerEven
 
 		if (DragVisualClass != nullptr)
 		{
+			GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Green, TEXT("Drag : DragVisualClass!= nullptr "));
+
 			USlot* visual = CreateWidget<USlot>(Cast<APlayerController>(Player->Controller), DragVisualClass);
 			visual->Type = this->Type;
 			visual->Player = this->Player;
@@ -154,6 +156,7 @@ FReply USlot::NativeOnMouseButtonDown(const FGeometry& InGeometry, const FPointe
 			{
 				if (Player->Inventory[Slotnum].Type != ITEM_None)
 				{
+					//DetectDragIfPressed-> OnDragDetected »£√‚ 
 					reply = UWidgetBlueprintLibrary::DetectDragIfPressed(InMouseEvent, this, EKeys::LeftMouseButton);
 				}
 				break;

@@ -36,7 +36,7 @@ void EmptyLinkFunctionForGeneratedCodeInGameData() {}
 		return ESlotType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ESlotType(ESlotType_StaticEnum, TEXT("/Script/UEStudyForMMO"), TEXT("ESlotType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_UEStudyForMMO_ESlotType_Hash() { return 1916598362U; }
+	uint32 Get_Z_Construct_UEnum_UEStudyForMMO_ESlotType_Hash() { return 2948128364U; }
 	UEnum* Z_Construct_UEnum_UEStudyForMMO_ESlotType()
 	{
 #if WITH_HOT_RELOAD
@@ -58,7 +58,7 @@ void EmptyLinkFunctionForGeneratedCodeInGameData() {}
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 				{ "BlueprintType", "true" },
-				{ "Comment", "//Slot Type\n" },
+				{ "Comment", "//Slot Type ???\xc5\xb3?, Item, Skil,\n" },
 				{ "ModuleRelativePath", "Public/InGameData.h" },
 				{ "SLOT_Item.DisplayName", "Item" },
 				{ "SLOT_Item.Name", "SLOT_Item" },
@@ -72,7 +72,7 @@ void EmptyLinkFunctionForGeneratedCodeInGameData() {}
 				{ "SLOT_Quick.Name", "SLOT_Quick" },
 				{ "SLOT_Skill.DisplayName", "Skill" },
 				{ "SLOT_Skill.Name", "SLOT_Skill" },
-				{ "ToolTip", "Slot Type" },
+				{ "ToolTip", "Slot Type ???\xc5\xb3?, Item, Skil," },
 			};
 #endif
 			static const UE4CodeGen_Private::FEnumParams EnumParams = {
@@ -106,7 +106,7 @@ void EmptyLinkFunctionForGeneratedCodeInGameData() {}
 		return EItemType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EItemType(EItemType_StaticEnum, TEXT("/Script/UEStudyForMMO"), TEXT("EItemType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_UEStudyForMMO_EItemType_Hash() { return 4162407414U; }
+	uint32 Get_Z_Construct_UEnum_UEStudyForMMO_EItemType_Hash() { return 1944542794U; }
 	UEnum* Z_Construct_UEnum_UEStudyForMMO_EItemType()
 	{
 #if WITH_HOT_RELOAD
@@ -125,7 +125,7 @@ void EmptyLinkFunctionForGeneratedCodeInGameData() {}
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 				{ "BlueprintType", "true" },
-				{ "Comment", "//Inventory Item Data\n" },
+				{ "Comment", "//Inventory Item Data ???\xc5\xb3?, ????, ???? \n" },
 				{ "ITEM_Equiment.DisplayName", "Equiment" },
 				{ "ITEM_Equiment.Name", "ITEM_Equiment" },
 				{ "ITEM_None.DisplayName", "None" },
@@ -133,7 +133,7 @@ void EmptyLinkFunctionForGeneratedCodeInGameData() {}
 				{ "ITEM_Useable.DisplayName", "Useable" },
 				{ "ITEM_Useable.Name", "ITEM_Useable" },
 				{ "ModuleRelativePath", "Public/InGameData.h" },
-				{ "ToolTip", "Inventory Item Data" },
+				{ "ToolTip", "Inventory Item Data ???\xc5\xb3?, ????, ????" },
 			};
 #endif
 			static const UE4CodeGen_Private::FEnumParams EnumParams = {

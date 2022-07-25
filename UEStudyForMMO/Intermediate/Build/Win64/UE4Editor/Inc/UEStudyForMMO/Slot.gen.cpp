@@ -78,7 +78,9 @@ void EmptyLinkFunctionForGeneratedCodeSlot() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_USlot_Statics::NewProp_DragVisualClass_MetaData[] = {
 		{ "Category", "Slot" },
+		{ "Comment", "//?\xe5\xb7\xa1?\xd7\xbd? ???? SlotClass \n" },
 		{ "ModuleRelativePath", "Public/Slot.h" },
+		{ "ToolTip", "?\xe5\xb7\xa1?\xd7\xbd? ???? SlotClass" },
 	};
 #endif
 	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_USlot_Statics::NewProp_DragVisualClass = { "DragVisualClass", nullptr, (EPropertyFlags)0x0014000000000005, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(USlot, DragVisualClass), Z_Construct_UClass_USlot_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_USlot_Statics::NewProp_DragVisualClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_USlot_Statics::NewProp_DragVisualClass_MetaData)) };
@@ -158,7 +160,7 @@ void EmptyLinkFunctionForGeneratedCodeSlot() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(USlot, 3731215906);
+	IMPLEMENT_CLASS(USlot, 705487941);
 	template<> UESTUDYFORMMO_API UClass* StaticClass<USlot>()
 	{
 		return USlot::StaticClass();

@@ -31,6 +31,7 @@ protected:
 	bool NativeOnDrop(const FGeometry& InGeometry,const FDragDropEvent& InDragDropEvent, UDragDropOperation* InOperation) override;
 	FReply NativeOnMouseButtonDown(const FGeometry& InGeometry, const FPointerEvent& InMouseEvent) override;
 public:
+	//드래그시 보일 SlotClass 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		TSubclassOf<USlot> DragVisualClass;
 
