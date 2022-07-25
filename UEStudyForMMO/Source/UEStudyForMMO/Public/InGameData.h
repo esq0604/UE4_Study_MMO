@@ -28,9 +28,13 @@ struct FCharacterAbility
 public:
 	FCharacterAbility();
 
+	void SetOwner(AMyCharacter* owner, bool player = false);
 	void ChangeHP(float value);
 	void ChangeResource(float value);
 
+private:
+	AMyCharacter* Owner;
+	bool isPlayer;
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		int Level;

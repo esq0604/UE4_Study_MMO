@@ -5,6 +5,7 @@
 #include "Gauge.h"
 #include "MyCharacter.h"
 #include "Inventory.h"
+#include "InGameData.h"
 #include "Engine/Texture2D.h"
 
 UGameUI::UGameUI(const FObjectInitializer& ObjectInitializer) :Super(ObjectInitializer)
@@ -55,4 +56,23 @@ void UGameUI::Init()
 void UGameUI::RefreshInventory(int slotnum)
 {
 	Inventory->RefreshSlot(slotnum);
+}
+
+void UGameUI::ChangeTextinBar(EGaugeType type, float cur, float max)
+{
+	switch (type)
+	{
+		case EGaugeType::Gauge_HP:
+			HPBar->SetValue(cur, max); 
+			break;
+
+		case EGaugeType::Gauge_Resource:
+		{
+			break;
+		}
+		case EGaugeType::Gauge_Exp:
+		{
+			break;
+		}
+	}
 }

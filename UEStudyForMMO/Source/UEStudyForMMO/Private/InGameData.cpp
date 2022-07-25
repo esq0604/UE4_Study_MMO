@@ -16,19 +16,13 @@ InGameData::~InGameData()
 
 FCharacterAbility::FCharacterAbility()
 {
-	
-	/*Level = 0.0f;
-
-	CurrentHP = 1000.0f;
-	MaxHP = 2000.0f;
-
-	CurrentResource = 1000.0f;
-	MaxResource = 2000.0f;
-
-	CurrentExp = 1000.0f;
-	MaxExp = 2000.0f;*/
 }
 
+void FCharacterAbility::SetOwner(AMyCharacter* owner, bool player)
+{
+	Owner = owner;
+	isPlayer = player;
+}
 void FCharacterAbility::ChangeHP(float value)
 {
 	FString str = FString::Printf(TEXT("Current HP : %d"), (int)CurrentHP);
@@ -41,6 +35,16 @@ void FCharacterAbility::ChangeHP(float value)
 	str = FString::Printf(TEXT("Current HP : %d"), (int)CurrentHP);
 	GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Green, str);
 
+	if (isPlayer == true)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("isPlayer ==true"));
+		AMyCharacter* casting = Cast<AMyCharacter>(Owner);
+		if (casting)
+		{
+			casting->GameUIWidget->ChangeTextinBar(Gauge_HP, CurrentHP, MaxHP);
+		}
+
+	}
 }
 
 void FCharacterAbility::ChangeResource(float value)
@@ -54,6 +58,13 @@ void FCharacterAbility::ChangeResource(float value)
 
 	str = FString::Printf(TEXT("Current CurrentResource : %d"), (int)CurrentResource);
 	GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Green, str);
+
+	if (isPlayer == true)
+	{
+		AMyCharacter* casting = Cast<AMyCharacter>(Owner);
+		if (casting)
+			casting->GameUIWidget->ChangeTextinBar(Gauge_Resource, CurrentResource, MaxResource);
+	}
 }
 
 void FPotionData::Clear()
@@ -64,6 +75,7 @@ void FPotionData::Clear()
 
 void FPotionData::Use(AMyCharacter* player)
 {
+	player->Ability.SetOwner(player, true);
 	if (HPValue != 0)
 	{
 		player->Ability.ChangeHP(HPValue);

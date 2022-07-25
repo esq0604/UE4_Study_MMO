@@ -1,2 +1,2 @@
-C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\Definitions.UEStudyForMMO.h
-C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Source\UEStudyForMMO\Public\UEStudyForMMO.h
+C:\Users\dltkd\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\Definitions.UEStudyForMMO.h
+C:\Users\dltkd\UE4_Study_MMO\UEStudyForMMO\Source\UEStudyForMMO\Public\UEStudyForMMO.h

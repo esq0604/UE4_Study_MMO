@@ -11,6 +11,7 @@
  */
 class UGauge;
 class UInventory;
+enum EGaugeType;
 
 
 UCLASS()
@@ -21,8 +22,9 @@ public:
 	UGameUI(const FObjectInitializer& ObjectInitializer);
 
 	void Init() override;
-
 	void RefreshInventory(int slotnum);
+	void ChangeTextinBar(EGaugeType type, float cur, float max);
+
 //Inventory
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "UI", meta = (BindWidget))
