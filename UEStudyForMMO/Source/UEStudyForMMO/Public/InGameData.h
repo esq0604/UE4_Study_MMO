@@ -9,7 +9,7 @@
  */
 
 class AMyCharacter;
-
+class USlot;
 class UESTUDYFORMMO_API InGameData
 {
 public:
@@ -125,7 +125,8 @@ public:
 
 	 void Clear(); //정보를 초기화할것임 상속받은쪽에서 오버라이딩 할예정
 	 void Use(AMyCharacter* player);
-
+	 void AddSlot(USlot* slot);
+	 void RemoveSlot(USlot* slot);
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		FName Name;
@@ -141,6 +142,10 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		FPotionData potion;
+
+private:
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
+		TArray<USlot*> ReferenceSlots;
 };
 
 

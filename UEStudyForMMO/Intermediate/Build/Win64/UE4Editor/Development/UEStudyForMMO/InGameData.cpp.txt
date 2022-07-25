@@ -777,5 +777,7 @@ C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\In
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\UserWidget.generated.h
 C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Inc\UEStudyForMMO\CustomUI.generated.h
 C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Inc\UEStudyForMMO\GameUI.generated.h
+C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Source\UEStudyForMMO\Public\Slot.h
+C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Inc\UEStudyForMMO\Slot.generated.h
 C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Source\UEStudyForMMO\Public\Inventory.h
 C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Inc\UEStudyForMMO\Inventory.generated.h

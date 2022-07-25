@@ -20,6 +20,7 @@ void EmptyLinkFunctionForGeneratedCodeInGameData() {}
 	UESTUDYFORMMO_API UScriptStruct* Z_Construct_UScriptStruct_FItemData();
 	ENGINE_API UClass* Z_Construct_UClass_UTexture2D_NoRegister();
 	UESTUDYFORMMO_API UScriptStruct* Z_Construct_UScriptStruct_FPotionData();
+	UESTUDYFORMMO_API UClass* Z_Construct_UClass_USlot_NoRegister();
 	UESTUDYFORMMO_API UScriptStruct* Z_Construct_UScriptStruct_FCharacterAbility();
 // End Cross Module References
 	static UEnum* ESlotType_StaticEnum()
@@ -262,6 +263,11 @@ static struct FScriptStruct_UEStudyForMMO_StaticRegisterNativesFItemData
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_potion_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_potion;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ReferenceSlots_Inner;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ReferenceSlots_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_ReferenceSlots;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
@@ -312,12 +318,24 @@ static struct FScriptStruct_UEStudyForMMO_StaticRegisterNativesFItemData
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FItemData_Statics::NewProp_potion = { "potion", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FItemData, potion), Z_Construct_UScriptStruct_FPotionData, METADATA_PARAMS(Z_Construct_UScriptStruct_FItemData_Statics::NewProp_potion_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FItemData_Statics::NewProp_potion_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UScriptStruct_FItemData_Statics::NewProp_ReferenceSlots_Inner = { "ReferenceSlots", nullptr, (EPropertyFlags)0x00000000000a0008, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_USlot_NoRegister, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FItemData_Statics::NewProp_ReferenceSlots_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "ItemData" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/InGameData.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FItemData_Statics::NewProp_ReferenceSlots = { "ReferenceSlots", nullptr, (EPropertyFlags)0x004000800002000d, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FItemData, ReferenceSlots), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UScriptStruct_FItemData_Statics::NewProp_ReferenceSlots_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FItemData_Statics::NewProp_ReferenceSlots_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FItemData_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemData_Statics::NewProp_Name,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemData_Statics::NewProp_Texture,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemData_Statics::NewProp_Type,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemData_Statics::NewProp_Count,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemData_Statics::NewProp_potion,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemData_Statics::NewProp_ReferenceSlots_Inner,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemData_Statics::NewProp_ReferenceSlots,
 	};
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FItemData_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_UEStudyForMMO,
@@ -329,7 +347,7 @@ static struct FScriptStruct_UEStudyForMMO_StaticRegisterNativesFItemData
 		Z_Construct_UScriptStruct_FItemData_Statics::PropPointers,
 		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FItemData_Statics::PropPointers),
 		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
+		EStructFlags(0x00000005),
 		METADATA_PARAMS(Z_Construct_UScriptStruct_FItemData_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FItemData_Statics::Struct_MetaDataParams))
 	};
 	UScriptStruct* Z_Construct_UScriptStruct_FItemData()
@@ -347,7 +365,7 @@ static struct FScriptStruct_UEStudyForMMO_StaticRegisterNativesFItemData
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FItemData_Hash() { return 3230483660U; }
+	uint32 Get_Z_Construct_UScriptStruct_FItemData_Hash() { return 1931780701U; }
 class UScriptStruct* FPotionData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

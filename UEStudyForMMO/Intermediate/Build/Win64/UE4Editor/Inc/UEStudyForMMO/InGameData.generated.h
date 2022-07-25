@@ -15,7 +15,8 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 #define UEStudyForMMO_Source_UEStudyForMMO_Public_InGameData_h_118_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FItemData_Statics; \
-	UESTUDYFORMMO_API static class UScriptStruct* StaticStruct();
+	UESTUDYFORMMO_API static class UScriptStruct* StaticStruct(); \
+	FORCEINLINE static uint32 __PPO__ReferenceSlots() { return STRUCT_OFFSET(FItemData, ReferenceSlots); }
 
 
 template<> UESTUDYFORMMO_API UScriptStruct* StaticStruct<struct FItemData>();
