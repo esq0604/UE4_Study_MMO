@@ -12,6 +12,15 @@
 
 void USlot::Init()
 {
+	switch (Type)
+	{
+	case SLOT_Item:
+	case SLOT_Skill:
+		index = Slotnum;
+		
+	default :
+		break;
+	}
 	Refresh();
 }
 
@@ -119,28 +128,11 @@ FReply USlot::NativeOnMouseButtonDown(const FGeometry& InGeometry, const FPointe
 	
 	if (InMouseEvent.IsMouseButtonDown(EKeys::RightMouseButton) == true)
 	{
-		UE_LOG(LogTemp, Warning, TEXT(" RightMouseButton, IsMouseButtonDown"));
-		if (Player->Inventory[Slotnum].Type == ITEM_None)
+		if (index<0 || Player->Inventory[index].Type == ITEM_None) 
 			return reply.NativeReply;
 
-		switch (Type)
-		{
-		case SLOT_None:
-		case SLOT_Quick:
-			return reply.NativeReply;
-			break;
-		case SLOT_Item:
-		case SLOT_Q_Item:
-			Player->Inventory[Slotnum].Use(Player);
-			break;
-		case SLOT_Skill:
-		case SLOT_Q_Skill:
-			break;
-
-		}
-		Refresh();
+		this->Action();
 	}
-
 	else if (InMouseEvent.IsMouseButtonDown(EKeys::LeftMouseButton) == true)
 	{
 		GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Green, TEXT("Drag : Left Button Down"));
@@ -154,12 +146,12 @@ FReply USlot::NativeOnMouseButtonDown(const FGeometry& InGeometry, const FPointe
 			case SLOT_Item:
 			case SLOT_Q_Item:
 			{
-				if (Player->Inventory[Slotnum].Type != ITEM_None)
+				if (Player->Inventory[index].Type != ITEM_None)
 				{
 					//DetectDragIfPressed-> OnDragDetected È£Ãâ 
 					reply = UWidgetBlueprintLibrary::DetectDragIfPressed(InMouseEvent, this, EKeys::LeftMouseButton);
+					break;
 				}
-				break;
 			}
 		}
 	}	
@@ -167,4 +159,12 @@ FReply USlot::NativeOnMouseButtonDown(const FGeometry& InGeometry, const FPointe
 	return reply.NativeReply;
 }
 
-
+void USlot::Action()
+{
+	switch (Type)
+	{
+	case SLOT_None: case SLOT_Quick: break;
+	case SLOT_Item:	case SLOT_Q_Item: Player->Inventory[index].Use(Player); break;
+	case SLOT_Skill: case SLOT_Q_Skill: break;
+	}
+}

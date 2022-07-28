@@ -25,7 +25,7 @@ public:
 	void SetType(enum ESlotType type);
 	void SetTexture(UTexture2D* tex);
 	void Refresh();
-
+	void Action();
 protected:
 	void NativeOnDragDetected(const FGeometry& InGeometry, const FPointerEvent& InMouseEvent, UDragDropOperation*& OutOperation) override;
 	bool NativeOnDrop(const FGeometry& InGeometry,const FDragDropEvent& InDragDropEvent, UDragDropOperation* InOperation) override;
@@ -37,6 +37,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (UIMax = 31, UIMin = -1))
 		int Slotnum;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+		int index;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 		int Count;

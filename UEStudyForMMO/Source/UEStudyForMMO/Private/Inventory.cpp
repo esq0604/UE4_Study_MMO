@@ -14,6 +14,7 @@ void UInventory::Init()
 	{
 		if (Player->Inventory[i].Type == EItemType::ITEM_None)
 		{
+			//UE_LOG(LogTemp, Warning, TEXT("Player->Inventory[i].Type == EItemType::ITEM_None"));
 			Player->Inventory[i].Texture = DefTex;
 		}
 	}

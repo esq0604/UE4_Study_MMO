@@ -18,6 +18,7 @@ void EmptyLinkFunctionForGeneratedCodeGameUI() {}
 	UESTUDYFORMMO_API UClass* Z_Construct_UClass_UCustomUI();
 	UPackage* Z_Construct_UPackage__Script_UEStudyForMMO();
 	UESTUDYFORMMO_API UClass* Z_Construct_UClass_UInventory_NoRegister();
+	UESTUDYFORMMO_API UClass* Z_Construct_UClass_UQuickSlot_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UTexture2D_NoRegister();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FLinearColor();
 	UESTUDYFORMMO_API UClass* Z_Construct_UClass_UGauge_NoRegister();
@@ -39,6 +40,10 @@ void EmptyLinkFunctionForGeneratedCodeGameUI() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Inventory_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Inventory;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_QuickSlot_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_QuickSlot;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_HPBarTex_MetaData[];
 #endif
@@ -99,6 +104,15 @@ void EmptyLinkFunctionForGeneratedCodeGameUI() {}
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UGameUI_Statics::NewProp_Inventory = { "Inventory", nullptr, (EPropertyFlags)0x001000000008001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGameUI, Inventory), Z_Construct_UClass_UInventory_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UGameUI_Statics::NewProp_Inventory_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGameUI_Statics::NewProp_Inventory_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGameUI_Statics::NewProp_QuickSlot_MetaData[] = {
+		{ "BindWidget", "" },
+		{ "Category", "UI" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/GameUI.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UGameUI_Statics::NewProp_QuickSlot = { "QuickSlot", nullptr, (EPropertyFlags)0x001000000008001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGameUI, QuickSlot), Z_Construct_UClass_UQuickSlot_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UGameUI_Statics::NewProp_QuickSlot_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGameUI_Statics::NewProp_QuickSlot_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGameUI_Statics::NewProp_HPBarTex_MetaData[] = {
 		{ "Category", "ProgressBarData" },
@@ -170,6 +184,7 @@ void EmptyLinkFunctionForGeneratedCodeGameUI() {}
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UGameUI_Statics::NewProp_ExpBar = { "ExpBar", nullptr, (EPropertyFlags)0x001000000008001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGameUI, ExpBar), Z_Construct_UClass_UGauge_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UGameUI_Statics::NewProp_ExpBar_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGameUI_Statics::NewProp_ExpBar_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UGameUI_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGameUI_Statics::NewProp_Inventory,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGameUI_Statics::NewProp_QuickSlot,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGameUI_Statics::NewProp_HPBarTex,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGameUI_Statics::NewProp_HPBarColor,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGameUI_Statics::NewProp_ResourceBarTex,
@@ -207,7 +222,7 @@ void EmptyLinkFunctionForGeneratedCodeGameUI() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UGameUI, 2234678842);
+	IMPLEMENT_CLASS(UGameUI, 2498060255);
 	template<> UESTUDYFORMMO_API UClass* StaticClass<UGameUI>()
 	{
 		return UGameUI::StaticClass();

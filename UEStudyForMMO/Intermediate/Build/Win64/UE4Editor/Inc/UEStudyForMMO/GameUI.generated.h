@@ -13,10 +13,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define UESTUDYFORMMO_GameUI_generated_h
 
-#define UEStudyForMMO_Source_UEStudyForMMO_Public_GameUI_h_20_SPARSE_DATA
-#define UEStudyForMMO_Source_UEStudyForMMO_Public_GameUI_h_20_RPC_WRAPPERS
-#define UEStudyForMMO_Source_UEStudyForMMO_Public_GameUI_h_20_RPC_WRAPPERS_NO_PURE_DECLS
-#define UEStudyForMMO_Source_UEStudyForMMO_Public_GameUI_h_20_INCLASS_NO_PURE_DECLS \
+#define UEStudyForMMO_Source_UEStudyForMMO_Public_GameUI_h_21_SPARSE_DATA
+#define UEStudyForMMO_Source_UEStudyForMMO_Public_GameUI_h_21_RPC_WRAPPERS
+#define UEStudyForMMO_Source_UEStudyForMMO_Public_GameUI_h_21_RPC_WRAPPERS_NO_PURE_DECLS
+#define UEStudyForMMO_Source_UEStudyForMMO_Public_GameUI_h_21_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUGameUI(); \
 	friend struct Z_Construct_UClass_UGameUI_Statics; \
@@ -25,7 +25,7 @@ public: \
 	DECLARE_SERIALIZER(UGameUI)
 
 
-#define UEStudyForMMO_Source_UEStudyForMMO_Public_GameUI_h_20_INCLASS \
+#define UEStudyForMMO_Source_UEStudyForMMO_Public_GameUI_h_21_INCLASS \
 private: \
 	static void StaticRegisterNativesUGameUI(); \
 	friend struct Z_Construct_UClass_UGameUI_Statics; \
@@ -34,7 +34,7 @@ public: \
 	DECLARE_SERIALIZER(UGameUI)
 
 
-#define UEStudyForMMO_Source_UEStudyForMMO_Public_GameUI_h_20_STANDARD_CONSTRUCTORS \
+#define UEStudyForMMO_Source_UEStudyForMMO_Public_GameUI_h_21_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UGameUI(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UGameUI) \
@@ -47,7 +47,7 @@ private: \
 public:
 
 
-#define UEStudyForMMO_Source_UEStudyForMMO_Public_GameUI_h_20_ENHANCED_CONSTRUCTORS \
+#define UEStudyForMMO_Source_UEStudyForMMO_Public_GameUI_h_21_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API UGameUI(UGameUI&&); \
@@ -58,28 +58,28 @@ public: \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UGameUI)
 
 
-#define UEStudyForMMO_Source_UEStudyForMMO_Public_GameUI_h_20_PRIVATE_PROPERTY_OFFSET
-#define UEStudyForMMO_Source_UEStudyForMMO_Public_GameUI_h_17_PROLOG
-#define UEStudyForMMO_Source_UEStudyForMMO_Public_GameUI_h_20_GENERATED_BODY_LEGACY \
+#define UEStudyForMMO_Source_UEStudyForMMO_Public_GameUI_h_21_PRIVATE_PROPERTY_OFFSET
+#define UEStudyForMMO_Source_UEStudyForMMO_Public_GameUI_h_18_PROLOG
+#define UEStudyForMMO_Source_UEStudyForMMO_Public_GameUI_h_21_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	UEStudyForMMO_Source_UEStudyForMMO_Public_GameUI_h_20_PRIVATE_PROPERTY_OFFSET \
-	UEStudyForMMO_Source_UEStudyForMMO_Public_GameUI_h_20_SPARSE_DATA \
-	UEStudyForMMO_Source_UEStudyForMMO_Public_GameUI_h_20_RPC_WRAPPERS \
-	UEStudyForMMO_Source_UEStudyForMMO_Public_GameUI_h_20_INCLASS \
-	UEStudyForMMO_Source_UEStudyForMMO_Public_GameUI_h_20_STANDARD_CONSTRUCTORS \
+	UEStudyForMMO_Source_UEStudyForMMO_Public_GameUI_h_21_PRIVATE_PROPERTY_OFFSET \
+	UEStudyForMMO_Source_UEStudyForMMO_Public_GameUI_h_21_SPARSE_DATA \
+	UEStudyForMMO_Source_UEStudyForMMO_Public_GameUI_h_21_RPC_WRAPPERS \
+	UEStudyForMMO_Source_UEStudyForMMO_Public_GameUI_h_21_INCLASS \
+	UEStudyForMMO_Source_UEStudyForMMO_Public_GameUI_h_21_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define UEStudyForMMO_Source_UEStudyForMMO_Public_GameUI_h_20_GENERATED_BODY \
+#define UEStudyForMMO_Source_UEStudyForMMO_Public_GameUI_h_21_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	UEStudyForMMO_Source_UEStudyForMMO_Public_GameUI_h_20_PRIVATE_PROPERTY_OFFSET \
-	UEStudyForMMO_Source_UEStudyForMMO_Public_GameUI_h_20_SPARSE_DATA \
-	UEStudyForMMO_Source_UEStudyForMMO_Public_GameUI_h_20_RPC_WRAPPERS_NO_PURE_DECLS \
-	UEStudyForMMO_Source_UEStudyForMMO_Public_GameUI_h_20_INCLASS_NO_PURE_DECLS \
-	UEStudyForMMO_Source_UEStudyForMMO_Public_GameUI_h_20_ENHANCED_CONSTRUCTORS \
+	UEStudyForMMO_Source_UEStudyForMMO_Public_GameUI_h_21_PRIVATE_PROPERTY_OFFSET \
+	UEStudyForMMO_Source_UEStudyForMMO_Public_GameUI_h_21_SPARSE_DATA \
+	UEStudyForMMO_Source_UEStudyForMMO_Public_GameUI_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
+	UEStudyForMMO_Source_UEStudyForMMO_Public_GameUI_h_21_INCLASS_NO_PURE_DECLS \
+	UEStudyForMMO_Source_UEStudyForMMO_Public_GameUI_h_21_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

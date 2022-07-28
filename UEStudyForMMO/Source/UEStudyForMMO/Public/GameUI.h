@@ -11,6 +11,7 @@
  */
 class UGauge;
 class UInventory;
+class UQuickSlot;
 enum EGaugeType;
 
 
@@ -24,13 +25,15 @@ public:
 	void Init() override;
 	void RefreshInventory(int slotnum);
 	void ChangeTextinBar(EGaugeType type, float cur, float max);
-
-//Inventory
+	
+//Gauge
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "UI", meta = (BindWidget))
 		UInventory* Inventory;
-//Gauge
-public:
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "UI", meta = (BindWidget))
+		UQuickSlot* QuickSlot;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "ProgressBarData")
 		UTexture2D* HPBarTex;
 

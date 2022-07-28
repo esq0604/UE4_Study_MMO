@@ -6,6 +6,7 @@
 #include "MyCharacter.h"
 #include "Inventory.h"
 #include "InGameData.h"
+#include "QuickSlot.h"
 #include "Engine/Texture2D.h"
 
 UGameUI::UGameUI(const FObjectInitializer& ObjectInitializer) :Super(ObjectInitializer)
@@ -18,11 +19,15 @@ void UGameUI::Init()
 	
 	
 	UE_LOG(LogTemp, Warning, TEXT("UGameUI::Init()"));  
-	
+	if (QuickSlot)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("QuickSlot!=null"));
+		QuickSlot->Player = this->Player;
+		QuickSlot->Init();
+	}
 	//Inventory Init
 	if (Inventory)
 	{
-
 		Inventory->Player = this->Player;
 		Inventory->Init();
 	}
