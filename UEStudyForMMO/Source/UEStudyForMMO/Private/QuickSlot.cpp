@@ -18,13 +18,11 @@ void UQuickSlot::Init()
 
 		if (!slot)
 			continue;
-		UE_LOG(LogTemp, Warning, TEXT("quickslot _ line _21 _for¹®"));
-		
 		slot->Player = this->Player;
 		slot->SetType(ESlotType::SLOT_Quick);
-		//slot->SetTexture(DefTex);
+		slot->SetTexture(DefTex);
 		slot->Init();
-		Slots[slot->Slotnum] = slot;
+		Slots[slot->index] = slot;
 	}
 
 }

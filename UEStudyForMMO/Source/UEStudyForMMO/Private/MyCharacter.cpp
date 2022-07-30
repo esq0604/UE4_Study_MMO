@@ -31,6 +31,10 @@ AMyCharacter::AMyCharacter()
 
 }
 
+void AMyCharacter::UseQuickSlot(int num)
+{
+	GameUIWidget->UseQuickSlot
+}
 // Called when the game starts or when spawned
 void AMyCharacter::BeginPlay()
 {
@@ -69,10 +73,20 @@ void AMyCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 	PlayerInputComponent->BindAxis(TEXT("LeftRight"), this, &AMyCharacter::LeftRight);
 	PlayerInputComponent->BindAction(TEXT("Attack"),EInputEvent::IE_Pressed, this, &AMyCharacter::Attack);
 
-	//카메라 움직임 바인딩 
 	PlayerInputComponent->BindAxis(TEXT("Turn"), this, &AMyCharacter::AddControllerYawInput);
 	PlayerInputComponent->BindAxis("LookUp", this, &APawn::AddControllerPitchInput);
 
+	//퀵슬롯
+	InputComponent->BindAction<QuickDelegate, AMyCharacter, int>("Quick_1", IE_Pressed, this, &AMyCharacter::UseQuickSlot, 0);
+	InputComponent->BindAction<QuickDelegate, AMyCharacter, int>("Quick_2", IE_Pressed, this, &AMyCharacter::UseQuickSlot, 1);
+	InputComponent->BindAction<QuickDelegate, AMyCharacter, int>("Quick_3", IE_Pressed, this, &AMyCharacter::UseQuickSlot, 2);
+	InputComponent->BindAction<QuickDelegate, AMyCharacter, int>("Quick_4", IE_Pressed, this, &AMyCharacter::UseQuickSlot, 3);
+	InputComponent->BindAction<QuickDelegate, AMyCharacter, int>("Quick_5", IE_Pressed, this, &AMyCharacter::UseQuickSlot, 4);
+	InputComponent->BindAction<QuickDelegate, AMyCharacter, int>("Quick_6", IE_Pressed, this, &AMyCharacter::UseQuickSlot, 5);
+	InputComponent->BindAction<QuickDelegate, AMyCharacter, int>("Quick_7", IE_Pressed, this, &AMyCharacter::UseQuickSlot, 6);
+	InputComponent->BindAction<QuickDelegate, AMyCharacter, int>("Quick_8", IE_Pressed, this, &AMyCharacter::UseQuickSlot, 7);
+
+	
 }
 
 void AMyCharacter::GetAnimInstance()

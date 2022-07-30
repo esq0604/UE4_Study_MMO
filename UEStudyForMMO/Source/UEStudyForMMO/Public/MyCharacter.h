@@ -19,6 +19,10 @@ public:
 	AMyCharacter();
 
 protected:
+	DECLARE_DELEGATE_OneParam(QuickDelegate, int);
+	void UseQuickSlot(int num);
+
+protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 

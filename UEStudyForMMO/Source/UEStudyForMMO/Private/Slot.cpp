@@ -17,7 +17,7 @@ void USlot::Init()
 	case SLOT_Item:
 	case SLOT_Skill:
 		index = Slotnum;
-		
+		break;
 	default :
 		break;
 	}
