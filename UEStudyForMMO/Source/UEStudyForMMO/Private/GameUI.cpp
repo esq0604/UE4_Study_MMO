@@ -61,12 +61,6 @@ void UGameUI::Init()
 	}
 }
 
-//드래그 & 드롭 후 해당 슬롯만 Refresh함 
-void UGameUI::RefreshInventory(int slotnum)
-{
-	Inventory->RefreshSlot(slotnum);
-}
-
 void UGameUI::ChangeTextinBar(EGaugeType type, float cur, float max)
 {
 	switch (type) 
@@ -84,4 +78,9 @@ void UGameUI::ChangeTextinBar(EGaugeType type, float cur, float max)
 			break;
 		}
 	}
+}
+
+void UGameUI::UseQuickSlot(int index)
+{
+	QuickSlot->Use(index);
 }

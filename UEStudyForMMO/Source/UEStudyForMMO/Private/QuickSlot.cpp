@@ -22,7 +22,7 @@ void UQuickSlot::Init()
 		slot->SetType(ESlotType::SLOT_Quick);
 		slot->SetTexture(DefTex);
 		slot->Init();
-		Slots[slot->index] = slot;
+		Slots[slot->Index] = slot;
 	}
 
 }

@@ -8,6 +8,7 @@
 #include "MyCharacter.generated.h"
 
 class UGameUI;
+class USlotDrag;
 
 UCLASS()
 class UESTUDYFORMMO_API AMyCharacter : public ACharacter
@@ -39,10 +40,6 @@ public:
 
 	void AbilityInit();
 
-	bool DraggingSwap(int from, ESlotType fromtype, int to, ESlotType totype);
-	bool SwapInven(int from, int to);
-
-
 private:
 	void UpDown(float NewAxisValue);
 	void LeftRight(float NewAxisValue);
@@ -64,6 +61,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "UI")
 		TArray<FItemData> Inventory;
+
+	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "UI")
+	//	USlotDrag* SlotDrag;
 
 	UPROPERTY(VisibleAnywhere, Category = Camera)
 		USpringArmComponent* SpringArm;

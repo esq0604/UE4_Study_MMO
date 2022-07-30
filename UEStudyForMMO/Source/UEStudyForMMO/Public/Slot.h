@@ -39,7 +39,7 @@ public:
 		int Slotnum;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
-		int index;
+		int Index;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 		int Count;

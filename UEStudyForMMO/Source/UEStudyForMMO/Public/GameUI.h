@@ -25,7 +25,7 @@ public:
 	void Init() override;
 	void RefreshInventory(int slotnum);
 	void ChangeTextinBar(EGaugeType type, float cur, float max);
-	
+	void UseQuickSlot(int index);
 //Gauge
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "UI", meta = (BindWidget))

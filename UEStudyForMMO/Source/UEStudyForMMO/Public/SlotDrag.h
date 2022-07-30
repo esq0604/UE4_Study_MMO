@@ -8,6 +8,9 @@
 
 enum ESlotType;
 
+class USlot;
+class AMyCharacter;
+
 /**
  * 
  */
@@ -16,6 +19,16 @@ class UESTUDYFORMMO_API USlotDrag : public UDragDropOperation
 {
 	GENERATED_BODY()
 	
+public:
+	bool Drop(USlot* to);
+	bool SwapInven(USlot* to);
+	bool SwapQuickSlot(USlot* to);
+	bool SetQuickSlot(USlot* to);
+
+public:
+	AMyCharacter* Player;
+	USlot* From;
+
 public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 		int FromNum;

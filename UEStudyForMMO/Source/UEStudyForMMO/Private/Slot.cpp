@@ -16,7 +16,7 @@ void USlot::Init()
 	{
 	case SLOT_Item:
 	case SLOT_Skill:
-		index = Slotnum;
+		Index = Slotnum;
 		break;
 	default :
 		break;
@@ -111,7 +111,7 @@ bool USlot::NativeOnDrop(const FGeometry& InGeometry, const FDragDropEvent& InDr
 
 	if (oper != nullptr)
 	{
-		Player->DraggingSwap(oper->FromNum, oper->Type, this->Slotnum, this->Type);
+		oper->Drop(this);
 		return true;
 	}
 	else
@@ -128,7 +128,7 @@ FReply USlot::NativeOnMouseButtonDown(const FGeometry& InGeometry, const FPointe
 	
 	if (InMouseEvent.IsMouseButtonDown(EKeys::RightMouseButton) == true)
 	{
-		if (index<0 || Player->Inventory[index].Type == ITEM_None) 
+		if (Index<0 || Player->Inventory[Index].Type == ITEM_None) 
 			return reply.NativeReply;
 
 		this->Action();
@@ -146,7 +146,7 @@ FReply USlot::NativeOnMouseButtonDown(const FGeometry& InGeometry, const FPointe
 			case SLOT_Item:
 			case SLOT_Q_Item:
 			{
-				if (Player->Inventory[index].Type != ITEM_None)
+				if (Player->Inventory[Index].Type != ITEM_None)
 				{
 					//DetectDragIfPressed-> OnDragDetected È£Ãâ 
 					reply = UWidgetBlueprintLibrary::DetectDragIfPressed(InMouseEvent, this, EKeys::LeftMouseButton);
@@ -164,7 +164,7 @@ void USlot::Action()
 	switch (Type)
 	{
 	case SLOT_None: case SLOT_Quick: break;
-	case SLOT_Item:	case SLOT_Q_Item: Player->Inventory[index].Use(Player); break;
+	case SLOT_Item:	case SLOT_Q_Item: Player->Inventory[Index].Use(Player); break;
 	case SLOT_Skill: case SLOT_Q_Skill: break;
 	}
 }

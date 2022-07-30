@@ -31,10 +31,7 @@ AMyCharacter::AMyCharacter()
 
 }
 
-void AMyCharacter::UseQuickSlot(int num)
-{
-	GameUIWidget->UseQuickSlot
-}
+
 // Called when the game starts or when spawned
 void AMyCharacter::BeginPlay()
 {
@@ -89,6 +86,10 @@ void AMyCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 	
 }
 
+void AMyCharacter::UseQuickSlot(int num)
+{
+	GameUIWidget->UseQuickSlot(num);
+}
 void AMyCharacter::GetAnimInstance()
 {
 	GetMesh()->SetAnimationMode(EAnimationMode::AnimationBlueprint);
@@ -204,26 +205,5 @@ void AMyCharacter::PlayMontage()
 	}
 	AnimInstance->PlayAttackMontage();
 
-}
-
-
-bool AMyCharacter::DraggingSwap(int from, ESlotType fromtype, int to, ESlotType totype)
-{
-	if (fromtype == ESlotType::SLOT_Item && (fromtype == totype))
-		return SwapInven(from, to);
-		
-	return true;
-}
-
-bool AMyCharacter::SwapInven(int from, int to)
-{
-	if (from < 0 || to < 0)
-		return false;
-
-	Inventory.Swap(from, to);
-	GameUIWidget->RefreshInventory(from);
-	GameUIWidget->RefreshInventory(to);
-
-	return true;
 }
 

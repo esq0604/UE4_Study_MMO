@@ -44,9 +44,9 @@ void EmptyLinkFunctionForGeneratedCodeSlot() {}
 #endif
 		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_Slotnum;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_index_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Index_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_index;
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_Index;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Count_MetaData[];
 #endif
@@ -98,12 +98,12 @@ void EmptyLinkFunctionForGeneratedCodeSlot() {}
 #endif
 	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_USlot_Statics::NewProp_Slotnum = { "Slotnum", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(USlot, Slotnum), METADATA_PARAMS(Z_Construct_UClass_USlot_Statics::NewProp_Slotnum_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_USlot_Statics::NewProp_Slotnum_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_USlot_Statics::NewProp_index_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_USlot_Statics::NewProp_Index_MetaData[] = {
 		{ "Category", "Slot" },
 		{ "ModuleRelativePath", "Public/Slot.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_USlot_Statics::NewProp_index = { "index", nullptr, (EPropertyFlags)0x0010000000020005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(USlot, index), METADATA_PARAMS(Z_Construct_UClass_USlot_Statics::NewProp_index_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_USlot_Statics::NewProp_index_MetaData)) };
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_USlot_Statics::NewProp_Index = { "Index", nullptr, (EPropertyFlags)0x0010000000020005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(USlot, Index), METADATA_PARAMS(Z_Construct_UClass_USlot_Statics::NewProp_Index_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_USlot_Statics::NewProp_Index_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_USlot_Statics::NewProp_Count_MetaData[] = {
 		{ "Category", "Slot" },
@@ -139,7 +139,7 @@ void EmptyLinkFunctionForGeneratedCodeSlot() {}
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_USlot_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USlot_Statics::NewProp_DragVisualClass,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USlot_Statics::NewProp_Slotnum,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USlot_Statics::NewProp_index,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USlot_Statics::NewProp_Index,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USlot_Statics::NewProp_Count,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USlot_Statics::NewProp_Type,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USlot_Statics::NewProp_Img,
@@ -172,7 +172,7 @@ void EmptyLinkFunctionForGeneratedCodeSlot() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(USlot, 565792520);
+	IMPLEMENT_CLASS(USlot, 1275097310);
 	template<> UESTUDYFORMMO_API UClass* StaticClass<USlot>()
 	{
 		return USlot::StaticClass();
