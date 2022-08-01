@@ -7,12 +7,28 @@
 
 bool USlotDrag::Drop(USlot* to)
 {
-	if(Player ==nullptr || From ==nullptr ) return false;
+	if (Player == nullptr)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Player ==nullptr"));
+		return false;
+	}
+	if (From == nullptr)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("From ==nullptr"));
+		return false;
 
+	}
+	if (to == nullptr)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("to ==nullptr"));
+		return false;
+	}
 	switch (From->Type)
 	{
 		case SLOT_Item:
 		{
+			UE_LOG(LogTemp, Warning, TEXT("From Idx : %d"), From->Index);
+			UE_LOG(LogTemp, Warning, TEXT("to Idx : %d"), to->Index);
 			if (to->Type == From->Type) return SwapInven(to);
 
 		}
@@ -29,7 +45,9 @@ bool USlotDrag::Drop(USlot* to)
 
 bool USlotDrag::SwapInven(USlot* to)
 {
+
 	Player->Inventory.Swap(From->Index, to->Index);
+	
 
 	From->Refresh();
 	to->Refresh();
