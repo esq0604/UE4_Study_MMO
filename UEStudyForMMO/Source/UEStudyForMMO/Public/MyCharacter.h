@@ -62,8 +62,6 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "UI")
 		TArray<FItemData> Inventory;
 
-	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "UI")
-	//	USlotDrag* SlotDrag;
 
 	UPROPERTY(VisibleAnywhere, Category = Camera)
 		USpringArmComponent* SpringArm;

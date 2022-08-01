@@ -78,8 +78,8 @@ void USlot::NativeOnDragDetected(const FGeometry& InGeometry, const FPointerEven
 
 		USlotDrag* oper = NewObject<USlotDrag>();
 		OutOperation = oper;
-		oper->FromNum = this->Slotnum;
-		oper->Type = this->Type;
+		//oper->FromNum = this->Slotnum;
+		//oper->Type = this->Type;
 
 		if (DragVisualClass != nullptr)
 		{
@@ -111,6 +111,10 @@ bool USlot::NativeOnDrop(const FGeometry& InGeometry, const FDragDropEvent& InDr
 
 	if (oper != nullptr)
 	{
+		GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Green, TEXT("NatvieOnDrop : oper != nullptr"));
+		oper->Player = this->Player;
+		oper->From = this;
+		//TODO : From 은 this가 맞는데,, to에 대한 포인터를 어떻게 얻어와야할지.
 		oper->Drop(this);
 		return true;
 	}

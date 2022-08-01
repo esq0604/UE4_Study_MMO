@@ -7,7 +7,6 @@
 #include "SlotDrag.generated.h"
 
 enum ESlotType;
-
 class USlot;
 class AMyCharacter;
 
@@ -29,10 +28,4 @@ public:
 	AMyCharacter* Player;
 	USlot* From;
 
-public:
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
-		int FromNum;
-
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
-		TEnumAsByte<ESlotType> Type;
 };
