@@ -13,7 +13,7 @@
 enum ESlotType;
 class UImage;
 class UTextBlock;
-//class FReply
+class FReply;
 
 UCLASS()
 class UESTUDYFORMMO_API USlot : public UCustomUI
