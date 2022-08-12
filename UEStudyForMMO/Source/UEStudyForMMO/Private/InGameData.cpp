@@ -120,6 +120,7 @@ void FItemData::Use(AMyCharacter* player)
 void FItemData::AddSlot(USlot* slot)
 {
 	//존재하지 않는 경우 배열에 고유한 요소를 추가함. 
+	UE_LOG(LogTemp, Warning, TEXT("FItemData : AddSlot"));
 	ReferenceSlots.AddUnique(slot);
 }
 
@@ -127,5 +128,12 @@ void FItemData::RemoveSlot(USlot* slot)
 {
 	//인덱스가 아닌 순서를 유지하며 지움 
 	ReferenceSlots.RemoveSingle(slot);
+}
+
+void FItemData::SwapReference(FItemData& data)
+{
+	TArray<USlot*> fromlist = this->ReferenceSlots;
+	this->ReferenceSlots = data.ReferenceSlots;
+	data.ReferenceSlots = fromlist;
 }
  

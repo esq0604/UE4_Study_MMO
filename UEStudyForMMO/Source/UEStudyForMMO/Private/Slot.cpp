@@ -40,11 +40,12 @@ void USlot::SetTexture(UTexture2D* tex)
 
 void USlot::Refresh()
 {
+	UE_LOG(LogTemp, Warning, TEXT("Slot : Refresh"));
 	switch (Type)
 	{
 	case ESlotType::SLOT_Item:
 	{
-		FItemData& data = Player->Inventory[Slotnum];
+		FItemData& data = Player->Inventory[Index];
 		if (data.Texture != nullptr)
 		{
 			SetTexture(data.Texture);
@@ -90,7 +91,7 @@ void USlot::NativeOnDragDetected(const FGeometry& InGeometry, const FPointerEven
 			USlot* visual = CreateWidget<USlot>(Cast<APlayerController>(Player->Controller), DragVisualClass);
 			visual->Type = this->Type;
 			visual->Player = this->Player;
-			visual->Slotnum = this->Slotnum;
+			visual->Index = this->Index;
 			visual->Refresh();
 
 
@@ -115,16 +116,11 @@ bool USlot::NativeOnDrop(const FGeometry& InGeometry, const FDragDropEvent& InDr
 	{
 		GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Green, TEXT("NatvieOnDrop : oper != nullptr"));
 		oper->Player = this->Player;
-
-		//TODO : From 은 this가 맞는데,, to에 대한 포인터를 어떻게 얻어와야할지.
-		
 		oper->Drop(this);
 		return true;
 	}
 	else
-	{
 		return false;
-	}
 	
 }
 
@@ -140,6 +136,7 @@ FReply USlot::NativeOnMouseButtonDown(const FGeometry& InGeometry, const FPointe
 			return reply.NativeReply;
 
 		this->Action();
+		Refresh();
 	}
 	else if (InMouseEvent.IsMouseButtonDown(EKeys::LeftMouseButton) == true)
 	{

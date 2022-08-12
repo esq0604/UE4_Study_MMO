@@ -7,30 +7,19 @@
 
 bool USlotDrag::Drop(USlot* to)
 {
-	if (Player == nullptr)
+	if (Player == nullptr || From == nullptr)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Player ==nullptr"));
 		return false;
 	}
-	if (From == nullptr)
-	{
-		UE_LOG(LogTemp, Warning, TEXT("From ==nullptr"));
-		//return false;
-
-	}
-	if (to == nullptr)
-	{
-		UE_LOG(LogTemp, Warning, TEXT("to ==nullptr"));
-		return false;
-	}
+	
+	
 	switch (From->Type)
 	{
 		case SLOT_Item:
 		{
-			UE_LOG(LogTemp, Warning, TEXT("From Idx : %d"), From->Index);
-			UE_LOG(LogTemp, Warning, TEXT("to Idx : %d"), to->Index);
-			if (to->Type == From->Type) return SwapInven(to);
 
+			if (to->Type == From->Type) return SwapInven(to);
+			if (to->Type == SLOT_Quick || to->Type == SLOT_Q_Item || to->Type == SLOT_Q_Skill) return SetQuickSlot(to);
 		}
 		case SLOT_Skill: break;
 		case SLOT_Q_Item: case SLOT_Q_Skill:
@@ -47,7 +36,7 @@ bool USlotDrag::SwapInven(USlot* to)
 {
 
 	Player->Inventory.Swap(From->Index, to->Index);
-	
+	Player->Inventory[From->Index].SwapReference(Player->Inventory[to->Index]);	
 
 	From->Refresh();
 	to->Refresh();
@@ -57,11 +46,13 @@ bool USlotDrag::SwapInven(USlot* to)
 
 bool USlotDrag::SwapQuickSlot(USlot* to)
 {
+
 	return false;
 }
 
 bool USlotDrag::SetQuickSlot(USlot* to)
 {
+	UE_LOG(LogTemp, Warning, TEXT("SetQuickSlot"));
 	if (From->Type == SLOT_Item)
 	{
 		if (to->Type == SLOT_Q_Item)
