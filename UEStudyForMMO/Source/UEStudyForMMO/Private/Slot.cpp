@@ -78,9 +78,11 @@ void USlot::NativeOnDragDetected(const FGeometry& InGeometry, const FPointerEven
 
 		USlotDrag* oper = NewObject<USlotDrag>();
 		OutOperation = oper;
-		//oper->FromNum = this->Slotnum;
-		//oper->Type = this->Type;
+		
+		oper->From = this;
+		
 
+		
 		if (DragVisualClass != nullptr)
 		{
 			GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Green, TEXT("Drag : DragVisualClass!= nullptr "));
@@ -106,23 +108,17 @@ void USlot::NativeOnDragDetected(const FGeometry& InGeometry, const FPointerEven
 bool USlot::NativeOnDrop(const FGeometry& InGeometry, const FDragDropEvent& InDragDropEvent, UDragDropOperation* InOperation)
 {
 	Super::NativeOnDrop(InGeometry, InDragDropEvent, InOperation);
-
+	
 	USlotDrag* oper = Cast<USlotDrag>(InOperation);
-	//payload는 전송되는 데이터 == this를 말하는것이기 때문에 이방법은 아닌듯.,.,
-	//oper->Payload = this;
-	//USlot* to = Cast<USlot>(oper->Payload);
 	
 	if (oper != nullptr)
 	{
-		USlot* From = Cast<USlot>(oper->From);
-	
 		GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Green, TEXT("NatvieOnDrop : oper != nullptr"));
 		oper->Player = this->Player;
-		From = this;
-		oper->From = Cast<USlot>(oper->Payload);
+
 		//TODO : From 은 this가 맞는데,, to에 대한 포인터를 어떻게 얻어와야할지.
 		
-		oper->Drop(From);
+		oper->Drop(this);
 		return true;
 	}
 	else

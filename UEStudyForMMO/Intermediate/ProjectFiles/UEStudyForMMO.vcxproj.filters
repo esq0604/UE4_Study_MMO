@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <None Include="..\..\UEStudyForMMO.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{810FD61E-FA58-491B-8CAB-4CBCDB49F5C8}</UniqueIdentifier>
+      <UniqueIdentifier>{85B16090-FCF3-4BAE-8762-D29317E3A147}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\UEStudyForMMO.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{2E7B9BC0-E2DB-4B33-9904-B12961D15F3A}</UniqueIdentifier>
+      <UniqueIdentifier>{368AE5B1-204F-4F61-8DD4-F9B5497888CB}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -30,13 +30,13 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\UEStudyForMMO">
-      <UniqueIdentifier>{147D3A6C-85A8-4975-8BAD-017BB8BEA991}</UniqueIdentifier>
+      <UniqueIdentifier>{01753CE0-1976-4785-ADBD-2064B5DBD653}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\UEStudyForMMO\UEStudyForMMO.Build.cs">
       <Filter>Source\UEStudyForMMO</Filter>
     </None>
     <Filter Include="Source\UEStudyForMMO\Private">
-      <UniqueIdentifier>{7B49D27E-31C4-447E-8A13-1CCC038D3FC3}</UniqueIdentifier>
+      <UniqueIdentifier>{E1916344-9E48-4F9A-9F06-5E7965D43417}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\UEStudyForMMO\Private\CustomUI.cpp">
       <Filter>Source\UEStudyForMMO\Private</Filter>
@@ -90,7 +90,7 @@
       <Filter>Source\UEStudyForMMO\Private</Filter>
     </ClCompile>
     <Filter Include="Source\UEStudyForMMO\Public">
-      <UniqueIdentifier>{71967BF7-194A-470C-87A3-00946FD46FBD}</UniqueIdentifier>
+      <UniqueIdentifier>{AC53992C-5E1E-469B-9F4E-D177243349B6}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\UEStudyForMMO\Public\CustomUI.h">
       <Filter>Source\UEStudyForMMO\Public</Filter>

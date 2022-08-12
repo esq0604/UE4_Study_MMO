@@ -15,7 +15,7 @@ bool USlotDrag::Drop(USlot* to)
 	if (From == nullptr)
 	{
 		UE_LOG(LogTemp, Warning, TEXT("From ==nullptr"));
-		return false;
+		//return false;
 
 	}
 	if (to == nullptr)

@@ -1,7 +1,7 @@
-C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\Definitions.UEStudyForMMO.h
+C:\Users\dltkd\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\Definitions.UEStudyForMMO.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
-C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Source\UEStudyForMMO/Public/SlotDrag.h
+C:\Users\dltkd\UE4_Study_MMO\UEStudyForMMO\Source\UEStudyForMMO/Public/SlotDrag.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\UMG\Public\Blueprint/DragDropOperation.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\DragDropOperation.generated.h
-C:\Users\Administrator\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Inc\UEStudyForMMO\SlotDrag.generated.h
+C:\Users\dltkd\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Inc\UEStudyForMMO\SlotDrag.generated.h
