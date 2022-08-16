@@ -36,7 +36,7 @@ bool USlotDrag::SwapInven(USlot* to)
 {
 
 	Player->Inventory.Swap(From->Index, to->Index);
-	Player->Inventory[From->Index].SwapReference(Player->Inventory[to->Index]);	
+	Player->Inventory[From->Index].SwapReference(Player->Inventory[to->Index],From->Index,to->Index);	
 
 	From->Refresh();
 	to->Refresh();

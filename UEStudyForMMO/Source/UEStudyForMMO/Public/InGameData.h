@@ -127,7 +127,7 @@ public:
 	 void Use(AMyCharacter* player);
 	 void AddSlot(USlot* slot);
 	 void RemoveSlot(USlot* slot);
-	 void SwapReference(FItemData& data);
+	 void SwapReference(FItemData& data, int fromindex, int toindex);
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		FName Name;

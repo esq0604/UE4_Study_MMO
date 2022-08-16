@@ -130,10 +130,44 @@ void FItemData::RemoveSlot(USlot* slot)
 	ReferenceSlots.RemoveSingle(slot);
 }
 
-void FItemData::SwapReference(FItemData& data)
+void FItemData::SwapReference(FItemData& data, int fromindex, int toindex)
 {
 	TArray<USlot*> fromlist = this->ReferenceSlots;
 	this->ReferenceSlots = data.ReferenceSlots;
 	data.ReferenceSlots = fromlist;
+
+	TArray<USlot*> quicklist;
+
+	for (auto slot : ReferenceSlots)
+	{
+		if (slot->Type == SLOT_Q_Item)
+		{
+			quicklist.Add(slot);
+		}
+	}
+
+	for (auto slot : data.ReferenceSlots)
+	{
+		if (slot->Type == SLOT_Q_Item)
+		{
+			quicklist.Add(slot);
+		}
+	}
+
+	for (auto slot : quicklist)
+	{
+		if (slot->Index == fromindex)
+		{
+			this->ReferenceSlots.RemoveSingle(slot);
+			slot->Index = toindex;
+			data.ReferenceSlots.Add(slot);
+		}
+		else
+		{
+			data.ReferenceSlots.RemoveSingle(slot);
+			slot->Index = fromindex;
+			this->ReferenceSlots.Add(slot);
+		}
+	}
 }
  
