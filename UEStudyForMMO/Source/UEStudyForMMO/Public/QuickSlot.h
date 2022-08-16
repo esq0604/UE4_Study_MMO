@@ -25,7 +25,7 @@ public:
 		UTexture2D* DefTex;
 
 private:
-	const int MAX_QUICK_SLOT = 8;
+	const int MAX_QUICK_SLOT = 9;
 
 private:
 	TArray<USlot*> Slots;

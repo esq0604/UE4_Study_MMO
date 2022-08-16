@@ -7,6 +7,7 @@
 
 void UQuickSlot::Init()
 {
+	UE_LOG(LogTemp,Warning,TEXT("UQuickSlot Init "))
 	Slots.Init(nullptr, MAX_QUICK_SLOT);
 	TArray<UWidget*> widgets;
 	WidgetTree->GetAllWidgets(widgets);
@@ -16,13 +17,13 @@ void UQuickSlot::Init()
 	{
 		slot = Cast<USlot>(widget);
 
-		if (!slot)
-			continue;
+		if (!slot) continue;
 		slot->Player = this->Player;
 		slot->SetType(ESlotType::SLOT_Quick);
 		slot->SetTexture(DefTex);
+		//UE_LOG(LogTemp, Warning, TEXT("UQuickSlot Init : Slot Init  "))
 		slot->Init();
-		Slots[slot->Index] = slot;
+		Slots[slot->Slotnum] = slot;
 	}
 
 }

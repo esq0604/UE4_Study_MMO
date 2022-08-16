@@ -16,6 +16,7 @@ void USlot::Init()
 	{
 	case SLOT_Item:
 	case SLOT_Skill:
+	case SLOT_Quick:
 		Index = Slotnum;
 		break;
 	default :
@@ -40,10 +41,12 @@ void USlot::SetTexture(UTexture2D* tex)
 
 void USlot::Refresh()
 {
+
 	UE_LOG(LogTemp, Warning, TEXT("Slot : Refresh"));
 	switch (Type)
 	{
 	case ESlotType::SLOT_Item:
+	case ESlotType::SLOT_Q_Item:
 	{
 		FItemData& data = Player->Inventory[Index];
 		if (data.Texture != nullptr)

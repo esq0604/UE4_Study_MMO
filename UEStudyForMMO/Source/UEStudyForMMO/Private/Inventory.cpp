@@ -32,6 +32,7 @@ void UInventory::Init()
 		slot->Player = this->Player;
 		slot->SetType(ESlotType::SLOT_Item);
 		slot->Init();
+		UE_LOG(LogTemp, Warning, TEXT("%d"), slot->Index);
 		Slots[slot->Slotnum] = slot;
 	}
 }
