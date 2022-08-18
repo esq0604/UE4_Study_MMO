@@ -116,7 +116,6 @@ void FItemData::Use(AMyCharacter* player)
 
 	for (auto slot : ReferenceSlots)
 	{
-		UE_LOG(LogTemp,Warning,TEXT("%d"),slot->Index);
 		slot->Refresh();
 	}
 }

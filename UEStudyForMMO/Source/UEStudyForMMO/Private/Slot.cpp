@@ -139,7 +139,7 @@ FReply USlot::NativeOnMouseButtonDown(const FGeometry& InGeometry, const FPointe
 			return reply.NativeReply;
 
 		this->Action();
-		Refresh();
+		//Refresh();
 	}
 	else if (InMouseEvent.IsMouseButtonDown(EKeys::LeftMouseButton) == true)
 	{
@@ -172,13 +172,16 @@ void USlot::Action()
 	switch (Type)
 	{
 
-	case SLOT_None: case SLOT_Quick:
-		GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Green, TEXT("Slot : Action : type : None,Quick"));
+	case SLOT_None: 
+	case SLOT_Quick:
 		break;
 
-	case SLOT_Item:	case SLOT_Q_Item:
-		GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Green, TEXT("Slot : Action : type : item,q_item"));
-		Player->Inventory[Index].Use(Player); break;
-	case SLOT_Skill: case SLOT_Q_Skill: break;
+	case SLOT_Item:	
+	case SLOT_Q_Item:
+		Player->Inventory[Index].Use(Player);
+
+		break;
+	case SLOT_Skill: 
+	case SLOT_Q_Skill: break;
 	}
 }

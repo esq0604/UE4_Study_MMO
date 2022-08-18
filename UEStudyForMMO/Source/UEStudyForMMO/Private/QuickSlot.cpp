@@ -30,6 +30,5 @@ void UQuickSlot::Init()
 
 void UQuickSlot::Use(int index)
 {
-	GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Green, TEXT("UseQuickSlot : Use"));
 	Slots[index] -> Action();
 }
