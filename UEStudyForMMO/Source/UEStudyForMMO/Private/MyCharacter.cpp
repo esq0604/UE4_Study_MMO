@@ -88,6 +88,7 @@ void AMyCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 
 void AMyCharacter::UseQuickSlot(int num)
 {
+	GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Green, TEXT("Charater : UseQuickSlot"));
 	GameUIWidget->UseQuickSlot(num);
 }
 void AMyCharacter::GetAnimInstance()

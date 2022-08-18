@@ -125,8 +125,8 @@ public:
 
 	 void Clear(); //정보를 초기화할것임 상속받은쪽에서 오버라이딩 할예정
 	 void Use(AMyCharacter* player);
-	 void AddSlot(USlot* slot);
-	 void RemoveSlot(USlot* slot);
+	 void AddSlot(USlot*& slot);
+	 void RemoveSlot(USlot*& slot);
 	 void SwapReference(FItemData& data, int fromindex, int toindex);
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

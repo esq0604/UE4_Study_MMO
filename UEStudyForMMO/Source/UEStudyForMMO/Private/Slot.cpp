@@ -44,7 +44,7 @@ void USlot::Refresh()
 
 	UE_LOG(LogTemp, Warning, TEXT("Slot : Refresh"));
 	switch (Type)
-	{
+	{ 
 	case ESlotType::SLOT_Item:
 	case ESlotType::SLOT_Q_Item:
 	{
@@ -171,8 +171,14 @@ void USlot::Action()
 {
 	switch (Type)
 	{
-	case SLOT_None: case SLOT_Quick: break;
-	case SLOT_Item:	case SLOT_Q_Item: Player->Inventory[Index].Use(Player); break;
+
+	case SLOT_None: case SLOT_Quick:
+		GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Green, TEXT("Slot : Action : type : None,Quick"));
+		break;
+
+	case SLOT_Item:	case SLOT_Q_Item:
+		GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Green, TEXT("Slot : Action : type : item,q_item"));
+		Player->Inventory[Index].Use(Player); break;
 	case SLOT_Skill: case SLOT_Q_Skill: break;
 	}
 }

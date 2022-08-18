@@ -87,6 +87,7 @@ void FItemData::Clear()
 		break;
 	}
 
+	UE_LOG(LogTemp, Warning, TEXT("FItemData : Clear"));
 	Name = TEXT("");
 	Count = 0;
 	Texture = nullptr;
@@ -114,17 +115,20 @@ void FItemData::Use(AMyCharacter* player)
 	}
 
 	for (auto slot : ReferenceSlots)
+	{
+		UE_LOG(LogTemp,Warning,TEXT("%d"),slot->Index);
 		slot->Refresh();
+	}
 }
 
-void FItemData::AddSlot(USlot* slot)
+void FItemData::AddSlot(USlot*& slot)
 {
 	//존재하지 않는 경우 배열에 고유한 요소를 추가함. 
 	UE_LOG(LogTemp, Warning, TEXT("FItemData : AddSlot"));
 	ReferenceSlots.AddUnique(slot);
 }
 
-void FItemData::RemoveSlot(USlot* slot)
+void FItemData::RemoveSlot(USlot*& slot)
 {
 	//인덱스가 아닌 순서를 유지하며 지움 
 	ReferenceSlots.RemoveSingle(slot);
