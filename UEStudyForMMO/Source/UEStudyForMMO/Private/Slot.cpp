@@ -5,6 +5,8 @@
 #include "Components/Image.h"
 #include "Components/TextBlock.h"
 #include "MyCharacter.h"
+#include "GameUI.h"
+#include "QuickSlot.h"
 #include "Input/Reply.h"
 #include "Blueprint/WidgetBlueprintLibrary.h"
 #include "SlotDrag.h"
@@ -61,6 +63,13 @@ void USlot::Refresh()
 			Text->SetVisibility(ESlateVisibility::Visible);
 			Text->SetText(FText::FromString(FString::FromInt(Count)));
 		}
+		break;
+	}
+	
+	case ESlotType::SLOT_Quick:
+	{
+		SetTexture(Player->GameUIWidget->QuickSlot->DefTex);
+		Text->SetVisibility(ESlateVisibility::Hidden);
 		break;
 	}
 	case ESlotType::SLOT_Skill:

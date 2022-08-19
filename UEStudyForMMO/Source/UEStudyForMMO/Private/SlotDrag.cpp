@@ -61,7 +61,6 @@ bool USlotDrag::SwapQuickSlot(USlot* to)
 			Player->Inventory[to->Index].RemoveSlot(to);
 			Player->Inventory[to->Index].AddSlot(From);
 		}
-
 		goto DoSwap;
 	}
 	
@@ -78,7 +77,9 @@ DoSwap:
 	to->Index = From->Index;
 	From->Index = index;
 
-	if (index < 0)	
+	//임시방편으로 From->Type ==SLOT_Quick 해놈
+	//왜Refresh에서 안되는건지 잘 모르겠다.
+	if (index < 0 /* || From->Type == SLOT_Quick  */ )
 		From->SetTexture(Player->GameUIWidget->QuickSlot->DefTex);
 
 	to->Refresh();
