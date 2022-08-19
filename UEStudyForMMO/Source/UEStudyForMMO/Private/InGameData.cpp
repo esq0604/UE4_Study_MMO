@@ -114,16 +114,18 @@ void FItemData::Use(AMyCharacter* player)
 			break;
 	}
 
+	//UInventory* inventory;
+
 	for (auto slot : ReferenceSlots)
 	{
 		slot->Refresh();
+		player->GameUIWidget->Inventory->RefreshSlot(slot->Index);
 	}
 }
 
 void FItemData::AddSlot(USlot*& slot)
 {
 	//존재하지 않는 경우 배열에 고유한 요소를 추가함. 
-	UE_LOG(LogTemp, Warning, TEXT("FItemData : AddSlot"));
 	ReferenceSlots.AddUnique(slot);
 }
 

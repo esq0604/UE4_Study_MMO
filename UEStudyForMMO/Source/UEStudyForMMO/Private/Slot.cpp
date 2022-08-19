@@ -41,8 +41,6 @@ void USlot::SetTexture(UTexture2D* tex)
 
 void USlot::Refresh()
 {
-
-	UE_LOG(LogTemp, Warning, TEXT("Slot : Refresh"));
 	switch (Type)
 	{ 
 	case ESlotType::SLOT_Item:

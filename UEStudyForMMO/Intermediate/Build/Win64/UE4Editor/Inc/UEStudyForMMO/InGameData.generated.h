@@ -13,7 +13,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define UESTUDYFORMMO_InGameData_generated_h
 
-#define UEStudyForMMO_Source_UEStudyForMMO_Public_InGameData_h_118_GENERATED_BODY \
+#define UEStudyForMMO_Source_UEStudyForMMO_Public_InGameData_h_119_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FItemData_Statics; \
 	UESTUDYFORMMO_API static class UScriptStruct* StaticStruct(); \
 	FORCEINLINE static uint32 __PPO__ReferenceSlots() { return STRUCT_OFFSET(FItemData, ReferenceSlots); }
@@ -21,14 +21,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 template<> UESTUDYFORMMO_API UScriptStruct* StaticStruct<struct FItemData>();
 
-#define UEStudyForMMO_Source_UEStudyForMMO_Public_InGameData_h_98_GENERATED_BODY \
+#define UEStudyForMMO_Source_UEStudyForMMO_Public_InGameData_h_99_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FPotionData_Statics; \
 	UESTUDYFORMMO_API static class UScriptStruct* StaticStruct();
 
 
 template<> UESTUDYFORMMO_API UScriptStruct* StaticStruct<struct FPotionData>();
 
-#define UEStudyForMMO_Source_UEStudyForMMO_Public_InGameData_h_26_GENERATED_BODY \
+#define UEStudyForMMO_Source_UEStudyForMMO_Public_InGameData_h_27_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FCharacterAbility_Statics; \
 	UESTUDYFORMMO_API static class UScriptStruct* StaticStruct();
 

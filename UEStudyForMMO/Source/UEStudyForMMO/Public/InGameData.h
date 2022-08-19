@@ -10,6 +10,7 @@
 
 class AMyCharacter;
 class USlot;
+
 class UESTUDYFORMMO_API InGameData
 {
 public:

@@ -83,4 +83,5 @@ void UGameUI::ChangeTextinBar(EGaugeType type, float cur, float max)
 void UGameUI::UseQuickSlot(int index)
 {
 	QuickSlot->Use(index);
+	//Inventory->RefreshSlot(index);
 }

@@ -3,6 +3,8 @@
 
 #include "SlotDrag.h"
 #include "Slot.h"
+#include "GameUI.h"
+#include "QuickSlot.h"
 #include "MyCharacter.h"
 
 bool USlotDrag::Drop(USlot* to)
@@ -46,8 +48,43 @@ bool USlotDrag::SwapInven(USlot* to)
 
 bool USlotDrag::SwapQuickSlot(USlot* to)
 {
+	if (From->Type == SLOT_Q_Item)
+	{
+		if (From->Index == to->Index) 
+			return true;
 
-	return false;
+		Player->Inventory[From->Index].RemoveSlot(From);
+		Player->Inventory[From->Index].AddSlot(to);
+
+		if (to->Type == SLOT_Q_Item)
+		{
+			Player->Inventory[to->Index].RemoveSlot(to);
+			Player->Inventory[to->Index].AddSlot(From);
+		}
+
+		goto DoSwap;
+	}
+	
+	SwapEnd:
+	return true;
+
+DoSwap:
+	ESlotType type = to->Type;
+	int index = to->Index;
+
+	to->Type = From->Type;
+	From->Type = type;
+
+	to->Index = From->Index;
+	From->Index = index;
+
+	if (index < 0)	
+		From->SetTexture(Player->GameUIWidget->QuickSlot->DefTex);
+
+	to->Refresh();
+	From->Refresh();
+
+	goto SwapEnd;
 }
 
 bool USlotDrag::SetQuickSlot(USlot* to)
