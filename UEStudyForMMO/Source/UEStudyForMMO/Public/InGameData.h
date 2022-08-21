@@ -10,6 +10,7 @@
 
 class AMyCharacter;
 class USlot;
+class AItemBase;
 
 class UESTUDYFORMMO_API InGameData
 {
@@ -75,9 +76,11 @@ enum EGaugeType
 UENUM(BlueprintType)
 enum EItemType
 {
-	ITEM_None		UMETA(DisplayName = "None"),
+	ITEM_WEAPON		UMETA(DisplayName = "Weapon"),
+	ITEM_Equiment	UMETA(DisplayName = "Equiment"),
 	ITEM_Useable	UMETA(DisplayName = "Useable"),
-	ITEM_Equiment	UMETA(DisplayName = "Equiment")
+	ITEM_None		UMETA(DisplayName = "None")
+
 };
 
 //Slot Type ¾ø°Å³ª, Item, Skil,
@@ -85,6 +88,7 @@ UENUM(BlueprintType)
 enum ESlotType
 {
 	SLOT_None		UMETA(DisplayName = "None"),
+	SLOT_Gear		UMETA(DisplayName = "Gear"),
 	SLOT_Item		UMETA(DisplayName = "Item"),
 	SLOT_Skill		UMETA(DisplayName ="Skill"),
 	SLOT_Quick		UMETA(DisplayName = "Quick"),
@@ -131,6 +135,9 @@ public:
 	 void SwapReference(FItemData& data, int fromindex, int toindex);
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		TSubclassOf<AItemBase> itemClass;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		FName Name;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
@@ -144,6 +151,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		FPotionData potion;
+
+
+
 
 private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))

@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\UEStudyForMMO.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{EC400D0F-EBDC-4CA6-9D77-7476F362F280}</UniqueIdentifier>
+      <UniqueIdentifier>{10B1DD9D-4E2F-44C0-89F2-F9145802914A}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\UEStudyForMMO.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{61AA118E-A1E4-430E-821C-61C230AA8EDD}</UniqueIdentifier>
+      <UniqueIdentifier>{642CF277-E834-4A4E-904F-FCF7FA22B0D9}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -30,13 +30,13 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\UEStudyForMMO">
-      <UniqueIdentifier>{A578B70A-5B68-4585-80BD-C222BE356ED3}</UniqueIdentifier>
+      <UniqueIdentifier>{9E021961-59F4-4F16-9D8E-AFAC0293365F}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\UEStudyForMMO\UEStudyForMMO.Build.cs">
       <Filter>Source\UEStudyForMMO</Filter>
     </None>
     <Filter Include="Source\UEStudyForMMO\Private">
-      <UniqueIdentifier>{86ADDF3D-01A5-489F-B2CF-EA288A469A65}</UniqueIdentifier>
+      <UniqueIdentifier>{82AFD19E-1C4A-4B3A-930C-377258218FDC}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\UEStudyForMMO\Private\CustomUI.cpp">
       <Filter>Source\UEStudyForMMO\Private</Filter>
@@ -53,10 +53,16 @@
     <ClCompile Include="..\..\Source\UEStudyForMMO\Private\Gauge.cpp">
       <Filter>Source\UEStudyForMMO\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\UEStudyForMMO\Private\GearSet.cpp">
+      <Filter>Source\UEStudyForMMO\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\UEStudyForMMO\Private\InGameData.cpp">
       <Filter>Source\UEStudyForMMO\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\UEStudyForMMO\Private\Inventory.cpp">
+      <Filter>Source\UEStudyForMMO\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\UEStudyForMMO\Private\ItemBase.cpp">
       <Filter>Source\UEStudyForMMO\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\UEStudyForMMO\Private\MyAnimInstance.cpp">
@@ -77,6 +83,9 @@
     <ClCompile Include="..\..\Source\UEStudyForMMO\Private\QuickSlot.cpp">
       <Filter>Source\UEStudyForMMO\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\UEStudyForMMO\Private\SkeletalItem.cpp">
+      <Filter>Source\UEStudyForMMO\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\UEStudyForMMO\Private\Slot.cpp">
       <Filter>Source\UEStudyForMMO\Private</Filter>
     </ClCompile>
@@ -90,7 +99,7 @@
       <Filter>Source\UEStudyForMMO\Private</Filter>
     </ClCompile>
     <Filter Include="Source\UEStudyForMMO\Public">
-      <UniqueIdentifier>{9B93D7A2-1958-49FE-ACAA-4791C3FC9A9A}</UniqueIdentifier>
+      <UniqueIdentifier>{EAF1C965-C400-4F7B-AF68-EDD4CE801AF8}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\UEStudyForMMO\Public\CustomUI.h">
       <Filter>Source\UEStudyForMMO\Public</Filter>
@@ -107,10 +116,16 @@
     <ClInclude Include="..\..\Source\UEStudyForMMO\Public\Gauge.h">
       <Filter>Source\UEStudyForMMO\Public</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\UEStudyForMMO\Public\GearSet.h">
+      <Filter>Source\UEStudyForMMO\Public</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\UEStudyForMMO\Public\InGameData.h">
       <Filter>Source\UEStudyForMMO\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\UEStudyForMMO\Public\Inventory.h">
+      <Filter>Source\UEStudyForMMO\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\UEStudyForMMO\Public\ItemBase.h">
       <Filter>Source\UEStudyForMMO\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\UEStudyForMMO\Public\MyAnimInstance.h">
@@ -129,6 +144,9 @@
       <Filter>Source\UEStudyForMMO\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\UEStudyForMMO\Public\QuickSlot.h">
+      <Filter>Source\UEStudyForMMO\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\UEStudyForMMO\Public\SkeletalItem.h">
       <Filter>Source\UEStudyForMMO\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\UEStudyForMMO\Public\Slot.h">

@@ -23,6 +23,10 @@ AMyCharacter::AMyCharacter()
 	//AbilityInit();
 	AbilityInit();
 
+	FItemData data;
+	Equipment.Init(nullptr, EItemType::ITEM_Equiment);
+	GearSet.Init(data, EItemType::ITEM_Equiment);
+
 	/// Create the collection sphere
 
 	CollectionSphere = CreateDefaultSubobject<USphereComponent>(TEXT("CollectionSphere"));

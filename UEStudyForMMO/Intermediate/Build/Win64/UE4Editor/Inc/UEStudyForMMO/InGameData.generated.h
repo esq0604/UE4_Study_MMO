@@ -13,7 +13,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define UESTUDYFORMMO_InGameData_generated_h
 
-#define UEStudyForMMO_Source_UEStudyForMMO_Public_InGameData_h_119_GENERATED_BODY \
+#define UEStudyForMMO_Source_UEStudyForMMO_Public_InGameData_h_123_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FItemData_Statics; \
 	UESTUDYFORMMO_API static class UScriptStruct* StaticStruct(); \
 	FORCEINLINE static uint32 __PPO__ReferenceSlots() { return STRUCT_OFFSET(FItemData, ReferenceSlots); }
@@ -21,14 +21,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 template<> UESTUDYFORMMO_API UScriptStruct* StaticStruct<struct FItemData>();
 
-#define UEStudyForMMO_Source_UEStudyForMMO_Public_InGameData_h_99_GENERATED_BODY \
+#define UEStudyForMMO_Source_UEStudyForMMO_Public_InGameData_h_103_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FPotionData_Statics; \
 	UESTUDYFORMMO_API static class UScriptStruct* StaticStruct();
 
 
 template<> UESTUDYFORMMO_API UScriptStruct* StaticStruct<struct FPotionData>();
 
-#define UEStudyForMMO_Source_UEStudyForMMO_Public_InGameData_h_27_GENERATED_BODY \
+#define UEStudyForMMO_Source_UEStudyForMMO_Public_InGameData_h_28_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FCharacterAbility_Statics; \
 	UESTUDYFORMMO_API static class UScriptStruct* StaticStruct();
 
@@ -41,15 +41,17 @@ template<> UESTUDYFORMMO_API UScriptStruct* StaticStruct<struct FCharacterAbilit
 
 #define FOREACH_ENUM_ESLOTTYPE(op) \
 	op(SLOT_None) \
+	op(SLOT_Gear) \
 	op(SLOT_Item) \
 	op(SLOT_Skill) \
 	op(SLOT_Quick) \
 	op(SLOT_Q_Item) \
 	op(SLOT_Q_Skill) 
 #define FOREACH_ENUM_EITEMTYPE(op) \
-	op(ITEM_None) \
+	op(ITEM_WEAPON) \
+	op(ITEM_Equiment) \
 	op(ITEM_Useable) \
-	op(ITEM_Equiment) 
+	op(ITEM_None) 
 #define FOREACH_ENUM_EGAUGETYPE(op) \
 	op(Gauge_HP) \
 	op(Gauge_Resource) \

@@ -18,6 +18,8 @@ void EmptyLinkFunctionForGeneratedCodeInGameData() {}
 	UESTUDYFORMMO_API UEnum* Z_Construct_UEnum_UEStudyForMMO_EItemType();
 	UESTUDYFORMMO_API UEnum* Z_Construct_UEnum_UEStudyForMMO_EGaugeType();
 	UESTUDYFORMMO_API UScriptStruct* Z_Construct_UScriptStruct_FItemData();
+	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
+	UESTUDYFORMMO_API UClass* Z_Construct_UClass_AItemBase_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UTexture2D_NoRegister();
 	UESTUDYFORMMO_API UScriptStruct* Z_Construct_UScriptStruct_FPotionData();
 	UESTUDYFORMMO_API UClass* Z_Construct_UClass_USlot_NoRegister();
@@ -37,7 +39,7 @@ void EmptyLinkFunctionForGeneratedCodeInGameData() {}
 		return ESlotType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ESlotType(ESlotType_StaticEnum, TEXT("/Script/UEStudyForMMO"), TEXT("ESlotType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_UEStudyForMMO_ESlotType_Hash() { return 2948128364U; }
+	uint32 Get_Z_Construct_UEnum_UEStudyForMMO_ESlotType_Hash() { return 3310923836U; }
 	UEnum* Z_Construct_UEnum_UEStudyForMMO_ESlotType()
 	{
 #if WITH_HOT_RELOAD
@@ -50,6 +52,7 @@ void EmptyLinkFunctionForGeneratedCodeInGameData() {}
 		{
 			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
 				{ "SLOT_None", (int64)SLOT_None },
+				{ "SLOT_Gear", (int64)SLOT_Gear },
 				{ "SLOT_Item", (int64)SLOT_Item },
 				{ "SLOT_Skill", (int64)SLOT_Skill },
 				{ "SLOT_Quick", (int64)SLOT_Quick },
@@ -61,6 +64,8 @@ void EmptyLinkFunctionForGeneratedCodeInGameData() {}
 				{ "BlueprintType", "true" },
 				{ "Comment", "//Slot Type ???\xc5\xb3?, Item, Skil,\n" },
 				{ "ModuleRelativePath", "Public/InGameData.h" },
+				{ "SLOT_Gear.DisplayName", "Gear" },
+				{ "SLOT_Gear.Name", "SLOT_Gear" },
 				{ "SLOT_Item.DisplayName", "Item" },
 				{ "SLOT_Item.Name", "SLOT_Item" },
 				{ "SLOT_None.DisplayName", "None" },
@@ -107,7 +112,7 @@ void EmptyLinkFunctionForGeneratedCodeInGameData() {}
 		return EItemType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EItemType(EItemType_StaticEnum, TEXT("/Script/UEStudyForMMO"), TEXT("EItemType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_UEStudyForMMO_EItemType_Hash() { return 1944542794U; }
+	uint32 Get_Z_Construct_UEnum_UEStudyForMMO_EItemType_Hash() { return 2171793087U; }
 	UEnum* Z_Construct_UEnum_UEStudyForMMO_EItemType()
 	{
 #if WITH_HOT_RELOAD
@@ -119,9 +124,10 @@ void EmptyLinkFunctionForGeneratedCodeInGameData() {}
 		if (!ReturnEnum)
 		{
 			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
-				{ "ITEM_None", (int64)ITEM_None },
-				{ "ITEM_Useable", (int64)ITEM_Useable },
+				{ "ITEM_WEAPON", (int64)ITEM_WEAPON },
 				{ "ITEM_Equiment", (int64)ITEM_Equiment },
+				{ "ITEM_Useable", (int64)ITEM_Useable },
+				{ "ITEM_None", (int64)ITEM_None },
 			};
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
@@ -133,6 +139,8 @@ void EmptyLinkFunctionForGeneratedCodeInGameData() {}
 				{ "ITEM_None.Name", "ITEM_None" },
 				{ "ITEM_Useable.DisplayName", "Useable" },
 				{ "ITEM_Useable.Name", "ITEM_Useable" },
+				{ "ITEM_WEAPON.DisplayName", "Weapon" },
+				{ "ITEM_WEAPON.Name", "ITEM_WEAPON" },
 				{ "ModuleRelativePath", "Public/InGameData.h" },
 				{ "ToolTip", "Inventory Item Data ???\xc5\xb3?, ????, ????" },
 			};
@@ -244,6 +252,10 @@ static struct FScriptStruct_UEStudyForMMO_StaticRegisterNativesFItemData
 #endif
 		static void* NewStructOps();
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_itemClass_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_itemClass;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Name_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FNamePropertyParams NewProp_Name;
@@ -283,6 +295,13 @@ static struct FScriptStruct_UEStudyForMMO_StaticRegisterNativesFItemData
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FItemData>();
 	}
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FItemData_Statics::NewProp_itemClass_MetaData[] = {
+		{ "Category", "ItemData" },
+		{ "ModuleRelativePath", "Public/InGameData.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UScriptStruct_FItemData_Statics::NewProp_itemClass = { "itemClass", nullptr, (EPropertyFlags)0x0014000000000005, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FItemData, itemClass), Z_Construct_UClass_AItemBase_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UScriptStruct_FItemData_Statics::NewProp_itemClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FItemData_Statics::NewProp_itemClass_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FItemData_Statics::NewProp_Name_MetaData[] = {
 		{ "Category", "ItemData" },
@@ -329,6 +348,7 @@ static struct FScriptStruct_UEStudyForMMO_StaticRegisterNativesFItemData
 #endif
 	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FItemData_Statics::NewProp_ReferenceSlots = { "ReferenceSlots", nullptr, (EPropertyFlags)0x004000800002000d, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FItemData, ReferenceSlots), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UScriptStruct_FItemData_Statics::NewProp_ReferenceSlots_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FItemData_Statics::NewProp_ReferenceSlots_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FItemData_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemData_Statics::NewProp_itemClass,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemData_Statics::NewProp_Name,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemData_Statics::NewProp_Texture,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemData_Statics::NewProp_Type,
@@ -365,7 +385,7 @@ static struct FScriptStruct_UEStudyForMMO_StaticRegisterNativesFItemData
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FItemData_Hash() { return 1931780701U; }
+	uint32 Get_Z_Construct_UScriptStruct_FItemData_Hash() { return 939594941U; }
 class UScriptStruct* FPotionData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

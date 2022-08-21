@@ -58,6 +58,10 @@ private:
 public:
 	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "UI")
 	//	TArray<FItemData> Data;
+	TArray<AItemBase*> Equipment;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "UI")
+		TArray<FItemData> GearSet;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "UI")
 		TArray<FItemData> Inventory;
