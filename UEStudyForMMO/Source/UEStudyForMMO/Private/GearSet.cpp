@@ -42,5 +42,7 @@ void UGearSet::Init()
 		slot->SetType(ESlotType::SLOT_Gear);
 		slot->Init();
 		Slots[slot->Slotnum] = slot;
+		
+		//visual studio git ¿¬µ¿ 
 	}
 }
