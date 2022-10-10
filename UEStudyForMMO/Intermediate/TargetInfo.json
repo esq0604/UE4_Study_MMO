@@ -2,12 +2,12 @@
 	"Targets": [
 		{
 			"Name": "UEStudyForMMO",
-			"Path": "C:\\Users\\dltkd\\UE4_Study_MMO\\UEStudyForMMO\\Source\\UEStudyForMMO.Target.cs",
+			"Path": "C:\\Users\\user1\\UE4_Study_MMO\\UEStudyForMMO\\Source\\UEStudyForMMO.Target.cs",
 			"Type": "Game"
 		},
 		{
 			"Name": "UEStudyForMMOEditor",
-			"Path": "C:\\Users\\dltkd\\UE4_Study_MMO\\UEStudyForMMO\\Source\\UEStudyForMMOEditor.Target.cs",
+			"Path": "C:\\Users\\user1\\UE4_Study_MMO\\UEStudyForMMO\\Source\\UEStudyForMMOEditor.Target.cs",
 			"Type": "Editor"
 		}
 	]
