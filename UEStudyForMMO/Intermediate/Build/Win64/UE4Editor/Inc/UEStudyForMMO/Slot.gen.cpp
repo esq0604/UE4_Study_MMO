@@ -75,6 +75,7 @@ void EmptyLinkFunctionForGeneratedCodeSlot() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_USlot_Statics::Class_MetaDataParams[] = {
 		{ "IncludePath", "Slot.h" },
 		{ "ModuleRelativePath", "Public/Slot.h" },
+		{ "ObjectInitializerConstructorDeclared", "" },
 	};
 #endif
 #if WITH_METADATA
@@ -170,7 +171,7 @@ void EmptyLinkFunctionForGeneratedCodeSlot() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(USlot, 4086230239);
+	IMPLEMENT_CLASS(USlot, 3944322137);
 	template<> UESTUDYFORMMO_API UClass* StaticClass<USlot>()
 	{
 		return USlot::StaticClass();

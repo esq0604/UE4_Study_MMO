@@ -5,6 +5,8 @@
 #include "Blueprint/WidgetTree.h"
 #include "Slot.h"
 
+
+
 void UQuickSlot::Init()
 {
 	UE_LOG(LogTemp,Warning,TEXT("UQuickSlot Init "))

@@ -8,6 +8,11 @@
 #include "Blueprint/WidgetTree.h"
 
 
+UInventory::UInventory(const FObjectInitializer& ObjectInitializer)
+	:Super(ObjectInitializer)
+{
+}
+
 void UInventory::Init()
 {
 	for (int i = 0; i < Max_Slot; i++)

@@ -18,7 +18,7 @@ class UESTUDYFORMMO_API UInventory : public UCustomUI
 	GENERATED_BODY()
 
 public:
-
+	UInventory(const FObjectInitializer& ObjectInitializer);
 	void Init() override;
 
 	void RefreshSlot(int slotnum);

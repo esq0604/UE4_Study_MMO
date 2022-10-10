@@ -59,6 +59,7 @@ void EmptyLinkFunctionForGeneratedCodeGauge() {}
 		{ "Comment", "/**\n * \n */" },
 		{ "IncludePath", "Gauge.h" },
 		{ "ModuleRelativePath", "Public/Gauge.h" },
+		{ "ObjectInitializerConstructorDeclared", "" },
 	};
 #endif
 #if WITH_METADATA
@@ -118,7 +119,7 @@ void EmptyLinkFunctionForGeneratedCodeGauge() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UGauge, 3541288513);
+	IMPLEMENT_CLASS(UGauge, 1916585391);
 	template<> UESTUDYFORMMO_API UClass* StaticClass<UGauge>()
 	{
 		return UGauge::StaticClass();

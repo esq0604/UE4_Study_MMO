@@ -19,6 +19,7 @@ class UESTUDYFORMMO_API UGauge : public UCustomUI
 {
 	GENERATED_BODY()
 public:
+	UGauge(const FObjectInitializer& ObjectInitializer);
 	void Init();
 	void SetType(EGaugeType type);
 	void SetValue(float cur, float max);

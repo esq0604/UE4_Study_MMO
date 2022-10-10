@@ -1,58 +1,11 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build (C:\Users\user1\UE4_Study_MMO).
-  Creating makefile for UEStudyForMMOEditor (no existing makefile)
   Parsing headers for UEStudyForMMOEditor
     Running UnrealHeaderTool "C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\UEStudyForMMO.uproject" "C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UEStudyForMMOEditor\Development\UEStudyForMMOEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\user1\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
   LogInit: Display: Loading text-based GConfig....
-  Reflection code generated for UEStudyForMMOEditor in 5.6617955 seconds
+  Reflection code generated for UEStudyForMMOEditor in 2.9999624 seconds
   Building UEStudyForMMOEditor...
   Using Visual Studio 2019 14.29.30137 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Building 45 actions with 16 processes...
-    [1/45] Default.rc2
-    [2/45] SharedPCH.Engine.ShadowErrors.cpp
-    [3/45] UEStudyForMMO.init.gen.cpp
-    [4/45] MyAnimInstance.cpp
-    [5/45] Weapon.gen.cpp
-    [6/45] MyAnimInstance.gen.cpp
-    [7/45] FireBallMovement.gen.cpp
-    [8/45] SlotDrag.gen.cpp
-    [9/45] MyGameModeBase.gen.cpp
-    [10/45] SkeletalItem.cpp
-    [11/45] SkeletalItem.gen.cpp
-    [12/45] FireBall.cpp
-    [13/45] InGameData.gen.cpp
-    [14/45] UEStudyForMMO.cpp
-    [15/45] CustomUI.cpp
-    [16/45] QuickSlot.cpp
-    [17/45] Inventory.gen.cpp
-    [18/45] GameUI.gen.cpp
-    [19/45] QuickSlot.gen.cpp
-    [20/45] Slot.gen.cpp
-    [21/45] ItemBase.cpp
-    [22/45] FireBallMovement.cpp
-    [23/45] CustomUI.gen.cpp
-    [24/45] Weapon.cpp
-    [25/45] ItemBase.gen.cpp
-    [26/45] FireBall.gen.cpp
-    [27/45] GearSet.gen.cpp
-    [28/45] MyPlayerController.gen.cpp
-    [29/45] MyGameStateBase.gen.cpp
-    [30/45] MyGameStateBase.cpp
-    [31/45] GameUI.cpp
-    [32/45] Inventory.cpp
-    [33/45] MyGameModeBase.cpp
-    [34/45] Slot.cpp
-    [35/45] InGameData.cpp
-    [36/45] MyCharacter.cpp
-    [37/45] MyCharacter.gen.cpp
-    [38/45] Gauge.cpp
-    [39/45] GearSet.cpp
-    [40/45] MyPlayerController.cpp
-    [41/45] Gauge.gen.cpp
-    [42/45] SlotDrag.cpp
-    [43/45] UE4Editor-UEStudyForMMO.lib
-       C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\UE4Editor-UEStudyForMMO.lib 라이브러리 및 C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\UE4Editor-UEStudyForMMO.exp 개체를 생성하고 있습니다.
-    [44/45] UE4Editor-UEStudyForMMO.dll
-       C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\UE4Editor-UEStudyForMMO.suppressed.lib 라이브러리 및 C:\Users\user1\UE4_Study_MMO\UEStudyForMMO\Intermediate\Build\Win64\UE4Editor\Development\UEStudyForMMO\UE4Editor-UEStudyForMMO.suppressed.exp 개체를 생성하고 있습니다.
-    [45/45] UEStudyForMMOEditor.target
-  Total time in Parallel executor: 37.35 seconds
-  Total execution time: 50.59 seconds
+  Building 10 actions with 16 processes...
+    [1/10] QuickSlot.cpp
+    [2/10] Slot.gen.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.MakeFile.Targets(44,5): warning MSB5021: 빌드가 취소되었으므로 작업 실행 파일 "cmd" 및 자식 프로세스를 종료합니다.

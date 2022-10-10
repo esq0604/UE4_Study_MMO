@@ -21,11 +21,14 @@ class UESTUDYFORMMO_API USlot : public UCustomUI
 	GENERATED_BODY()
 	
 public:
+	USlot(const FObjectInitializer& ObjectInitializer);
 	void Init() override;
 	void SetType(enum ESlotType type);
 	void SetTexture(UTexture2D* tex);
+
 	void Refresh();
 	void Action();
+
 protected:
 	void NativeOnDragDetected(const FGeometry& InGeometry, const FPointerEvent& InMouseEvent, UDragDropOperation*& OutOperation) override;
 	bool NativeOnDrop(const FGeometry& InGeometry,const FDragDropEvent& InDragDropEvent, UDragDropOperation* InOperation) override;

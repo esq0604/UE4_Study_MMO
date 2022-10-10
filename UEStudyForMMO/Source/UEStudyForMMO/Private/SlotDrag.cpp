@@ -7,6 +7,8 @@
 #include "QuickSlot.h"
 #include "MyCharacter.h"
 
+
+
 bool USlotDrag::Drop(USlot* to)
 {
 	if (Player == nullptr || From == nullptr)

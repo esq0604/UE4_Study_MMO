@@ -8,6 +8,10 @@
 #include "MyCharacter.h"
 
 
+UGauge::UGauge(const FObjectInitializer& ObjectInitializer)
+	:Super(ObjectInitializer)
+{}
+
 void UGauge::Init()
 {
 	UE_LOG(LogTemp,Warning, TEXT("UGauge::Init"));

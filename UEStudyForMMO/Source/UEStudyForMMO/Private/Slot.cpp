@@ -12,6 +12,11 @@
 #include "SlotDrag.h"
 
 
+USlot::USlot(const FObjectInitializer& ObjectInitializer)
+	:Super(ObjectInitializer)
+{
+}
+
 void USlot::Init()
 {
 	switch (Type)
@@ -146,7 +151,9 @@ FReply USlot::NativeOnMouseButtonDown(const FGeometry& InGeometry, const FPointe
 			return reply.NativeReply;
 
 		this->Action();
-		//Refresh();
+		//return reply.NativeReply;
+		Refresh();
+		
 	}
 	else if (InMouseEvent.IsMouseButtonDown(EKeys::LeftMouseButton) == true)
 	{
